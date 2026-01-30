@@ -1,0 +1,346 @@
+[
+  {
+    "resume_id": "RES_0",
+    "filename": "AARADHI KS.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Aaradhik\",\n  \"email\": \"aaradhiks04@gmail.com\",\n  \"skills\": [\n    \"Flutter\",\n    \"Dart\",\n    \"Python\",\n    \"Firebase\",\n    \"UI design\",\n    \"UX design\",\n    \"Blockchain\",\n    \"AES-256\",\n    \"ECC\",\n    \"SHA-3\",\n    \"Post-quantum cryptography\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_1",
+    "filename": "Abhay S.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Abhaya Bhi\",\n  \"email\": \"abhayabhi239@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"NumPy\",\n    \"Pandas\",\n    \"Scikit-Learn\",\n    \"Machine Learning\",\n    \"Data Analysis\",\n    \"Web Development\",\n    \"Android App Development\",\n    \"DevOps\",\n    \"IOT\",\n    \"Software Testing\"\n  ]\n}\n```",
+      "experience_years": 0.2
+    }
+  },
+  {
+    "resume_id": "RES_2",
+    "filename": "ABHIJITH V.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Abhijith V Kumar\",\n  \"email\": \"abhijithvkumar02@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"MERN\",\n    \"PHP\",\n    \"Java\",\n    \"DataBase Management System\"\n  ]\n}\n```",
+      "experience_years": 6.0
+    }
+  },
+  {
+    "resume_id": "RES_3",
+    "filename": "Abhishek S Kumar.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Abhishek S Kumar\",\n  \"email\": \"abhishekskumar2@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"Java\",\n    \"C\",\n    \"C++\",\n    \"Machine Learning\",\n    \"Image Processing\",\n    \"Arduino\",\n    \"AI Object Detection\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_4",
+    "filename": "Ahamed Akhil M N.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Ahamed Akhil\",\n  \"email\": \"ahamedakhil55@gmail.com\",\n  \"skills\": [\n    \"Artificial Intelligence\",\n    \"Machine Learning\",\n    \"DSA\",\n    \"DBMS\",\n    \"Data Analytics\",\n    \"Operating System\",\n    \"Data Visualization\",\n    \"Python\",\n    \"Problem Solving\",\n    \"Time Management\",\n    \"Communication\"\n  ]\n}\n```",
+      "experience_years": 4.0
+    }
+  },
+  {
+    "resume_id": "RES_5",
+    "filename": "AKSHAY KANNAN.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Akshay\",\n  \"email\": \"iamakshy81@gmail.com\",\n  \"skills\": [\n    \"React.js\",\n    \"Tailwind CSS\",\n    \"JavaScript\",\n    \"API integration\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_6",
+    "filename": "ALEX JOBY.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Alex Joby\",\n  \"email\": \"alexjoby85@gmail.com\",\n  \"skills\": [\"Computer Accounting\", \"Tally\"]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_7",
+    "filename": "Aneeta Varghese.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Aneeta Varghese\",\n  \"email\": \"aneetavarghese987@gmail.com\",\n  \"skills\": [\n    \"Deep Learning\",\n    \"SVM\",\n    \"React.js\",\n    \"Django\",\n    \"Java\",\n    \"Android Studio\",\n    \"MySQL\",\n    \"PHP\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_8",
+    "filename": "ANILA RAJAN.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Jananila\",\n  \"email\": \"jananila346@gamil.com\",\n  \"skills\": []\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_9",
+    "filename": "ANJALI K C.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Anjali K C\",\n  \"email\": \"anjalikc620@gmail.com\",\n  \"skills\": [\"English\", \"HTML\", \"C\", \"Malayalam\", \"PHP\", \"C++\", \"Python\"]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_10",
+    "filename": "Anjana NP.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Anjana Nediya Parampath\",\n  \"email\": \"anjananediyaparampath@gmail.com\",\n  \"skills\": [\n    \"React\",\n    \"TypeScript\",\n    \"Supabase\",\n    \"Flask\",\n    \"Google Cloud AI\"\n  ]\n}\n```",
+      "experience_years": 2.0
+    }
+  },
+  {
+    "resume_id": "RES_11",
+    "filename": "ANUMOL REJI.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Anureji\",\n  \"email\": \"anureji6282@gmail.com\",\n  \"skills\": [\n    \"Multi-Tasking\",\n    \"English\",\n    \"Hindi\",\n    \"Malayalam\",\n    \"Tamil\",\n    \"Good Communication\",\n    \"Leadership Quality\",\n    \"Active listening\",\n    \"Public speaking\",\n    \"Presentation\"\n  ]\n}\n```",
+      "experience_years": 3.0
+    }
+  },
+  {
+    "resume_id": "RES_12",
+    "filename": "APARNA DAS.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Aparna Dass\",\n  \"email\": \"aparnadass2002@gmail.com\",\n  \"skills\": [\n    \"Problem Solving\",\n    \"Critical Thinking\",\n    \"Leadership\",\n    \"Teamwork\",\n    \"Communication\",\n    \"AWS\",\n    \"EC2\",\n    \"S3\",\n    \"IAM\",\n    \"CI/CD\",\n    \"Docker\",\n    \"Git\",\n    \"GitHub\",\n    \"CRM\",\n    \"CRT\",\n    \"SAP BRIM\",\n    \"MySQL\",\n    \"MongoDB\",\n    \"ER Diagrams\",\n    \"Normalization\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_13",
+    "filename": "Aswathy V.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Aswathy Anu\",\n  \"email\": \"aswathyanuece@gmail.com\",\n  \"skills\": [\n    \"React.js\",\n    \"HTML\",\n    \"CSS\",\n    \"JavaScript\",\n    \"TailwindCSS\",\n    \"Bootstrap\",\n    \"Node.js\",\n    \"Express.js\",\n    \"RESTfulAPIs\",\n    \"MongoDB\",\n    \"Mongoose\",\n    \"JWT\",\n    \"bcrypt\",\n    \"Git\",\n    \"GitHub\",\n    \"GitLab\",\n    \"Vercel\",\n    \"Render\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_14",
+    "filename": "Avinash Fernandez.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Af14son\",\n  \"email\": \"af14son@gmail.com\",\n  \"skills\": [\n    \"Problem-Solving\",\n    \"Critical Thinking\",\n    \"English\",\n    \"Malayalam\",\n    \"Hindi\",\n    \"Bartending\"\n  ]\n}\n```",
+      "experience_years": 10.0
+    }
+  },
+  {
+    "resume_id": "RES_15",
+    "filename": "Aysha P Faizel.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Aysha Faisal\",\n  \"email\": \"aysha.faisal10@gmail.com\",\n  \"skills\": [\n    \"Java\",\n    \"Java Spring Boot\",\n    \"Core Java\",\n    \"OOP\",\n    \"Node.js\",\n    \"React\"\n  ]\n}\n```",
+      "experience_years": 3.0
+    }
+  },
+  {
+    "resume_id": "RES_17",
+    "filename": "Cyril M George.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Cyril M George\",\n  \"email\": \"cyrilmgeorge07@gmail.com\",\n  \"skills\": [\n    \"MS Excel\",\n    \"HTML\",\n    \"CSS\",\n    \"Bootstrap\",\n    \"PHP\",\n    \"Django\",\n    \"Flask\",\n    \"MySQL\",\n    \"PostgreSQL\",\n    \"Data Cleaning\",\n    \"SQL Queries\",\n    \"Power BI\",\n    \"Python\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_18",
+    "filename": "DEVIKA B.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Devika B\",\n  \"email\": \"devikab140@gmail.com\",\n  \"skills\": [\n    \"Time management\",\n    \"MS Excel\",\n    \"MS Word\",\n    \"Oracle Database Design\",\n    \"SQL\",\n    \"Power BI\",\n    \"Tableau\",\n    \"Supervised Machine Learning\",\n    \"Regression\",\n    \"Classification\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_19",
+    "filename": "Dilja Das ER.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Diljadaser\",\n  \"email\": \"diljadaser@gmail.com\",\n  \"skills\": [\n    \"HTML5\",\n    \"CSS3\",\n    \"JavaScript\",\n    \"Bootstrap\",\n    \"React.js\",\n    \"Node.js\",\n    \"Express.js\",\n    \"REST APIs\",\n    \"MySQL\",\n    \"MongoDB\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_20",
+    "filename": "Doppalapudi Nithin.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Nithin Chowdary\",\n  \"email\": \"Chowdarynithin2183@gmail.com\",\n  \"skills\": [\n    \"Web Security\",\n    \"Performance Optimization\",\n    \"JavaScript\",\n    \"HTML\",\n    \"CSS\",\n    \"Python Flask\",\n    \"MERN Stack Development\",\n    \"MongoDB\",\n    \"Express.js\",\n    \"React.js\",\n    \"Node.js\",\n    \"Git\",\n    \"GitHub\",\n    \"VS Code\",\n    \"Chrome DevTools\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_21",
+    "filename": "DURGALEKSHMI.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Durgalekshmi\",\n  \"email\": \"durgalekshmi91@gmail.com\",\n  \"skills\": [\n    \"C programming\",\n    \"Python\",\n    \"PHP\",\n    \"Javascript\",\n    \"DBMS\",\n    \"MongoDB\",\n    \"SQLite\",\n    \"HTML\",\n    \"CSS\",\n    \"MERN STACK\",\n    \"MS WORD\",\n    \"EXCEL\",\n    \"POWERPOINT\"\n  ]\n}\n```",
+      "experience_years": 3.0
+    }
+  },
+  {
+    "resume_id": "RES_22",
+    "filename": "GAYATHRI P K.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Gayathri P K\",\n  \"email\": \"gayathripk129@gmail.com\",\n  \"skills\": [\n    \"Problem Solving\",\n    \"Analytical Thinking\",\n    \"Communication\",\n    \"Team Collaboration\",\n    \"Time Management\",\n    \"Attention to details\",\n    \"Programming\",\n    \"Django\",\n    \"Python\",\n    \"HTML5\",\n    \"CSS3\",\n    \"Ethical Hacking\",\n    \"Bug Bounty Hunting\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_23",
+    "filename": "HARIPRIYA SAJEEVAN.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Haripriya\",\n  \"email\": \"haripriyacsdigital@gmail.com\",\n  \"skills\": [\n    \"Digital Marketing\",\n    \"Content Marketing\",\n    \"SEO\",\n    \"Google analytics\",\n    \"Email marketing\",\n    \"Social media management\",\n    \"Google ads\",\n    \"Meta ads\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_24",
+    "filename": "HARISANKAR K  S.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Hari Kavunkal\",\n  \"email\": \"hari.kavunkal.ks@gmail.com\",\n  \"skills\": [\n    \"Critical Thinking\",\n    \"Adaptability\",\n    \"Time Management\",\n    \"Communication\",\n    \"Java\",\n    \"HTML\",\n    \"CSS\",\n    \"JavaScript\",\n    \"MYSQL\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_25",
+    "filename": "JAHANARA JABBAR.pdf",
+    "extracted": {
+      "raw_output": "```json\n{\n  \"name\": \"J Jahanara\",\n  \"email\": \"jjahanara471@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"Computer Vision\",\n    \"Numpy\",\n    \"Tensorflow\",\n    \"SciPy\",\n    \"Data Science\",\n    \"Matplotlib\",\n    \"NLP\",\n    \"Artificial Intelligence\",\n    \"HTML\",\n    \"Machine Learning\",\n    \"SQL\",\n    \"Deep Learning\"\n  ]\n}\n```",
+      "experience_years": 4.0
+    }
+  },
+  {
+    "resume_id": "RES_26",
+    "filename": "jayakrishnan k.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Jayakrishnan\",\n  \"email\": \"jayakrishnank664@gmail.com\",\n  \"skills\": [\n    \"Technical Documentation\",\n    \"Adaptability\",\n    \"Time Management\",\n    \"Leadership\",\n    \"Communication\",\n    \"Teamwork\",\n    \"Machine Learning\",\n    \"Deep Learning\",\n    \"Computer Vision\",\n    \"Power BI\",\n    \"Excel\",\n    \"Git/GitHub\",\n    \"Visual Studio Code\",\n    \"Jupyter\",\n    \"Python\",\n    \"Java\",\n    \"R\",\n    \"C\",\n    \"Prompt Engineering\"\n  ]\n}\n```",
+      "experience_years": 1.7
+    }
+  },
+  {
+    "resume_id": "RES_27",
+    "filename": "Joel D\u2019cruz.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Joel D Cruz\",\n  \"email\": \"joeldcruz96@gmail.com\",\n  \"skills\": [\n    \"PHP\",\n    \"MySQL\",\n    \"Deep Learning\",\n    \"Programming\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_29",
+    "filename": "MERSHAN PETER.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Peter Mershan\",\n  \"email\": \"mershanpeter27@gmail.com\",\n  \"skills\": [\n    \"Leadership\",\n    \"Adaptability\",\n    \"Communication\",\n    \"Time Management\",\n    \"Team collaboration\",\n    \"VSCode\",\n    \"SolidWorks\",\n    \"Arduino IDE\",\n    \"WPLSoft\",\n    \"Blue Prism\",\n    \"Easy EDA\",\n    \"Java Programming\",\n    \"CAD/CAM/CAE\",\n    \"Bluetooth connectivity\",\n    \"IoT\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_30",
+    "filename": "Mohammed Safwan PK.pdf",
+    "extracted": {
+      "raw_output": "```json\n{\n  \"name\": \"Safwan P K P\",\n  \"email\": \"safwanpkpnm@gmail.com\",\n  \"skills\": [\n    \"Team Coordination\",\n    \"Leadership\",\n    \"Reporting\",\n    \"Adaptability\",\n    \"Multitasking\",\n    \"Microsoft Word\",\n    \"Microsoft Excel\",\n    \"Microsoft PowerPoint\"\n  ]\n}\n```",
+      "experience_years": 5.0
+    }
+  },
+  {
+    "resume_id": "RES_31",
+    "filename": "MOHAMMED SHAMIL  M.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Mohammed Shamil\",\n  \"email\": \"mohammedshamilm17@gmail.com\",\n  \"skills\": [\n    \"Time Management\",\n    \"Video editing\",\n    \"Videography\",\n    \"Machine Learning\",\n    \"Supervised Learning\",\n    \"Fraud Detection\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_32",
+    "filename": "Mohammed Shammas MP.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"\",\n  \"email\": \"amsvkd1@gmail.com\",\n  \"skills\": [\n    \"MS office\",\n    \"Excel\",\n    \"Mobile graphic designing\",\n    \"Powerpoint\"\n  ]\n}\n```",
+      "experience_years": 20.0
+    }
+  },
+  {
+    "resume_id": "RES_33",
+    "filename": "MOHAMMED SHIHAM C.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"MSCY0077\",\n  \"email\": \"MSCY0077@gmail.com\",\n  \"skills\": [\"Java\", \"Rdbms\", \"Html\"]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_34",
+    "filename": "MUHAMMED SHIFAN S.pdf",
+    "extracted": {
+      "raw_output": "```json\n{\n  \"name\": \"Shifan Kichu\",\n  \"email\": \"shifankichu100@gmail.com\",\n  \"skills\": [\n    \"React\",\n    \"GitHub API\",\n    \"HTML\",\n    \"Tailwind CSS\",\n    \"MERN\",\n    \"MongoDB\",\n    \"Express.js\",\n    \"Node.js\",\n    \"CSS\",\n    \"JavaScript\",\n    \"VS Code\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_35",
+    "filename": "NANDHANA V A.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Nandhana\",\n  \"email\": \"nandhana82003@gmail.com\",\n  \"skills\": [\n    \"Machine Learning\",\n    \"Git\",\n    \"GitHub\",\n    \"Linux\",\n    \"Web\",\n    \"AWS\",\n    \"Windows\",\n    \"NLP\",\n    \"Search Engine\",\n    \"Web Crawlers\",\n    \"Multimedia Processing\",\n    \"Python\",\n    \"NodeJS\",\n    \"Intel OpenVino Toolkit\",\n    \"Selenium\",\n    \"TensorFlow\",\n    \"Pandas\",\n    \"NumPy\",\n    \"Power BI\"\n  ]\n}\n```",
+      "experience_years": 2.0
+    }
+  },
+  {
+    "resume_id": "RES_36",
+    "filename": "Sahva Ibrahim.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Sahvaibrahim\",\n  \"email\": \"Sahvaibrahim16@gmail.com\",\n  \"skills\": [\n    \"Communication skill\",\n    \"Listening skill\",\n    \"Multi tasking\",\n    \"Problem solving skill\",\n    \"Time management\",\n    \"C Programming\",\n    \"Python programming\",\n    \"Java programming\",\n    \"AI & ML\",\n    \"PHP & Java script\",\n    \"HTML & CSS\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_37",
+    "filename": "Sandra.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Sandra K Vinod\",\n  \"email\": \"sandrakvinod06@gmail.com\",\n  \"skills\": [\n    \"C programming\",\n    \"Matlab\",\n    \"Scilab\",\n    \"Arduino\",\n    \"Bluetooth\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_38",
+    "filename": "Shaahul hamid.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Shaahulhamid Kassim\",\n  \"email\": \"shaahulhamid.kassim@gmail.com\",\n  \"skills\": [\n    \"C\",\n    \"C++\",\n    \"Java\",\n    \"Selenium\",\n    \"SQL\",\n    \"HTML\",\n    \"CSS\",\n    \"Manual Testing\",\n    \"Automation Testing\",\n    \"Linux\",\n    \"Windows\"\n  ]\n}\n```",
+      "experience_years": 1.5
+    }
+  },
+  {
+    "resume_id": "RES_39",
+    "filename": "SIJEESH S.pdf",
+    "extracted": {
+      "raw_output": "```json\n{\n  \"name\": \"Sijeesh\",\n  \"email\": \"sijeesh.2392004.sijeesh@gmail.com\",\n  \"skills\": [\n    \"AI\",\n    \"ML\",\n    \"Ethical Hacking\",\n    \"Generative AI\",\n    \"Git\",\n    \"Visual Studio Code\",\n    \"Eclipse\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_40",
+    "filename": "SREEJITH S.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Sreejith Sreekumar\",\n  \"email\": \"sreejithsreekumar2002@gmail.com\",\n  \"skills\": [\n    \"HTML5\",\n    \"SQL\",\n    \"CSS3\",\n    \"Node Js\",\n    \"Javascript\",\n    \"Version Controls\",\n    \"Bootstrap\",\n    \"Python\",\n    \"Django\",\n    \"React Js\",\n    \"Datastructures\",\n    \"Java\",\n    \"Arduino\",\n    \"LangChain\",\n    \"LLM\",\n    \"MS Office\"\n  ]\n}\n```",
+      "experience_years": 4.0
+    }
+  },
+  {
+    "resume_id": "RES_41",
+    "filename": "Sruthi Satheesan.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Sruthi Sreejith\",\n  \"email\": \"sruthisreejith07@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"Bioinformatics\",\n    \"Database\",\n    \"HTML\",\n    \"Decision making\",\n    \"Problem solving\",\n    \"rbcL PCR Barcodes\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_42",
+    "filename": "STENIYA LIEONS.pdf",
+    "extracted": {
+      "raw_output": "```json\n{\n  \"name\": \"Steniyalieons\",\n  \"email\": \"Steniyalieons2002@gmail.com\",\n  \"skills\": [\n    \"FLEXIBILITY\",\n    \"PROBLEM-SOLVING\",\n    \"CREATIVITY\",\n    \"CRITICAL THINKING\",\n    \"TEAMWORK\",\n    \"TIME MANAGEMENT\",\n    \"PYTHON\",\n    \"BOOTSTRAP\",\n    \"JAVASCRIPT\",\n    \"DJANGO\",\n    \"HTML\",\n    \"MY SQL\",\n    \"CSS\"\n  ]\n}\n```",
+      "experience_years": 3.0
+    }
+  },
+  {
+    "resume_id": "RES_43",
+    "filename": "Vismin Krishna M.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Vishnu S Dev\",\n  \"email\": \"vishnusdev@gmail.com\",\n  \"skills\": [\n    \"Python\",\n    \"YOLOv10\",\n    \"Object Detection\",\n    \"Generative Pre-trained Transformer\",\n    \"GPT\",\n    \"Deep Learning\"\n  ]\n}\n```",
+      "experience_years": 2.0
+    }
+  },
+  {
+    "resume_id": "RES_44",
+    "filename": "Yaseen Salim.pdf",
+    "extracted": {
+      "raw_output": "```\n{\n  \"name\": \"Yaseen Salim\",\n  \"email\": \"yaseensalim2005@gmail.com\",\n  \"skills\": [\n    \"Communication Skill\",\n    \"Foresighting\",\n    \"Computer Problem Solving\",\n    \"Image Encryption\"\n  ]\n}\n```",
+      "experience_years": 0.0
+    }
+  }
+]
