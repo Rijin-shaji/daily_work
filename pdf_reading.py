@@ -1,4 +1,5 @@
 import os
+import re
 import json
 import faiss
 import torch
@@ -7,18 +8,16 @@ import pdfplumber
 from tkinter import Tk, filedialog
 from transformers import AutoTokenizer, AutoModel
 
-# ==========================
+
 # CONFIG
-# ==========================
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-TOP_K = 5
+TOP_K = 20
 FAISS_INDEX_FILE = "resume_faiss.index"
 METADATA_FILE = "resume_metadata.json"
 MAX_TOKENS = 256
 
-# ==========================
+
 # LOAD FAISS & METADATA
-# ==========================
 index = faiss.read_index(FAISS_INDEX_FILE)
 
 with open(METADATA_FILE, "r", encoding="utf-8") as f:
@@ -27,20 +26,17 @@ with open(METADATA_FILE, "r", encoding="utf-8") as f:
 print(f"FAISS loaded: {index.ntotal} vectors")
 print(f"Metadata loaded: {len(metadata_store)} entries")
 
-# ==========================
+
 # LOAD MODEL
-# ==========================
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
 model.eval()
 
-# ==========================
-# FUNCTIONS
-# ==========================
+# TEXT HELPERS
 def clean_text(text):
-    return " ".join(text.split()).replace("\x00", "")
+    return " ".join(text.split()).replace("\x00", "").lower()
 
 def extract_text_from_pdf(pdf_path):
     text = ""
@@ -51,6 +47,21 @@ def extract_text_from_pdf(pdf_path):
                 text += t + "\n"
     return clean_text(text)
 
+
+# JD PARSING
+def extract_experience_from_jd(text):
+    match = re.search(r"(\d+(\.\d+)?)\s*\+?\s*years", text)
+    return float(match.group(1)) if match else 0.0
+
+def extract_skills_from_jd(text):
+    stop_words = {
+        "experience", "years", "knowledge", "required", "skills",
+        "ability", "good", "strong", "hands", "working"
+    }
+    words = set(re.findall(r"[a-zA-Z]{3,}", text))
+    return {w for w in words if w not in stop_words}
+
+# EMBEDDING
 def embed_text(text):
     encoded = tokenizer(
         text,
@@ -62,16 +73,16 @@ def embed_text(text):
 
     with torch.no_grad():
         output = model(**encoded)
-
         token_embeddings = output.last_hidden_state
-        mask = encoded["attention_mask"].unsqueeze(-1).expand(token_embeddings.size()).float()
+        mask = encoded["attention_mask"].unsqueeze(-1).float()
 
         pooled = (token_embeddings * mask).sum(1) / mask.sum(1).clamp(min=1e-9)
         pooled = torch.nn.functional.normalize(pooled, p=2, dim=1)
 
     return pooled.cpu().numpy().astype("float32")
 
-def upload_pdf(title="Select PDF"):
+# FILE UPLOAD
+def upload_pdf(title):
     root = Tk()
     root.withdraw()
     root.attributes("-topmost", True)
@@ -84,26 +95,21 @@ def upload_pdf(title="Select PDF"):
     root.destroy()
     return path
 
-# ==========================
-# FIXED SEARCH FUNCTION
-# ==========================
+# FAISS SEARCH
 def search_faiss(vector, top_k=TOP_K):
     distances, indices = index.search(vector, top_k)
 
-    results = []
+    candidates = []
 
     for idx, dist in zip(indices[0], distances[0]):
-
         if idx >= len(metadata_store):
             continue
 
         entry = metadata_store[idx]
-
-        # 🔥 IMPORTANT FIX: read nested metadata
         meta = entry.get("metadata", {})
 
-        results.append({
-            "similarity_score": float(dist),
+        candidates.append({
+            "semantic_score": float(dist),
             "name": meta.get("name", "Unknown"),
             "email": meta.get("email", "Unknown"),
             "skills": meta.get("skills", []),
@@ -111,47 +117,86 @@ def search_faiss(vector, top_k=TOP_K):
             "filename": entry.get("filename", "Unknown")
         })
 
-    return results
+    return candidates
 
-# ==========================
+# HR MATCHING LOGIC
+def match_and_rank(candidates, jd_skills, jd_experience):
+    final_results = []
+
+    for c in candidates:
+        resume_exp = c["experience_years"]
+
+        if jd_experience > 0 and resume_exp < jd_experience:
+            continue
+
+        resume_skills = [s.lower() for s in c["skills"]]
+
+        matched_skills = [
+            s for s in resume_skills
+            if any(jd in s for jd in jd_skills)
+        ]
+
+        if not matched_skills:
+            continue
+
+        skill_score = len(matched_skills) / max(len(resume_skills), 1)
+
+        final_score = (
+            0.7 * c["semantic_score"] +
+            0.3 * skill_score
+        )
+
+        c["matched_skills"] = matched_skills
+        c["final_score"] = round(final_score, 4)
+
+        final_results.append(c)
+
+    return sorted(final_results, key=lambda x: x["final_score"], reverse=True)
+
+
 # MAIN PIPELINE
-# ==========================
 def find_best_employees():
     print("\nUpload Job Description PDF...")
     jd_path = upload_pdf("Select Job Description PDF")
 
     if not jd_path:
-        print("No file selected")
+        print("No JD selected")
         return []
 
     print(f"JD uploaded: {os.path.basename(jd_path)}")
 
     jd_text = extract_text_from_pdf(jd_path)
 
-    if not jd_text.strip():
-        print("JD is empty")
-        return []
+    jd_experience = extract_experience_from_jd(jd_text)
+    jd_skills = extract_skills_from_jd(jd_text)
+
+    print(f"JD Experience Required: {jd_experience} years")
 
     jd_vector = embed_text(jd_text)
 
-    return search_faiss(jd_vector)
+    candidates = search_faiss(jd_vector)
 
-# ==========================
+    return match_and_rank(candidates, jd_skills, jd_experience)
+
+
 # RUN
-# ==========================
 if __name__ == "__main__":
     employees = find_best_employees()
 
-    if employees:
+    if not employees:
+        print("\nNo suitable candidates found")
+    else:
         print("\n===== TOP MATCHED EMPLOYEES =====\n")
 
         for rank, emp in enumerate(employees, 1):
-            print(f"Rank {rank}:")
-            print(f"  Name             : {emp['name']}")
-            print(f"  Email            : {emp['email']}")
-            print(f"  Skills           : {', '.join(emp['skills'])}")
-            print(f"  Experience Years : {emp['experience_years']}")
-            print(f"  Resume File      : {emp['filename']}")
-            print(f"  Similarity Score : {emp['similarity_score']:.4f}\n")
+            print(f"Rank {rank}")
+            print("-" * 50)
+            print(f"Name             : {emp['name']}")
+            print(f"Email            : {emp['email']}")
+            print(f"Experience Years : {emp['experience_years']}")
+            print(f"Matched Skills   : {', '.join(emp['matched_skills'])}")
+            print(f"Resume File      : {emp['filename']}")
+            print(f"Final Score      : {emp['final_score']}\n")
+
 
 

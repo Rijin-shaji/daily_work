@@ -8,7 +8,7 @@ from transformers import AutoTokenizer, AutoModel
 # ==========================
 # CONFIG
 # ==========================
-VALIDATED_JSON = "step4_validated.json"  # JSON with employee info
+VALIDATED_JSON = "step4_validated.json"
 FAISS_INDEX_PATH = "resume_faiss.index"
 VECTOR_SIZE = 384
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
