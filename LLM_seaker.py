@@ -1,6 +1,6 @@
 import os
 from groq import Groq
-from resumer_uploader import retrieve_resume_matches
+from seeker_resumer_uploader import retrieve_resume_matches
 
 
 # CONFIG

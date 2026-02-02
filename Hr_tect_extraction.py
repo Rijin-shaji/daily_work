@@ -3,16 +3,11 @@ import json
 import re
 import pdfplumber
 
-# ==============================
 # CONFIG
-# ==============================
 RESUME_FOLDER = "D:/project_2_resumes"
 OUTPUT_FILE = "step1_raw_text.json"
 
-
-
 # CLEANING
-
 def clean_text(text):
     if not text:
         return ""
@@ -21,9 +16,7 @@ def clean_text(text):
     return text.strip()
 
 
-
 # PDF TEXT EXTRACTION
-
 def extract_from_pdf(path):
     full_text = ""
     try:
@@ -39,7 +32,6 @@ def extract_from_pdf(path):
 
 
 # MAIN
-
 def run():
     all_resumes = []
 

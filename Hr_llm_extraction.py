@@ -5,19 +5,13 @@ from datetime import datetime
 from groq import Groq
 from dotenv import load_dotenv
 
-# ==============================
-# LOAD ENV
-# ==============================
-load_dotenv()  # loads from .env if present
+load_dotenv()
 
-# ==============================
-# CONFIG
-# ==============================
 INPUT_FILE = "step2_sections.json"
 OUTPUT_FILE = "step3_llm_output.json"
 LLM_MODEL_NAME = "llama-3.3-70b-versatile"
 
-# API Key check
+#API Key check
 api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY environment variable not set")
@@ -51,10 +45,7 @@ SKILLS_HEADERS = [
     "tools", "technologies", "projects", "certifications"
 ]
 
-# -------------------------------
 # FUNCTIONS
-# -------------------------------
-
 def combine_skill_sections(r):
     skills_text = ""
     for key, val in r.items():
@@ -106,10 +97,7 @@ def extract_experience_years(text):
 
     return round(total_months / 12.0, 1)
 
-# -------------------------------
 # MAIN
-# -------------------------------
-
 def run():
     data = json.load(open(INPUT_FILE, encoding="utf-8"))
     results = []

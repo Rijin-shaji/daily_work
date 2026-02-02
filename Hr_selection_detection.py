@@ -21,17 +21,12 @@ EXP_HEADERS = [
     "experience","work experience","employment","work history","projects"
 ]
 
-# ==========================
-# NEW: LANGUAGE BLOCKLIST
-# ==========================
 LANGUAGES = {
-    "english", "hindi", "tamil", "malayalam", "malayala",
+    "english", "hindi", "tamil", "malayalam",
     "french", "spanish", "german", "arabic", "urdu"
 }
 
-# ==========================
 # FUNCTIONS
-# ==========================
 def split_sections(text):
     pattern = r'(?i)\b(' + '|'.join(HEADERS) + r')\b'
     matches = list(re.finditer(pattern, text))
@@ -51,9 +46,7 @@ def combine_sections(sections, headers_list):
         combined += sections.get(h.lower(), "") + " "
     return combined.strip()
 
-# ==========================
-# NEW: REMOVE LANGUAGES FROM SKILLS
-# ==========================
+#REMOVE LANGUAGES FROM SKILLS
 def remove_languages_from_skills(skills_text):
     parts = re.split(r"[,\n•\-|]+", skills_text)
     clean = []
@@ -84,9 +77,7 @@ def extract_email(text):
     match = re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', text)
     return match.group(0) if match else "Not found"
 
-# ==========================
 # MAIN
-# ==========================
 def run():
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         resumes = json.load(f)
