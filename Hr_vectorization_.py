@@ -5,9 +5,7 @@ import faiss
 import numpy as np
 from transformers import AutoTokenizer, AutoModel
 
-# ==========================
 # CONFIG
-# ==========================
 VALIDATED_JSON = "step4_validated.json"
 FAISS_INDEX_PATH = "resume_faiss.index"
 VECTOR_SIZE = 384
@@ -15,17 +13,13 @@ HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE = 250
 CHUNK_OVERLAP = 50
 
-# ==========================
 # LOAD MODEL
-# ==========================
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
 model.eval()
 
-# ==========================
 # HELPER FUNCTIONS
-# ==========================
 def mean_pooling(model_output, attention_mask):
     token_embeddings = model_output.last_hidden_state
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
@@ -53,9 +47,7 @@ def chunk_text(text, chunk_size=CHUNK_SIZE, overlap=CHUNK_OVERLAP):
         start += chunk_size - overlap
     return chunks
 
-# ==========================
 # BUILD FAISS INDEX
-# ==========================
 def build_faiss_index():
     if not os.path.exists(VALIDATED_JSON):
         print(f"Error: {VALIDATED_JSON} not found!")
@@ -109,9 +101,7 @@ def build_faiss_index():
         json.dump(metadata_store, f, indent=2, ensure_ascii=False)
     print("Metadata saved: resume_metadata.json")
 
-# ==========================
 # MAIN
-# ==========================
 if __name__ == "__main__":
     build_faiss_index()
 

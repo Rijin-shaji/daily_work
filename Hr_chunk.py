@@ -2,14 +2,12 @@ import json
 import os
 import textwrap
 
-# ==============================
+
 # CONFIG
-# ==============================
 VALIDATED_JSON = "step4_validated.json"
 OUTPUT_CHUNKS_JSON = "step5_chunks.json"
-CHUNK_SIZE = 250  # Max words per chunk
+CHUNK_SIZE = 250
 
-# Optional: you can split by sentences too
 def split_text_into_chunks(text, chunk_size=CHUNK_SIZE):
     words = text.split()
     chunks = []
@@ -35,9 +33,9 @@ def run():
         combined_text = (skills_text + " " + exp_text).strip()
 
         if not combined_text:
-            continue  # Skip empty resumes
+            continue
 
-        # Split into chunks if needed
+
         chunks = split_text_into_chunks(combined_text)
 
         for chunk in chunks:
@@ -49,7 +47,7 @@ def run():
 
         print(f"Processed {r.get('filename', '')}, {len(chunks)} chunk(s)")
 
-    # Save chunks JSON
+
     with open(OUTPUT_CHUNKS_JSON, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, ensure_ascii=False)
 
