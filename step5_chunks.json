@@ -1,171 +1,201 @@
 [
   {
-    "text": "AES-256, blockchain, Firebase, post-quantum cryptography, Python, Dart, ECC, UX design, UI design, SHA-3, Flutter, persistent storage",
+    "text": "Dart, AES-256, Blockchain, Flutter, SHA-3, Firebase, ECC, UX design, Python",
     "filename": "AARADHI KS.pdf",
     "resume_id": "RES_0"
   },
   {
-    "text": "DataBase Management System, MERN, Python, Java, PHP",
+    "text": "DevOps, Pandas, NumPy, Android App, Machine Learning, Python, IOT, Scikit-Learn",
+    "filename": "Abhay S.pdf",
+    "resume_id": "RES_1"
+  },
+  {
+    "text": "PHP, Python Basics, Python Fundamentals, MERN, Python, DataBase, NPTEL, Java",
     "filename": "ABHIJITH V.pdf",
     "resume_id": "RES_2"
   },
   {
-    "text": "Problem solving, Decision making, AI object detection, Sales, C++, Image processing, Team building, Python, Java, Adaptability, Machine learning, Arduino, C",
+    "text": "GSM, AI, C, Image Processing, C++, Machine Learning, Python, Arduino, Braille, Java",
     "filename": "Abhishek S Kumar.pdf",
     "resume_id": "RES_3"
   },
   {
-    "text": "DBMS, Artificial Intelligence, Time Management, Machine Learning, Python, Data Analytics, Problem Solving, Operating System, Data Visualization, Communication, DSA",
+    "text": "Power BI, DBMS, DSA, Robotics, Digital Marketing, Data Analytics, Artificial Intelligence, Microsoft, Machine Learning, Python, IBM",
     "filename": "Ahamed Akhil M N.pdf",
     "resume_id": "RES_4"
   },
   {
-    "text": "Computer Accounting, Tally",
+    "text": "Tailwind CSS, React.js, GITHUB, APIs, JavaScript",
+    "filename": "AKSHAY KANNAN.pdf",
+    "resume_id": "RES_5"
+  },
+  {
+    "text": "Tally",
     "filename": "ALEX JOBY.pdf",
     "resume_id": "RES_6"
   },
   {
-    "text": "MySQL, Java, PHP, SVM, Django, React.js, Deep Learning, Android Studio",
+    "text": "SVM, PHP, React.js, Deep Learning, MySQL, Android Studio, Android, Django, Java",
     "filename": "Aneeta Varghese.pdf",
     "resume_id": "RES_7"
   },
   {
-    "text": "C++, Python, PHP, HTML, English, C, Malayalam",
+    "text": "HTML, PHP, C++, Python, English",
     "filename": "ANJALI K C.pdf",
     "resume_id": "RES_9"
   },
   {
-    "text": "Presentation, English, Active listening, Leadership Quality, Public speaking, Good Communication, Multi Tasking",
-    "filename": "ANUMOL REJI.pdf",
-    "resume_id": "RES_11"
+    "text": "React, Flask, Google Cloud AI, Supabase, TypeScript",
+    "filename": "Anjana NP.pdf",
+    "resume_id": "RES_10"
   },
   {
-    "text": "MongoDB, Critical Thinking, CRM, ER Diagrams, AWS, CRT, Teamwork, MySQL, CI/CD Concepts, SAP BRIM, Normalization, Problem Solving, GitHub, Docker, Git, Communication, Leadership",
+    "text": "ER Diagrams, CRM, AWS, IAM, EC2, CI/CD, Git, GitHub, MySQL, SAP BRIM, CRT, S3, Docker, MongoDB",
     "filename": "APARNA DAS.pdf",
     "resume_id": "RES_12"
   },
   {
-    "text": "TailwindCSS, MongoDB, Git, Render, JavaScript, Node.js, GitLab, Express.js, bcrypt, HTML, JWT, GitHub, Bootstrap, CSS, React.js, RESTfulAPIs, Vercel, Mongoose",
+    "text": "CSS, Bootstrap, TailwindCSS, React.js, JWT, bcrypt, GitHub, Git, Mongoose, Vercel, Render, RESTfulAPIs, Express.js, Node.js, GitLab, JavaScript, MongoDB, HTML",
     "filename": "Aswathy V.pdf",
     "resume_id": "RES_13"
   },
   {
-    "text": "Critical Thinking, Hindi, Problem Solving, English, Malayalam",
-    "filename": "Avinash Fernandez.pdf",
-    "resume_id": "RES_14"
-  },
-  {
-    "text": "Node.js, Java Spring Boot, React, OOP, Core Java",
+    "text": "React, Spring Boot, OOP, Node.js, Core Java, Java",
     "filename": "Aysha P Faizel.pdf",
     "resume_id": "RES_15"
   },
   {
-    "text": "SQL Queries, Basic Data Analysis, Flask, MySQL, MS Excel, PostgreSQL, Power BI, Python, PHP, HTML, Bootstrap, CSS, Django, Data Cleaning",
+    "text": "CSS, Bootstrap, PHP, Power BI, Flask, SQL, MySQL, MS Excel, PostgreSQL, Python, Django, HTML",
     "filename": "Cyril M George.pdf",
     "resume_id": "RES_17"
   },
   {
-    "text": "MS Word, SQL, Tableau, Regression, MS Excel, Power BI, Classification, Time management, Oracle Database Design, Supervised Machine Learning",
+    "text": "Power BI, SQL, MS Word, MS Excel, Oracle Database, Machine Learning, Tableau",
     "filename": "DEVIKA B.pdf",
     "resume_id": "RES_18"
   },
   {
-    "text": "MongoDB, CSS3, REST APIs, HTML5, Node.js, MySQL, Express.js, Bootstrap, JavaScript, React.js",
+    "text": "CSS3, Bootstrap, React.js, HTML5, MERN Stack, MySQL, Chrome Developer, REST APIs, Express.js, Node.js, JavaScript, MongoDB",
     "filename": "Dilja Das ER.pdf",
     "resume_id": "RES_19"
   },
   {
-    "text": "MongoDB, Chrome DevTools, Git, VS Code, Performance Optimization, Python Flask, Node.js, MERN Stack Development, Express.js, CSS, HTML, GitHub, Web Security, JavaScript, React.js",
+    "text": "CSS, React.js, GitHub, Flask, Git, VS Code, MERN, Express.js, Node.js, Python, JavaScript, MongoDB, Chrome DevTools, HTML",
     "filename": "Doppalapudi Nithin.pdf",
     "resume_id": "RES_20"
   },
   {
-    "text": "MongoDB, DBMS, EXCEL, SQLite, MERN STACK, Python, PHP, Javascript, HTML, MS WORD, CSS, POWERPOINT, C",
+    "text": "CSS, MERN STACK, PHP, DBMS, POWERPOINT, SQLite, MS WORD, C, Javascript, EXCEL, Python, MongoDB, HTML",
     "filename": "DURGALEKSHMI.pdf",
     "resume_id": "RES_21"
   },
   {
-    "text": "Content Marketing, Google ads, Meta ads, Email marketing, Digital Marketing, SEO, Google analytics, Social media management",
+    "text": "CSS3, HTML5, Udemy, Python, Django",
+    "filename": "GAYATHRI P K.pdf",
+    "resume_id": "RES_22"
+  },
+  {
+    "text": "SEO, LinkedIn, Canva, Google Analytics, Meta Ads, Social Media, Malayalam, Email Marketing, Google Ads, Instagram, Facebook, English",
     "filename": "HARIPRIYA SAJEEVAN.pdf",
     "resume_id": "RES_23"
   },
   {
-    "text": "Critical Thinking, JavaScript, Time Management, Java, Adaptability, HTML, CSS, Communication, MYSQL",
+    "text": "CSS, MYSQL, JavaScript, Java, HTML",
     "filename": "HARISANKAR K  S.pdf",
     "resume_id": "RES_24"
   },
   {
-    "text": "Computer Vision, Teamwork, Git/GitHub, Python, Adaptability, Leadership, Excel, Visual Studio Code, Prompt Engineering, Java, Jupyter, AI, Time Management, Machine Learning, Power BI, Deep Learning, Data Engineer, R, Technical Documentation, Communication, C",
+    "text": "HTML, SciPy, NLTK, Mediapipe, Computer Vision, SQL, Deep Learning, TensorFlow, PyTorch, Keras, Machine Learning, Python, Scikit, Numpy, NLP, Matplotlib",
+    "filename": "JAHANARA JABBAR.pdf",
+    "resume_id": "RES_25"
+  },
+  {
+    "text": "Reinforcement Learning, Power BI, Jupyter, Excel, GitHub, Computer Vision, Deep Learning, Git, Prompt Engineering, Visual Studio Code, R, C, Data Engineer, IoT, Machine Learning, Python, Java",
     "filename": "jayakrishnan k.pdf",
     "resume_id": "RES_26"
   },
   {
-    "text": "PHP, MySQL, Deep Learning, Web Development",
+    "text": "Deep Learning, PHP, MySQL",
     "filename": "Joel D’cruz.pdf",
     "resume_id": "RES_27"
   },
   {
-    "text": "Easy EDA, SolidWorks, Time Management, WPLSoft, IoT, Blue Prism, Adaptability, VSCode, CAD/CAM/CAE, Communication, Java Programming, Bluetooth connectivity, Team collaboration, Leadership, Arduino IDE",
+    "text": "CAD/CAM/CAE, Arduino IDE, Easy EDA, VSCode, WPLSoft, Bluetooth, Blue Prism, SolidWorks, IoT, Java",
     "filename": "MERSHAN PETER.pdf",
     "resume_id": "RES_29"
   },
   {
-    "text": "Multitasking, Adaptability, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Team Coordination, Reporting, Leadership",
+    "text": "Microsoft Excel, Microsoft PowerPoint, Microsoft Word",
     "filename": "Mohammed Safwan PK.pdf",
     "resume_id": "RES_30"
   },
   {
-    "text": "Supervised Learning, Time Management, Machine Learning, Videography, Video editing, Fraud Detection",
+    "text": "Machine Learning, Linkedin, Supervised Learning, Credit Card Processing, Video Editing, Python, Videography, Github, Online Banking",
     "filename": "MOHAMMED SHAMIL  M.pdf",
     "resume_id": "RES_31"
   },
   {
-    "text": "Mobile graphic designing, MS office, Powerpoint, Graphic designing, Content writing, Excel",
+    "text": "Powerpoint, Graphic Designing, MS Office, Excel",
     "filename": "Mohammed Shammas MP.pdf",
     "resume_id": "RES_32"
   },
   {
-    "text": "Java, Rdbms, Html",
+    "text": "Rdbms, Html, Java",
     "filename": "MOHAMMED SHIHAM C.pdf",
     "resume_id": "RES_33"
   },
   {
-    "text": "AWS, Intel OpenVino Toolkit, NumPy, Windows, Web, NodeJS, Linux, Machine Learning, Python, Selenium, Pandas, Power BI, TensorFlow, GitHub, Git",
+    "text": "Tailwind CSS, React, Hooks, CSS, GitHub API, VS Code, CRUD, MERN, Express.js, Node.js, MongoDB, HTML",
+    "filename": "MUHAMMED SHIFAN S.pdf",
+    "resume_id": "RES_34"
+  },
+  {
+    "text": "Windows, NodeJS, GitHub, AWS, Intel OpenVino, Power BI, Git, Linux, Pandas, NumPy, TensorFlow, Selenium, Machine Learning, Python, NLP",
     "filename": "NANDHANA V A.pdf",
     "resume_id": "RES_35"
   },
   {
-    "text": "AI & ML, PHP & Java script, Problem solving skill, C Programming, HTML & CSS, Communication skill, Java programming, Time management, Listening skill, Multi tasking, Python programming",
+    "text": "AI & ML, CSS, PHP, C Programming, Python, JavaScript, Java, HTML",
     "filename": "Sahva Ibrahim.pdf",
     "resume_id": "RES_36"
   },
   {
-    "text": "C programming, Bluetooth, Scilab, Matlab, Arduino",
+    "text": "Tinkercad, C programming, Arduino Uno, Bluetooth, Matlab, Scilab, Arduino",
     "filename": "Sandra.pdf",
     "resume_id": "RES_37"
   },
   {
-    "text": "SQL, C++, Automation Testing, Agile, Manual Testing, Windows, Linux, Scrum, Java, Selenium, HTML, CSS, C",
+    "text": "CSS, Windows, STLC, SQL, SDLC, Linux, Agile, Scrum, C, C++, Selenium, Java, HTML",
     "filename": "Shaahul hamid.pdf",
     "resume_id": "RES_38"
   },
   {
-    "text": "Problem solving, Decision making, database, rbcL PCR barcodes, HTML, python, Bioinformatics",
+    "text": "ML, Git, Visual Studio Code, Ethical Hacking, AI, Eclipse",
+    "filename": "SIJEESH S.pdf",
+    "resume_id": "RES_39"
+  },
+  {
+    "text": "CSS3, Bootstrap, React Js, API, HTML5, LLM, SQL, ML, Node Js, Javascript, LangChain, Python, Arduino, Django, Java",
+    "filename": "SREEJITH S.pdf",
+    "resume_id": "RES_40"
+  },
+  {
+    "text": "rbcL PCR, PCR Barcodes, Bioinformatics, Python, HTML",
     "filename": "Sruthi Satheesan.pdf",
     "resume_id": "RES_41"
   },
   {
-    "text": "CREATIVITY, CRITICAL THINKING, BOOTSTRAP, PROBLEM SOLVING, FLEXIBILITY, PYTHON, TIME MANAGEMENT, DJANGO, HTML, JAVASCRIPT, CSS, MY SQL, TEAMWORK",
+    "text": "CSS, MY SQL, DJANGO, JAVASCRIPT, PYTHON, BOOTSTRAP, HTML",
     "filename": "STENIYA LIEONS.pdf",
     "resume_id": "RES_42"
   },
   {
-    "text": "Object Detection, Python, YOLOv10, Deep Learning, Generative Pre-trained Transformer",
+    "text": "YOLOv10, Python, GPT, Deep Learning",
     "filename": "Vismin Krishna M.pdf",
     "resume_id": "RES_43"
   },
   {
-    "text": "Image Encryption, Communication Skill, Foresighting, Computer Problem Solving",
+    "text": "Image Encryption, Computer",
     "filename": "Yaseen Salim.pdf",
     "resume_id": "RES_44"
   }

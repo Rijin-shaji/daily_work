@@ -11,32 +11,28 @@ INPUT_FILE = "step2_sections.json"
 OUTPUT_FILE = "step3_llm_output.json"
 LLM_MODEL_NAME = "llama-3.3-70b-versatile"
 
-#API Key check
-api_key = os.getenv("GROQ_API_KEY")
+# API Key check
+api_key = os.getenv("GROQ_API")
 if not api_key:
     raise ValueError("GROQ_API_KEY environment variable not set")
 
 client = Groq(api_key=api_key)
 
+# Simplified prompt - ONLY for skills extraction
 PROMPT = """
-Extract from this resume:
-
-1) Full Name
-2) Email
-3) Skills (professional/technical only)
+Extract professional and technical skills from the following resume text.
 
 Rules:
-- Skills must be short phrases, not sentences
-- Return ONLY JSON
-- Format:
+- Extract ONLY technical skills, tools, programming languages, frameworks, certifications
+- Return short phrases (2-5 words maximum)
+- NO full sentences
+- NO job descriptions
+- NO soft skills like "communication" or "teamwork"
 
-{
-  "name": "",
-  "email": "",
-  "skills": []
-}
+Return ONLY a JSON array of skills (NO markdown, NO code blocks):
+["skill1", "skill2", "skill3"]
 
-Resume:
+Resume text:
 """
 
 # Headers indicating skills sections
@@ -44,6 +40,7 @@ SKILLS_HEADERS = [
     "skills", "technical skills", "competencies", "expertise",
     "tools", "technologies", "projects", "certifications"
 ]
+
 
 # FUNCTIONS
 def combine_skill_sections(r):
@@ -53,17 +50,6 @@ def combine_skill_sections(r):
             skills_text += val + " "
     return skills_text.strip()
 
-def fallback_email(raw_text):
-    m = re.search(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', raw_text)
-    return m.group(0) if m else ""
-
-def fallback_name(raw_text):
-    lines = raw_text.split("\n")[:10]
-    for line in lines:
-        line = line.strip()
-        if 1 < len(line.split()) <= 4 and all(c.isalpha() or c=='.' for c in line.replace("-", " ").split()):
-            return line.title()
-    return "Unknown"
 
 def extract_experience_years(text):
     text = re.sub(r'(\d{4})([A-Za-z])', r'\1 \2', text)
@@ -78,7 +64,8 @@ def extract_experience_years(text):
     for start, end in matches:
         try:
             start = start.strip()
-            start_date = datetime.strptime(start, "%b %Y") if any(m.isalpha() for m in start) else datetime.strptime(start, "%Y")
+            start_date = datetime.strptime(start, "%b %Y") if any(m.isalpha() for m in start) else datetime.strptime(
+                start, "%Y")
         except:
             continue
 
@@ -87,7 +74,8 @@ def extract_experience_years(text):
                 end_date = datetime.now()
             else:
                 end = end.strip()
-                end_date = datetime.strptime(end, "%b %Y") if any(m.isalpha() for m in end) else datetime.strptime(end, "%Y")
+                end_date = datetime.strptime(end, "%b %Y") if any(m.isalpha() for m in end) else datetime.strptime(end,
+                                                                                                                   "%Y")
         except:
             end_date = datetime.now()
 
@@ -97,63 +85,83 @@ def extract_experience_years(text):
 
     return round(total_months / 12.0, 1)
 
+
 # MAIN
 def run():
     data = json.load(open(INPUT_FILE, encoding="utf-8"))
     results = []
 
     for r in data:
-        raw_text = r.get("raw_text", "")
+        # DIRECTLY take name and email from JSON - that's it!
+        final_name = r.get("name", "Unknown")
+        final_email = r.get("email", "")
 
+        print(f"Processing: {r['filename']}")
+        print(f"  Name: {final_name}")
+        print(f"  Email: {final_email}")
+
+        # Combine skills text for LLM
         skills_text = combine_skill_sections(r)
         if not skills_text.strip():
-            skills_text = raw_text
+            skills_text = r.get("raw_text", "")[:2000]
 
-        name_hint = r.get("name_guess", "Unknown")
-        if name_hint == "Unknown":
-            name_hint = fallback_name(raw_text)
+        experience_text = r.get("experience_section", "")
 
-        email_hint = r.get("email", "")
-        if not email_hint or "@" not in email_hint:
-            email_hint = fallback_email(raw_text)
+        # Create input for LLM - ONLY for skills extraction
+        llm_input = f"{skills_text}\n\n{experience_text}"
 
-        text_input = f"""
-Name hint: {name_hint}
-Email hint: {email_hint}
-
-Skills + Technical Skills Section:
-{skills_text}
-
-Experience Section:
-{r.get("experience_section","")}
-"""
-
-        response = client.chat.completions.create(
-            model=LLM_MODEL_NAME,
-            messages=[{"role": "user", "content": PROMPT + text_input}],
-            temperature=0
-        )
-
-        content = response.choices[0].message.content
-
+        # Call LLM ONLY for skills
         try:
-            parsed = json.loads(content)
-        except:
-            parsed = {"raw_output": content}
+            response = client.chat.completions.create(
+                model=LLM_MODEL_NAME,
+                messages=[{"role": "user", "content": PROMPT + llm_input}],
+                temperature=0
+            )
 
-        experience_text = r.get("experience_section", "") + " " + r.get("skills_section","")
-        parsed["experience_years"] = extract_experience_years(experience_text)
+            content = response.choices[0].message.content.strip()
+
+            # Remove markdown if present
+            if content.startswith("```"):
+                content = re.sub(r'^```(?:json)?\n?', '', content)
+                content = re.sub(r'\n?```$', '', content)
+
+            skills_list = json.loads(content)
+
+            # Ensure it's a list
+            if not isinstance(skills_list, list):
+                skills_list = []
+
+        except Exception as e:
+            print(f"  ERROR extracting skills: {e}")
+            skills_list = []
+
+        # Calculate experience years
+        exp_years = extract_experience_years(experience_text + " " + skills_text)
+
+        # Build final result - name and email directly from JSON
+        final_result = {
+            "name": final_name,
+            "email": final_email,
+            "skills": skills_list,
+            "experience_years": exp_years
+        }
 
         results.append({
             "resume_id": r["resume_id"],
             "filename": r["filename"],
-            "extracted": parsed
+            "extracted": final_result
         })
 
-        print("Done:", r["filename"])
+        print(f"  ✓ Skills: {len(skills_list)}, Experience: {exp_years} years")
+        print()
 
-    json.dump(results, open(OUTPUT_FILE, "w", encoding="utf-8"), indent=2)
-    print("LLM extraction complete, saved to", OUTPUT_FILE)
+    # Save results
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(results, f, indent=2, ensure_ascii=False)
+
+    print(f"\n✓ Complete! Saved to {OUTPUT_FILE}")
+    print(f"  Total resumes processed: {len(results)}")
+
 
 if __name__ == "__main__":
     run()

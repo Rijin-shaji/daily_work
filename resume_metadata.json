@@ -2,23 +2,20 @@
   {
     "resume_id": "RES_0",
     "filename": "AARADHI KS.pdf",
-    "text": "AES-256, blockchain, Firebase, post-quantum cryptography, Python, Dart, ECC, UX design, UI design, SHA-3, Flutter, persistent storage 0.0 years",
+    "text": "Dart, AES-256, Blockchain, Flutter, SHA-3, Firebase, ECC, UX design, Python 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Aaradhi Ks",
       "email": "aaradhiks04@gmail.com",
       "skills": [
-        "AES-256",
-        "blockchain",
-        "Firebase",
-        "post-quantum cryptography",
-        "Python",
         "Dart",
+        "AES-256",
+        "Blockchain",
+        "Flutter",
+        "SHA-3",
+        "Firebase",
         "ECC",
         "UX design",
-        "UI design",
-        "SHA-3",
-        "Flutter",
-        "persistent storage"
+        "Python"
       ],
       "experience_years": 0.0
     }
@@ -26,52 +23,61 @@
   {
     "resume_id": "RES_1",
     "filename": "Abhay S.pdf",
-    "text": "0.0 years",
+    "text": "DevOps, Pandas, NumPy, Android App, Machine Learning, Python, IOT, Scikit-Learn 0.2 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
-      "experience_years": 0.0
+      "name": "Abhay S",
+      "email": "abhayabhi239@gmail.com",
+      "skills": [
+        "DevOps",
+        "Pandas",
+        "NumPy",
+        "Android App",
+        "Machine Learning",
+        "Python",
+        "IOT",
+        "Scikit-Learn"
+      ],
+      "experience_years": 0.2
     }
   },
   {
     "resume_id": "RES_2",
     "filename": "ABHIJITH V.pdf",
-    "text": "DataBase Management System, MERN, Python, Java, PHP 0.0 years",
+    "text": "PHP, Python Basics, Python Fundamentals, MERN, Python, DataBase, NPTEL, Java 3.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Abhijith V",
       "email": "abhijithvkumar02@gmail.com",
       "skills": [
-        "DataBase Management System",
+        "PHP",
+        "Python Basics",
+        "Python Fundamentals",
         "MERN",
         "Python",
-        "Java",
-        "PHP"
+        "DataBase",
+        "NPTEL",
+        "Java"
       ],
-      "experience_years": 0.0
+      "experience_years": 3.0
     }
   },
   {
     "resume_id": "RES_3",
     "filename": "Abhishek S Kumar.pdf",
-    "text": "Problem solving, Decision making, AI object detection, Sales, C++, Image processing, Team building, Python, Java, Adaptability, Machine learning, Arduino, C 0.0 years",
+    "text": "GSM, AI, C, Image Processing, C++, Machine Learning, Python, Arduino, Braille, Java 0.0 years",
     "metadata": {
       "name": "Abhishek S Kumar",
       "email": "abhishekskumar2@gmail.com",
       "skills": [
-        "Problem solving",
-        "Decision making",
-        "AI object detection",
-        "Sales",
+        "GSM",
+        "AI",
+        "C",
+        "Image Processing",
         "C++",
-        "Image processing",
-        "Team building",
+        "Machine Learning",
         "Python",
-        "Java",
-        "Adaptability",
-        "Machine learning",
         "Arduino",
-        "C"
+        "Braille",
+        "Java"
       ],
       "experience_years": 0.0
     }
@@ -79,22 +85,22 @@
   {
     "resume_id": "RES_4",
     "filename": "Ahamed Akhil M N.pdf",
-    "text": "DBMS, Artificial Intelligence, Time Management, Machine Learning, Python, Data Analytics, Problem Solving, Operating System, Data Visualization, Communication, DSA 0.0 years",
+    "text": "Power BI, DBMS, DSA, Robotics, Digital Marketing, Data Analytics, Artificial Intelligence, Microsoft, Machine Learning, Python, IBM 0.0 years",
     "metadata": {
-      "name": "Ahamed Akhil",
+      "name": "Ahamed Akhil M N",
       "email": "ahamedakhil55@gmail.com",
       "skills": [
+        "Power BI",
         "DBMS",
+        "DSA",
+        "Robotics",
+        "Digital Marketing",
+        "Data Analytics",
         "Artificial Intelligence",
-        "Time Management",
+        "Microsoft",
         "Machine Learning",
         "Python",
-        "Data Analytics",
-        "Problem Solving",
-        "Operating System",
-        "Data Visualization",
-        "Communication",
-        "DSA"
+        "IBM"
       ],
       "experience_years": 0.0
     }
@@ -102,23 +108,28 @@
   {
     "resume_id": "RES_5",
     "filename": "AKSHAY KANNAN.pdf",
-    "text": "0.0 years",
+    "text": "Tailwind CSS, React.js, GITHUB, APIs, JavaScript 0.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
+      "name": "Akshay Kannan",
+      "email": "iamakshy81@gmail.com",
+      "skills": [
+        "Tailwind CSS",
+        "React.js",
+        "GITHUB",
+        "APIs",
+        "JavaScript"
+      ],
       "experience_years": 0.0
     }
   },
   {
     "resume_id": "RES_6",
     "filename": "ALEX JOBY.pdf",
-    "text": "Computer Accounting, Tally 0.0 years",
+    "text": "Tally 0.0 years",
     "metadata": {
       "name": "Alex Joby",
       "email": "alexjoby85@gmail.com",
       "skills": [
-        "Computer Accounting",
         "Tally"
       ],
       "experience_years": 0.0
@@ -127,19 +138,20 @@
   {
     "resume_id": "RES_7",
     "filename": "Aneeta Varghese.pdf",
-    "text": "MySQL, Java, PHP, SVM, Django, React.js, Deep Learning, Android Studio 0.0 years",
+    "text": "SVM, PHP, React.js, Deep Learning, MySQL, Android Studio, Android, Django, Java 0.0 years",
     "metadata": {
       "name": "Aneeta Varghese",
       "email": "aneetavarghese987@gmail.com",
       "skills": [
-        "MySQL",
-        "Java",
-        "PHP",
         "SVM",
-        "Django",
+        "PHP",
         "React.js",
         "Deep Learning",
-        "Android Studio"
+        "MySQL",
+        "Android Studio",
+        "Android",
+        "Django",
+        "Java"
       ],
       "experience_years": 0.0
     }
@@ -149,7 +161,7 @@
     "filename": "ANILA RAJAN.pdf",
     "text": "0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Anila Rajan",
       "email": "jananila346@gamil.com",
       "skills": [],
       "experience_years": 0.0
@@ -158,18 +170,16 @@
   {
     "resume_id": "RES_9",
     "filename": "ANJALI K C.pdf",
-    "text": "C++, Python, PHP, HTML, English, C, Malayalam 0.0 years",
+    "text": "HTML, PHP, C++, Python, English 0.0 years",
     "metadata": {
       "name": "Anjali K C",
       "email": "anjalikc620@gmail.com",
       "skills": [
+        "HTML",
+        "PHP",
         "C++",
         "Python",
-        "PHP",
-        "HTML",
-        "English",
-        "C",
-        "Malayalam"
+        "English"
       ],
       "experience_years": 0.0
     }
@@ -177,58 +187,53 @@
   {
     "resume_id": "RES_10",
     "filename": "Anjana NP.pdf",
-    "text": "0.0 years",
+    "text": "React, Flask, Google Cloud AI, Supabase, TypeScript 2.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
-      "experience_years": 0.0
+      "name": "Anjana Np",
+      "email": "anjananediyaparampath@gmail.com",
+      "skills": [
+        "React",
+        "Flask",
+        "Google Cloud AI",
+        "Supabase",
+        "TypeScript"
+      ],
+      "experience_years": 2.0
     }
   },
   {
     "resume_id": "RES_11",
     "filename": "ANUMOL REJI.pdf",
-    "text": "Presentation, English, Active listening, Leadership Quality, Public speaking, Good Communication, Multi Tasking 0.0 years",
+    "text": "3.1 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Anumol Reji",
       "email": "anureji6282@gmail.com",
-      "skills": [
-        "Presentation",
-        "English",
-        "Active listening",
-        "Leadership Quality",
-        "Public speaking",
-        "Good Communication",
-        "Multi Tasking"
-      ],
-      "experience_years": 0.0
+      "skills": [],
+      "experience_years": 3.1
     }
   },
   {
     "resume_id": "RES_12",
     "filename": "APARNA DAS.pdf",
-    "text": "MongoDB, Critical Thinking, CRM, ER Diagrams, AWS, CRT, Teamwork, MySQL, CI/CD Concepts, SAP BRIM, Normalization, Problem Solving, GitHub, Docker, Git, Communication, Leadership 0.0 years",
+    "text": "ER Diagrams, CRM, AWS, IAM, EC2, CI/CD, Git, GitHub, MySQL, SAP BRIM, CRT, S3, Docker, MongoDB 0.0 years",
     "metadata": {
-      "name": "Aparna Dass",
+      "name": "Aparna Das",
       "email": "aparnadass2002@gmail.com",
       "skills": [
-        "MongoDB",
-        "Critical Thinking",
-        "CRM",
         "ER Diagrams",
+        "CRM",
         "AWS",
-        "CRT",
-        "Teamwork",
-        "MySQL",
-        "CI/CD Concepts",
-        "SAP BRIM",
-        "Normalization",
-        "Problem Solving",
-        "GitHub",
-        "Docker",
+        "IAM",
+        "EC2",
+        "CI/CD",
         "Git",
-        "Communication",
-        "Leadership"
+        "GitHub",
+        "MySQL",
+        "SAP BRIM",
+        "CRT",
+        "S3",
+        "Docker",
+        "MongoDB"
       ],
       "experience_years": 0.0
     }
@@ -236,29 +241,29 @@
   {
     "resume_id": "RES_13",
     "filename": "Aswathy V.pdf",
-    "text": "TailwindCSS, MongoDB, Git, Render, JavaScript, Node.js, GitLab, Express.js, bcrypt, HTML, JWT, GitHub, Bootstrap, CSS, React.js, RESTfulAPIs, Vercel, Mongoose 0.0 years",
+    "text": "CSS, Bootstrap, TailwindCSS, React.js, JWT, bcrypt, GitHub, Git, Mongoose, Vercel, Render, RESTfulAPIs, Express.js, Node.js, GitLab, JavaScript, MongoDB, HTML 0.0 years",
     "metadata": {
-      "name": "Aswathyan U",
+      "name": "Aswathy V",
       "email": "aswathyanuece@gmail.com",
       "skills": [
+        "CSS",
+        "Bootstrap",
         "TailwindCSS",
-        "MongoDB",
+        "React.js",
+        "JWT",
+        "bcrypt",
+        "GitHub",
         "Git",
+        "Mongoose",
+        "Vercel",
         "Render",
-        "JavaScript",
+        "RESTfulAPIs",
+        "Express.js",
         "Node.js",
         "GitLab",
-        "Express.js",
-        "bcrypt",
-        "HTML",
-        "JWT",
-        "GitHub",
-        "Bootstrap",
-        "CSS",
-        "React.js",
-        "RESTfulAPIs",
-        "Vercel",
-        "Mongoose"
+        "JavaScript",
+        "MongoDB",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -266,33 +271,28 @@
   {
     "resume_id": "RES_14",
     "filename": "Avinash Fernandez.pdf",
-    "text": "Critical Thinking, Hindi, Problem Solving, English, Malayalam 0.0 years",
+    "text": "10.1 years",
     "metadata": {
-      "name": "",
+      "name": "Avinash Fernandez",
       "email": "af14son@gmail.com",
-      "skills": [
-        "Critical Thinking",
-        "Hindi",
-        "Problem Solving",
-        "English",
-        "Malayalam"
-      ],
-      "experience_years": 0.0
+      "skills": [],
+      "experience_years": 10.1
     }
   },
   {
     "resume_id": "RES_15",
     "filename": "Aysha P Faizel.pdf",
-    "text": "Node.js, Java Spring Boot, React, OOP, Core Java 0.0 years",
+    "text": "React, Spring Boot, OOP, Node.js, Core Java, Java 0.0 years",
     "metadata": {
-      "name": "Aysha Faisal",
+      "name": "Aysha P Faizel",
       "email": "aysha.faisal10@gmail.com",
       "skills": [
-        "Node.js",
-        "Java Spring Boot",
         "React",
+        "Spring Boot",
         "OOP",
-        "Core Java"
+        "Node.js",
+        "Core Java",
+        "Java"
       ],
       "experience_years": 0.0
     }
@@ -300,25 +300,23 @@
   {
     "resume_id": "RES_17",
     "filename": "Cyril M George.pdf",
-    "text": "SQL Queries, Basic Data Analysis, Flask, MySQL, MS Excel, PostgreSQL, Power BI, Python, PHP, HTML, Bootstrap, CSS, Django, Data Cleaning 0.0 years",
+    "text": "CSS, Bootstrap, PHP, Power BI, Flask, SQL, MySQL, MS Excel, PostgreSQL, Python, Django, HTML 0.0 years",
     "metadata": {
       "name": "Cyril M George",
       "email": "cyrilmgeorge07@gmail.com",
       "skills": [
-        "SQL Queries",
-        "Basic Data Analysis",
+        "CSS",
+        "Bootstrap",
+        "PHP",
+        "Power BI",
         "Flask",
+        "SQL",
         "MySQL",
         "MS Excel",
         "PostgreSQL",
-        "Power BI",
         "Python",
-        "PHP",
-        "HTML",
-        "Bootstrap",
-        "CSS",
         "Django",
-        "Data Cleaning"
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -326,21 +324,18 @@
   {
     "resume_id": "RES_18",
     "filename": "DEVIKA B.pdf",
-    "text": "MS Word, SQL, Tableau, Regression, MS Excel, Power BI, Classification, Time management, Oracle Database Design, Supervised Machine Learning 0.0 years",
+    "text": "Power BI, SQL, MS Word, MS Excel, Oracle Database, Machine Learning, Tableau 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Devika B",
       "email": "devikab140@gmail.com",
       "skills": [
-        "MS Word",
-        "SQL",
-        "Tableau",
-        "Regression",
-        "MS Excel",
         "Power BI",
-        "Classification",
-        "Time management",
-        "Oracle Database Design",
-        "Supervised Machine Learning"
+        "SQL",
+        "MS Word",
+        "MS Excel",
+        "Oracle Database",
+        "Machine Learning",
+        "Tableau"
       ],
       "experience_years": 0.0
     }
@@ -348,21 +343,23 @@
   {
     "resume_id": "RES_19",
     "filename": "Dilja Das ER.pdf",
-    "text": "MongoDB, CSS3, REST APIs, HTML5, Node.js, MySQL, Express.js, Bootstrap, JavaScript, React.js 0.0 years",
+    "text": "CSS3, Bootstrap, React.js, HTML5, MERN Stack, MySQL, Chrome Developer, REST APIs, Express.js, Node.js, JavaScript, MongoDB 0.0 years",
     "metadata": {
-      "name": "",
+      "name": "Dilja Das Er",
       "email": "diljadaser@gmail.com",
       "skills": [
-        "MongoDB",
         "CSS3",
-        "REST APIs",
-        "HTML5",
-        "Node.js",
-        "MySQL",
-        "Express.js",
         "Bootstrap",
+        "React.js",
+        "HTML5",
+        "MERN Stack",
+        "MySQL",
+        "Chrome Developer",
+        "REST APIs",
+        "Express.js",
+        "Node.js",
         "JavaScript",
-        "React.js"
+        "MongoDB"
       ],
       "experience_years": 0.0
     }
@@ -370,26 +367,25 @@
   {
     "resume_id": "RES_20",
     "filename": "Doppalapudi Nithin.pdf",
-    "text": "MongoDB, Chrome DevTools, Git, VS Code, Performance Optimization, Python Flask, Node.js, MERN Stack Development, Express.js, CSS, HTML, GitHub, Web Security, JavaScript, React.js 0.0 years",
+    "text": "CSS, React.js, GitHub, Flask, Git, VS Code, MERN, Express.js, Node.js, Python, JavaScript, MongoDB, Chrome DevTools, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Doppalapudi Nithin",
       "email": "Chowdarynithin2183@gmail.com",
       "skills": [
-        "MongoDB",
-        "Chrome DevTools",
+        "CSS",
+        "React.js",
+        "GitHub",
+        "Flask",
         "Git",
         "VS Code",
-        "Performance Optimization",
-        "Python Flask",
-        "Node.js",
-        "MERN Stack Development",
+        "MERN",
         "Express.js",
-        "CSS",
-        "HTML",
-        "GitHub",
-        "Web Security",
+        "Node.js",
+        "Python",
         "JavaScript",
-        "React.js"
+        "MongoDB",
+        "Chrome DevTools",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -397,24 +393,24 @@
   {
     "resume_id": "RES_21",
     "filename": "DURGALEKSHMI.pdf",
-    "text": "MongoDB, DBMS, EXCEL, SQLite, MERN STACK, Python, PHP, Javascript, HTML, MS WORD, CSS, POWERPOINT, C 0.0 years",
+    "text": "CSS, MERN STACK, PHP, DBMS, POWERPOINT, SQLite, MS WORD, C, Javascript, EXCEL, Python, MongoDB, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Durgalekshmi",
       "email": "durgalekshmi91@gmail.com",
       "skills": [
-        "MongoDB",
-        "DBMS",
-        "EXCEL",
-        "SQLite",
-        "MERN STACK",
-        "Python",
-        "PHP",
-        "Javascript",
-        "HTML",
-        "MS WORD",
         "CSS",
+        "MERN STACK",
+        "PHP",
+        "DBMS",
         "POWERPOINT",
-        "C"
+        "SQLite",
+        "MS WORD",
+        "C",
+        "Javascript",
+        "EXCEL",
+        "Python",
+        "MongoDB",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -422,30 +418,40 @@
   {
     "resume_id": "RES_22",
     "filename": "GAYATHRI P K.pdf",
-    "text": "0.0 years",
+    "text": "CSS3, HTML5, Udemy, Python, Django 0.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
+      "name": "Gayathri P K",
+      "email": "gayathripk129@gmail.com",
+      "skills": [
+        "CSS3",
+        "HTML5",
+        "Udemy",
+        "Python",
+        "Django"
+      ],
       "experience_years": 0.0
     }
   },
   {
     "resume_id": "RES_23",
     "filename": "HARIPRIYA SAJEEVAN.pdf",
-    "text": "Content Marketing, Google ads, Meta ads, Email marketing, Digital Marketing, SEO, Google analytics, Social media management 0.0 years",
+    "text": "SEO, LinkedIn, Canva, Google Analytics, Meta Ads, Social Media, Malayalam, Email Marketing, Google Ads, Instagram, Facebook, English 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Haripriya Sajeevan",
       "email": "haripriyacsdigital@gmail.com",
       "skills": [
-        "Content Marketing",
-        "Google ads",
-        "Meta ads",
-        "Email marketing",
-        "Digital Marketing",
         "SEO",
-        "Google analytics",
-        "Social media management"
+        "LinkedIn",
+        "Canva",
+        "Google Analytics",
+        "Meta Ads",
+        "Social Media",
+        "Malayalam",
+        "Email Marketing",
+        "Google Ads",
+        "Instagram",
+        "Facebook",
+        "English"
       ],
       "experience_years": 0.0
     }
@@ -453,20 +459,16 @@
   {
     "resume_id": "RES_24",
     "filename": "HARISANKAR K  S.pdf",
-    "text": "Critical Thinking, JavaScript, Time Management, Java, Adaptability, HTML, CSS, Communication, MYSQL 0.0 years",
+    "text": "CSS, MYSQL, JavaScript, Java, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Harisankar K  S",
       "email": "hari.kavunkal.ks@gmail.com",
       "skills": [
-        "Critical Thinking",
-        "JavaScript",
-        "Time Management",
-        "Java",
-        "Adaptability",
-        "HTML",
         "CSS",
-        "Communication",
-        "MYSQL"
+        "MYSQL",
+        "JavaScript",
+        "Java",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -474,59 +476,71 @@
   {
     "resume_id": "RES_25",
     "filename": "JAHANARA JABBAR.pdf",
-    "text": "0.0 years",
+    "text": "HTML, SciPy, NLTK, Mediapipe, Computer Vision, SQL, Deep Learning, TensorFlow, PyTorch, Keras, Machine Learning, Python, Scikit, Numpy, NLP, Matplotlib 0.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
+      "name": "Jahanara Jabbar",
+      "email": "jjahanara471@gmail.com",
+      "skills": [
+        "HTML",
+        "SciPy",
+        "NLTK",
+        "Mediapipe",
+        "Computer Vision",
+        "SQL",
+        "Deep Learning",
+        "TensorFlow",
+        "PyTorch",
+        "Keras",
+        "Machine Learning",
+        "Python",
+        "Scikit",
+        "Numpy",
+        "NLP",
+        "Matplotlib"
+      ],
       "experience_years": 0.0
     }
   },
   {
     "resume_id": "RES_26",
     "filename": "jayakrishnan k.pdf",
-    "text": "Computer Vision, Teamwork, Git/GitHub, Python, Adaptability, Leadership, Excel, Visual Studio Code, Prompt Engineering, Java, Jupyter, AI, Time Management, Machine Learning, Power BI, Deep Learning, Data Engineer, R, Technical Documentation, Communication, C 0.0 years",
+    "text": "Reinforcement Learning, Power BI, Jupyter, Excel, GitHub, Computer Vision, Deep Learning, Git, Prompt Engineering, Visual Studio Code, R, C, Data Engineer, IoT, Machine Learning, Python, Java 0.8 years",
     "metadata": {
-      "name": "Jayakrishnan",
+      "name": "Jayakrishnan K",
       "email": "jayakrishnank664@gmail.com",
       "skills": [
-        "Computer Vision",
-        "Teamwork",
-        "Git/GitHub",
-        "Python",
-        "Adaptability",
-        "Leadership",
-        "Excel",
-        "Visual Studio Code",
-        "Prompt Engineering",
-        "Java",
-        "Jupyter",
-        "AI",
-        "Time Management",
-        "Machine Learning",
+        "Reinforcement Learning",
         "Power BI",
+        "Jupyter",
+        "Excel",
+        "GitHub",
+        "Computer Vision",
         "Deep Learning",
-        "Data Engineer",
+        "Git",
+        "Prompt Engineering",
+        "Visual Studio Code",
         "R",
-        "Technical Documentation",
-        "Communication",
-        "C"
+        "C",
+        "Data Engineer",
+        "IoT",
+        "Machine Learning",
+        "Python",
+        "Java"
       ],
-      "experience_years": 0.0
+      "experience_years": 0.8
     }
   },
   {
     "resume_id": "RES_27",
     "filename": "Joel D’cruz.pdf",
-    "text": "PHP, MySQL, Deep Learning, Web Development 0.0 years",
+    "text": "Deep Learning, PHP, MySQL 0.0 years",
     "metadata": {
-      "name": "Joel D Cruz",
+      "name": "Joel D’Cruz",
       "email": "joeldcruz96@gmail.com",
       "skills": [
-        "PHP",
-        "MySQL",
         "Deep Learning",
-        "Web Development"
+        "PHP",
+        "MySQL"
       ],
       "experience_years": 0.0
     }
@@ -534,26 +548,21 @@
   {
     "resume_id": "RES_29",
     "filename": "MERSHAN PETER.pdf",
-    "text": "Easy EDA, SolidWorks, Time Management, WPLSoft, IoT, Blue Prism, Adaptability, VSCode, CAD/CAM/CAE, Communication, Java Programming, Bluetooth connectivity, Team collaboration, Leadership, Arduino IDE 0.0 years",
+    "text": "CAD/CAM/CAE, Arduino IDE, Easy EDA, VSCode, WPLSoft, Bluetooth, Blue Prism, SolidWorks, IoT, Java 0.0 years",
     "metadata": {
-      "name": "Peter Mershan",
+      "name": "Mershan Peter",
       "email": "mershanpeter27@gmail.com",
       "skills": [
-        "Easy EDA",
-        "SolidWorks",
-        "Time Management",
-        "WPLSoft",
-        "IoT",
-        "Blue Prism",
-        "Adaptability",
-        "VSCode",
         "CAD/CAM/CAE",
-        "Communication",
-        "Java Programming",
-        "Bluetooth connectivity",
-        "Team collaboration",
-        "Leadership",
-        "Arduino IDE"
+        "Arduino IDE",
+        "Easy EDA",
+        "VSCode",
+        "WPLSoft",
+        "Bluetooth",
+        "Blue Prism",
+        "SolidWorks",
+        "IoT",
+        "Java"
       ],
       "experience_years": 0.0
     }
@@ -561,37 +570,35 @@
   {
     "resume_id": "RES_30",
     "filename": "Mohammed Safwan PK.pdf",
-    "text": "Multitasking, Adaptability, Microsoft Word, Microsoft PowerPoint, Microsoft Excel, Team Coordination, Reporting, Leadership 0.0 years",
+    "text": "Microsoft Excel, Microsoft PowerPoint, Microsoft Word 2.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Mohammed Safwan Pk",
       "email": "safwanpkpnm@gmail.com",
       "skills": [
-        "Multitasking",
-        "Adaptability",
-        "Microsoft Word",
-        "Microsoft PowerPoint",
         "Microsoft Excel",
-        "Team Coordination",
-        "Reporting",
-        "Leadership"
+        "Microsoft PowerPoint",
+        "Microsoft Word"
       ],
-      "experience_years": 0.0
+      "experience_years": 2.0
     }
   },
   {
     "resume_id": "RES_31",
     "filename": "MOHAMMED SHAMIL  M.pdf",
-    "text": "Supervised Learning, Time Management, Machine Learning, Videography, Video editing, Fraud Detection 0.0 years",
+    "text": "Machine Learning, Linkedin, Supervised Learning, Credit Card Processing, Video Editing, Python, Videography, Github, Online Banking 0.0 years",
     "metadata": {
-      "name": "",
+      "name": "Mohammed Shamil  M",
       "email": "mohammedshamilm17@gmail.com",
       "skills": [
-        "Supervised Learning",
-        "Time Management",
         "Machine Learning",
+        "Linkedin",
+        "Supervised Learning",
+        "Credit Card Processing",
+        "Video Editing",
+        "Python",
         "Videography",
-        "Video editing",
-        "Fraud Detection"
+        "Github",
+        "Online Banking"
       ],
       "experience_years": 0.0
     }
@@ -599,32 +606,30 @@
   {
     "resume_id": "RES_32",
     "filename": "Mohammed Shammas MP.pdf",
-    "text": "Mobile graphic designing, MS office, Powerpoint, Graphic designing, Content writing, Excel 0.0 years",
+    "text": "Powerpoint, Graphic Designing, MS Office, Excel 20.5 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Mohammed Shammas Mp",
       "email": "amsvkd1@gmail.com",
       "skills": [
-        "Mobile graphic designing",
-        "MS office",
         "Powerpoint",
-        "Graphic designing",
-        "Content writing",
+        "Graphic Designing",
+        "MS Office",
         "Excel"
       ],
-      "experience_years": 0.0
+      "experience_years": 20.5
     }
   },
   {
     "resume_id": "RES_33",
     "filename": "MOHAMMED SHIHAM C.pdf",
-    "text": "Java, Rdbms, Html 0.0 years",
+    "text": "Rdbms, Html, Java 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Mohammed Shiham C",
       "email": "MSCY0077@gmail.com",
       "skills": [
-        "Java",
         "Rdbms",
-        "Html"
+        "Html",
+        "Java"
       ],
       "experience_years": 0.0
     }
@@ -632,60 +637,70 @@
   {
     "resume_id": "RES_34",
     "filename": "MUHAMMED SHIFAN S.pdf",
-    "text": "0.0 years",
+    "text": "Tailwind CSS, React, Hooks, CSS, GitHub API, VS Code, CRUD, MERN, Express.js, Node.js, MongoDB, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
+      "name": "Muhammed Shifan S",
+      "email": "shifankichu100@gmail.com",
+      "skills": [
+        "Tailwind CSS",
+        "React",
+        "Hooks",
+        "CSS",
+        "GitHub API",
+        "VS Code",
+        "CRUD",
+        "MERN",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "HTML"
+      ],
       "experience_years": 0.0
     }
   },
   {
     "resume_id": "RES_35",
     "filename": "NANDHANA V A.pdf",
-    "text": "AWS, Intel OpenVino Toolkit, NumPy, Windows, Web, NodeJS, Linux, Machine Learning, Python, Selenium, Pandas, Power BI, TensorFlow, GitHub, Git 0.0 years",
+    "text": "Windows, NodeJS, GitHub, AWS, Intel OpenVino, Power BI, Git, Linux, Pandas, NumPy, TensorFlow, Selenium, Machine Learning, Python, NLP 2.1 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Nandhana V A",
       "email": "nandhana82003@gmail.com",
       "skills": [
-        "AWS",
-        "Intel OpenVino Toolkit",
-        "NumPy",
         "Windows",
-        "Web",
         "NodeJS",
+        "GitHub",
+        "AWS",
+        "Intel OpenVino",
+        "Power BI",
+        "Git",
         "Linux",
+        "Pandas",
+        "NumPy",
+        "TensorFlow",
+        "Selenium",
         "Machine Learning",
         "Python",
-        "Selenium",
-        "Pandas",
-        "Power BI",
-        "TensorFlow",
-        "GitHub",
-        "Git"
+        "NLP"
       ],
-      "experience_years": 0.0
+      "experience_years": 2.1
     }
   },
   {
     "resume_id": "RES_36",
     "filename": "Sahva Ibrahim.pdf",
-    "text": "AI & ML, PHP & Java script, Problem solving skill, C Programming, HTML & CSS, Communication skill, Java programming, Time management, Listening skill, Multi tasking, Python programming 0.0 years",
+    "text": "AI & ML, CSS, PHP, C Programming, Python, JavaScript, Java, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Sahva Ibrahim",
       "email": "Sahvaibrahim16@gmail.com",
       "skills": [
         "AI & ML",
-        "PHP & Java script",
-        "Problem solving skill",
+        "CSS",
+        "PHP",
         "C Programming",
-        "HTML & CSS",
-        "Communication skill",
-        "Java programming",
-        "Time management",
-        "Listening skill",
-        "Multi tasking",
-        "Python programming"
+        "Python",
+        "JavaScript",
+        "Java",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -693,15 +708,17 @@
   {
     "resume_id": "RES_37",
     "filename": "Sandra.pdf",
-    "text": "C programming, Bluetooth, Scilab, Matlab, Arduino 0.0 years",
+    "text": "Tinkercad, C programming, Arduino Uno, Bluetooth, Matlab, Scilab, Arduino 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Sandra",
       "email": "sandrakvinod06@gmail.com",
       "skills": [
+        "Tinkercad",
         "C programming",
+        "Arduino Uno",
         "Bluetooth",
-        "Scilab",
         "Matlab",
+        "Scilab",
         "Arduino"
       ],
       "experience_years": 0.0
@@ -710,65 +727,86 @@
   {
     "resume_id": "RES_38",
     "filename": "Shaahul hamid.pdf",
-    "text": "SQL, C++, Automation Testing, Agile, Manual Testing, Windows, Linux, Scrum, Java, Selenium, HTML, CSS, C 0.0 years",
+    "text": "CSS, Windows, STLC, SQL, SDLC, Linux, Agile, Scrum, C, C++, Selenium, Java, HTML 1.0 years",
     "metadata": {
-      "name": "",
+      "name": "Shaahul Hamid",
       "email": "shaahulhamid.kassim@gmail.com",
       "skills": [
-        "SQL",
-        "C++",
-        "Automation Testing",
-        "Agile",
-        "Manual Testing",
-        "Windows",
-        "Linux",
-        "Scrum",
-        "Java",
-        "Selenium",
-        "HTML",
         "CSS",
-        "C"
+        "Windows",
+        "STLC",
+        "SQL",
+        "SDLC",
+        "Linux",
+        "Agile",
+        "Scrum",
+        "C",
+        "C++",
+        "Selenium",
+        "Java",
+        "HTML"
       ],
-      "experience_years": 0.0
+      "experience_years": 1.0
     }
   },
   {
     "resume_id": "RES_39",
     "filename": "SIJEESH S.pdf",
-    "text": "0.0 years",
+    "text": "ML, Git, Visual Studio Code, Ethical Hacking, AI, Eclipse 0.0 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
+      "name": "Sijeesh S",
+      "email": "sijeesh.2392004.sijeesh@gmail.com",
+      "skills": [
+        "ML",
+        "Git",
+        "Visual Studio Code",
+        "Ethical Hacking",
+        "AI",
+        "Eclipse"
+      ],
       "experience_years": 0.0
     }
   },
   {
     "resume_id": "RES_40",
     "filename": "SREEJITH S.pdf",
-    "text": "0.0 years",
+    "text": "CSS3, Bootstrap, React Js, API, HTML5, LLM, SQL, ML, Node Js, Javascript, LangChain, Python, Arduino, Django, Java 2.1 years",
     "metadata": {
-      "name": "Unknown",
-      "email": "Not found",
-      "skills": [],
-      "experience_years": 0.0
+      "name": "Sreejith S",
+      "email": "sreejithsreekumar2002@gmail.com",
+      "skills": [
+        "CSS3",
+        "Bootstrap",
+        "React Js",
+        "API",
+        "HTML5",
+        "LLM",
+        "SQL",
+        "ML",
+        "Node Js",
+        "Javascript",
+        "LangChain",
+        "Python",
+        "Arduino",
+        "Django",
+        "Java"
+      ],
+      "experience_years": 2.1
     }
   },
   {
     "resume_id": "RES_41",
     "filename": "Sruthi Satheesan.pdf",
-    "text": "Problem solving, Decision making, database, rbcL PCR barcodes, HTML, python, Bioinformatics 0.0 years",
+    "text": "rbcL PCR, PCR Barcodes, Bioinformatics, Python, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Sruthi Satheesan",
       "email": "sruthisreejith07@gmail.com",
       "skills": [
-        "Problem solving",
-        "Decision making",
-        "database",
-        "rbcL PCR barcodes",
-        "HTML",
-        "python",
-        "Bioinformatics"
+        "rbcL PCR",
+        "PCR Barcodes",
+        "Bioinformatics",
+        "Python",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -776,24 +814,18 @@
   {
     "resume_id": "RES_42",
     "filename": "STENIYA LIEONS.pdf",
-    "text": "CREATIVITY, CRITICAL THINKING, BOOTSTRAP, PROBLEM SOLVING, FLEXIBILITY, PYTHON, TIME MANAGEMENT, DJANGO, HTML, JAVASCRIPT, CSS, MY SQL, TEAMWORK 0.0 years",
+    "text": "CSS, MY SQL, DJANGO, JAVASCRIPT, PYTHON, BOOTSTRAP, HTML 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Steniya Lieons",
       "email": "Steniyalieons2002@gmail.com",
       "skills": [
-        "CREATIVITY",
-        "CRITICAL THINKING",
-        "BOOTSTRAP",
-        "PROBLEM SOLVING",
-        "FLEXIBILITY",
-        "PYTHON",
-        "TIME MANAGEMENT",
-        "DJANGO",
-        "HTML",
-        "JAVASCRIPT",
         "CSS",
         "MY SQL",
-        "TEAMWORK"
+        "DJANGO",
+        "JAVASCRIPT",
+        "PYTHON",
+        "BOOTSTRAP",
+        "HTML"
       ],
       "experience_years": 0.0
     }
@@ -801,16 +833,15 @@
   {
     "resume_id": "RES_43",
     "filename": "Vismin Krishna M.pdf",
-    "text": "Object Detection, Python, YOLOv10, Deep Learning, Generative Pre-trained Transformer 0.0 years",
+    "text": "YOLOv10, Python, GPT, Deep Learning 0.0 years",
     "metadata": {
-      "name": "",
+      "name": "Vismin Krishna M",
       "email": "visminkrishnam@gmail.com",
       "skills": [
-        "Object Detection",
-        "Python",
         "YOLOv10",
-        "Deep Learning",
-        "Generative Pre-trained Transformer"
+        "Python",
+        "GPT",
+        "Deep Learning"
       ],
       "experience_years": 0.0
     }
@@ -818,15 +849,13 @@
   {
     "resume_id": "RES_44",
     "filename": "Yaseen Salim.pdf",
-    "text": "Image Encryption, Communication Skill, Foresighting, Computer Problem Solving 0.0 years",
+    "text": "Image Encryption, Computer 0.0 years",
     "metadata": {
-      "name": "Unknown",
+      "name": "Yaseen Salim",
       "email": "yaseensalim2005@gmail.com",
       "skills": [
         "Image Encryption",
-        "Communication Skill",
-        "Foresighting",
-        "Computer Problem Solving"
+        "Computer"
       ],
       "experience_years": 0.0
     }
