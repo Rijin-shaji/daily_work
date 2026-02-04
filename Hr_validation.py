@@ -36,7 +36,6 @@ data = json.load(open(INPUT_FILE, "r", encoding="utf-8"))
 results = []
 
 for r in data:
-    # Read directly from 'extracted' - no need for raw_output parsing
     extracted = r.get("extracted", {})
 
     name = extracted.get("name", "Unknown")

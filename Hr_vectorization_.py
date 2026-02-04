@@ -5,7 +5,6 @@ import faiss
 import numpy as np
 from transformers import AutoTokenizer, AutoModel
 
-# CONFIG
 VALIDATED_JSON = "step4_validated.json"
 FAISS_INDEX_PATH = "resume_faiss.index"
 VECTOR_SIZE = 384
@@ -13,7 +12,7 @@ HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE = 250
 CHUNK_OVERLAP = 50
 
-# LOAD MODEL
+
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
@@ -62,7 +61,6 @@ def build_faiss_index():
     print(f"Processing {len(resumes)} resumes...")
 
     for i, r in enumerate(resumes):
-        # Combine skills into text + optional other info
         skills_text = ", ".join(r.get("skills", []))
         exp_text = f"{r.get('experience_years', 0.0)} years"
         combined_text = f"{skills_text} {exp_text}".strip()
@@ -89,7 +87,7 @@ def build_faiss_index():
 
     # Stack vectors
     vectors = np.vstack(vectors).astype("float32")
-    index = faiss.IndexFlatIP(vectors.shape[1])  # Inner product similarity
+    index = faiss.IndexFlatIP(vectors.shape[1])
     index.add(vectors)
 
     # Save FAISS index

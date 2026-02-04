@@ -3,11 +3,9 @@ from groq import Groq
 from Hr_pdf_reading import find_best_employees
 from seeker_resumer_uploader import retrieve_resume_matches
 
-
-# ================= CONFIG =================
 LLM_MODEL = "llama-3.3-70b-versatile"
 
-# ================= LLM CLIENT =================
+#  LLM CLIENT
 api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY not set")
@@ -15,7 +13,7 @@ if not api_key:
 llm_client = Groq(api_key=api_key)
 
 
-# ================= JOB SEEKER LLM =================
+#JOB SEEKER LLM
 def seeker_analysis(job_match):
     prompt = f"""
 You are a career advisor.
@@ -45,7 +43,7 @@ Be concise. Do not invent facts.
     return response.choices[0].message.content
 
 
-# ================= HR EVALUATION LLM =================
+#  HR EVALUATION LLM
 def hr_evaluation(candidate):
     prompt = f"""
 You are an HR evaluator.
@@ -79,7 +77,7 @@ Do NOT hallucinate.
     return response.choices[0].message.content
 
 
-# ================= MAIN CONTROLLER =================
+# MAIN CONTROLLER
 def main():
     print("\nWho are you?")
     print("1. Job Seeker")
@@ -87,7 +85,7 @@ def main():
 
     choice = input("Enter 1 or 2: ").strip()
 
-    # -------- JOB SEEKER MODE --------
+    # JOB SEEKER MODE
     if choice == "1":
         matches = retrieve_resume_matches()
 
@@ -101,7 +99,7 @@ def main():
             print(f"MATCH #{i} | Score: {match['similarity_score']:.4f}\n")
             print(seeker_analysis(match))
 
-    # -------- HR MODE --------
+    #  HR MODE
     elif choice == "2":
         candidates = find_best_employees()
 
@@ -125,7 +123,7 @@ def main():
         print("Invalid choice")
 
 
-# ================= RUN =================
+# RUN
 if __name__ == "__main__":
     main()
 

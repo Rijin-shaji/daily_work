@@ -9,7 +9,6 @@ from tkinter import filedialog
 from transformers import AutoTokenizer, AutoModel
 
 
-# CONFIG
 FAISS_INDEX_PATH = "rag_vector_index.faiss"
 METADATA_PATH = "job_description_chunks_metadata.json"
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"

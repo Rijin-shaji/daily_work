@@ -3,7 +3,6 @@ import json
 import re
 import pdfplumber
 
-# CONFIG
 RESUME_FOLDER = "D:/project_2_resumes"
 OUTPUT_FILE = "step1_raw_text.json"
 

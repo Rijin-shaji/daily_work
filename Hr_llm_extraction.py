@@ -18,7 +18,6 @@ if not api_key:
 
 client = Groq(api_key=api_key)
 
-# Simplified prompt - ONLY for skills extraction
 PROMPT = """
 Extract professional and technical skills from the following resume text.
 
@@ -35,7 +34,6 @@ Return ONLY a JSON array of skills (NO markdown, NO code blocks):
 Resume text:
 """
 
-# Headers indicating skills sections
 SKILLS_HEADERS = [
     "skills", "technical skills", "competencies", "expertise",
     "tools", "technologies", "projects", "certifications"
@@ -98,17 +96,14 @@ def run():
         print(f"  Name: {final_name}")
         print(f"  Email: {final_email}")
 
-        # Combine skills text for LLM
         skills_text = combine_skill_sections(r)
         if not skills_text.strip():
             skills_text = r.get("raw_text", "")[:2000]
 
         experience_text = r.get("experience_section", "")
 
-        # Create input for LLM - ONLY for skills extraction
         llm_input = f"{skills_text}\n\n{experience_text}"
 
-        # Call LLM ONLY for skills
         try:
             response = client.chat.completions.create(
                 model=LLM_MODEL_NAME,
@@ -118,14 +113,12 @@ def run():
 
             content = response.choices[0].message.content.strip()
 
-            # Remove markdown if present
             if content.startswith("```"):
                 content = re.sub(r'^```(?:json)?\n?', '', content)
                 content = re.sub(r'\n?```$', '', content)
 
             skills_list = json.loads(content)
 
-            # Ensure it's a list
             if not isinstance(skills_list, list):
                 skills_list = []
 
@@ -133,10 +126,8 @@ def run():
             print(f"  ERROR extracting skills: {e}")
             skills_list = []
 
-        # Calculate experience years
         exp_years = extract_experience_years(experience_text + " " + skills_text)
 
-        # Build final result - name and email directly from JSON
         final_result = {
             "name": final_name,
             "email": final_email,

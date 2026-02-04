@@ -2,8 +2,6 @@ import json
 import os
 import textwrap
 
-
-# CONFIG
 VALIDATED_JSON = "step4_validated.json"
 OUTPUT_CHUNKS_JSON = "step5_chunks.json"
 CHUNK_SIZE = 250
@@ -27,7 +25,6 @@ def run():
     all_chunks = []
 
     for r in resumes:
-        # Combine skills + experience section
         skills_text = ", ".join(r.get("skills", []))
         exp_text = r.get("experience_section", "")
         combined_text = (skills_text + " " + exp_text).strip()
