@@ -92,10 +92,8 @@ def run():
     results = []
 
     for r in data:
-        # DIRECTLY take name and email from JSON - that's it!
         final_name = r.get("name", "Unknown")
         final_email = r.get("email", "")
-
         print(f"Processing: {r['filename']}")
         print(f"  Name: {final_name}")
         print(f"  Email: {final_email}")

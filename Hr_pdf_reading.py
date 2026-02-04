@@ -8,8 +8,6 @@ import pdfplumber
 from tkinter import Tk, filedialog
 from transformers import AutoTokenizer, AutoModel
 
-
-# CONFIG
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 TOP_K = 20
 FAISS_INDEX_FILE = "resume_faiss.index"

@@ -115,6 +115,7 @@ def main():
             print(f"Rank        : {i}")
             print(f"Name        : {cand.get('name')}")
             print(f"Email       : {cand.get('email')}")
+            print(f"Skills      : {cand.get('skills')}")
             print(f"Experience  : {cand.get('experience_years')} years")
             print(f"Final Score : {cand.get('final_score')}\n")
             print(hr_evaluation(cand))
