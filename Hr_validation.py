@@ -20,7 +20,7 @@ def clean_skills(skills):
         s = str(s).strip().strip(",.;:")
         if s:
             clean.append(s)
-    return list(set(clean))  # remove duplicates
+    return list(set(clean))
 
 
 def validate_experience(exp):

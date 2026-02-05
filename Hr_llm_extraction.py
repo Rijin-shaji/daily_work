@@ -51,8 +51,6 @@ def combine_skill_sections(r):
 
 def extract_experience_years(text):
     text = re.sub(r'(\d{4})([A-Za-z])', r'\1 \2', text)
-    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
-
     matches = re.findall(
         r'((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*\d{4})\s*(?:-|to)\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*\d{4}|Present|Current|Now)?',
         text, flags=re.IGNORECASE

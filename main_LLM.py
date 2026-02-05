@@ -15,19 +15,35 @@ llm_client = Groq(api_key=api_key)
 
 #JOB SEEKER LLM
 def seeker_analysis(job_match):
+    meta = job_match.get("metadata", {})
+
     prompt = f"""
 You are a career advisor.
+Use ONLY the trusted fields below. Do NOT infer or invent facts.
 
-Job Information:
+Job Information (trusted):
+Company Name: {meta.get("company", "Not provided")}
+Job Role: {meta.get("job_title", "Not provided")}
+Location: {meta.get("location", "Not provided")}
+
+Job Description:
 {job_match.get("text", "")}
 
-Explain:
-1. Role Summary
-2. Required Skills
-3. Experience Level
-4. Why this role suits the candidate
+Respond in EXACTLY this format:
 
-Be concise. Do not invent facts.
+Role Summary:
+- <one short paragraph>
+
+Required Skills:
+- <comma-separated list>
+
+Experience Level:
+- <years or range if mentioned, else "Not specified">
+
+Why this role suits the candidate:
+- <one short paragraph>
+
+No introduction. No markdown. No extra text.
 """
 
     response = llm_client.chat.completions.create(
@@ -41,6 +57,7 @@ Be concise. Do not invent facts.
     )
 
     return response.choices[0].message.content
+
 
 
 #  HR EVALUATION LLM
@@ -79,48 +96,55 @@ Do NOT hallucinate.
 
 # MAIN CONTROLLER
 def main():
-    print("\nWho are you?")
-    print("1. Job Seeker")
-    print("2. HR / Recruiter")
+    while True:
+        print("\nWho are you?")
+        print("1. Job Seeker")
+        print("2. HR / Recruiter")
+        print("0. Exit")
 
-    choice = input("Enter 1 or 2: ").strip()
+        choice = input("Enter 1, 2 or 0: ").strip()
 
-    # JOB SEEKER MODE
-    if choice == "1":
-        matches = retrieve_resume_matches()
+        # EXIT
+        if choice == "0":
+            print("Exiting application. Goodbye!!")
+            break
 
-        if not matches:
-            print("No job matches found")
-            return
+        # JOB SEEKER MODE
+        elif choice == "1":
+            matches = retrieve_resume_matches()
 
-        print("\n===== TOP JOB MATCHES =====\n")
-        for i, match in enumerate(matches[:3], 1):
-            print("=" * 60)
-            print(f"MATCH #{i} | Score: {match['similarity_score']:.4f}\n")
-            print(seeker_analysis(match))
+            if not matches:
+                print("No job matches found")
+                continue
 
-    #  HR MODE
-    elif choice == "2":
-        candidates = find_best_employees()
+            print("\n===== TOP JOB MATCHES =====\n")
+            for i, match in enumerate(matches[:3], 1):
+                print("=" * 60)
+                print(f"MATCH #{i} | Score: {match['similarity_score']:.4f}\n")
+                print(seeker_analysis(match))
 
-        if not candidates:
-            print("No suitable candidates found")
-            return
+        # HR MODE
+        elif choice == "2":
+            candidates = find_best_employees()
 
-        print("\n===== TOP CANDIDATES =====\n")
-        for i, cand in enumerate(candidates[:6], 1):
-            print("=" * 60)
-            print(f"Rank        : {i}")
-            print(f"Name        : {cand.get('name')}")
-            print(f"Email       : {cand.get('email')}")
-            print(f"Skills      : {cand.get('skills')}")
-            print(f"Experience  : {cand.get('experience_years')} years")
-            print(f"Final Score : {cand.get('final_score')}\n")
-            print(hr_evaluation(cand))
+            if not candidates:
+                print("No suitable candidates found")
+                continue
 
+            print("\n===== TOP CANDIDATES =====\n")
+            for i, cand in enumerate(candidates[:6], 1):
+                print("=" * 60)
+                print(f"Rank        : {i}")
+                print(f"Name        : {cand.get('name')}")
+                print(f"Email       : {cand.get('email')}")
+                print(f"Skills      : {cand.get('skills')}")
+                print(f"Experience  : {cand.get('experience_years')} years")
+                print(f"Final Score : {cand.get('final_score')}\n")
+                print(hr_evaluation(cand))
 
-    else:
-        print("Invalid choice")
+        else:
+            print("Invalid choice. Please enter 1, 2, or 0.")
+
 
 
 # RUN
