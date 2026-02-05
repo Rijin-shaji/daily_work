@@ -13,10 +13,13 @@
         "AES-256",
         "ECC",
         "SHA-3",
-        "Blockchain",
-        "UX design"
+        "Blockchain"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -33,9 +36,13 @@
         "Machine Learning",
         "IOT",
         "DevOps",
-        "Android App"
+        "Android"
       ],
-      "experience_years": 0.2
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 1
+      }
     }
   },
   {
@@ -54,7 +61,11 @@
         "Python Fundamentals",
         "NPTEL"
       ],
-      "experience_years": 3.0
+      "experience_years": {
+        "total_experience_years": 3.0,
+        "work_experience_count": 1,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -70,12 +81,14 @@
         "C++",
         "Arduino",
         "AI",
-        "Machine Learning",
-        "Image Processing",
         "GSM",
         "Braille"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -85,19 +98,22 @@
       "name": "Ahamed Akhil M N",
       "email": "ahamedakhil55@gmail.com",
       "skills": [
-        "Artificial Intelligence",
-        "Machine Learning",
+        "Python",
         "DSA",
         "DBMS",
         "Data Analytics",
-        "Python",
-        "IBM",
+        "Operating System",
+        "Data Visualization",
+        "Machine Learning",
+        "Artificial Intelligence",
         "Digital Marketing",
-        "Microsoft",
-        "Power BI",
-        "Robotics"
+        "Power BI"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -113,7 +129,11 @@
         "APIs",
         "GITHUB"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -125,7 +145,11 @@
       "skills": [
         "Tally"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -145,7 +169,11 @@
         "MySQL",
         "PHP"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -155,7 +183,11 @@
       "name": "Anila Rajan",
       "email": "jananila346@gamil.com",
       "skills": [],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -169,9 +201,13 @@
         "PHP",
         "C++",
         "Python",
-        "English"
+        "C"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -187,7 +223,11 @@
         "Flask",
         "Google Cloud AI"
       ],
-      "experience_years": 2.0
+      "experience_years": {
+        "total_experience_years": 2.0,
+        "work_experience_count": 1,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -197,7 +237,11 @@
       "name": "Anumol Reji",
       "email": "anureji6282@gmail.com",
       "skills": [],
-      "experience_years": 3.1
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -217,12 +261,17 @@
         "GitHub",
         "MySQL",
         "MongoDB",
-        "SAP BRIM",
-        "CRT",
-        "CRM",
-        "ER Diagrams"
+        "ER Diagrams",
+        "NPTEL",
+        "IoT",
+        "Cyber Security",
+        "AI"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -244,14 +293,13 @@
         "MongoDB",
         "Mongoose",
         "JWT",
-        "bcrypt",
-        "Git",
-        "GitHub",
-        "GitLab",
-        "Vercel",
-        "Render"
+        "bcrypt"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -261,7 +309,11 @@
       "name": "Avinash Fernandez",
       "email": "af14son@gmail.com",
       "skills": [],
-      "experience_years": 10.1
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -273,12 +325,16 @@
       "skills": [
         "Java",
         "Spring Boot",
-        "Core Java",
-        "OOP",
         "Node.js",
-        "React"
+        "React",
+        "Core Java",
+        "OOP"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -288,7 +344,6 @@
       "name": "Cyril M George",
       "email": "cyrilmgeorge07@gmail.com",
       "skills": [
-        "MS Excel",
         "HTML",
         "CSS",
         "Bootstrap",
@@ -301,7 +356,11 @@
         "Power BI",
         "Python"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -311,15 +370,17 @@
       "name": "Devika B",
       "email": "devikab140@gmail.com",
       "skills": [
-        "MS Excel",
-        "MS Word",
         "Oracle Database",
         "SQL",
         "Power BI",
         "Tableau",
         "Machine Learning"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -342,7 +403,11 @@
         "MERN Stack",
         "Chrome Developer"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -361,13 +426,13 @@
         "MongoDB",
         "Express.js",
         "React.js",
-        "Node.js",
-        "Git",
-        "GitHub",
-        "VS Code",
-        "Chrome DevTools"
+        "Node.js"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -377,7 +442,7 @@
       "name": "Durgalekshmi",
       "email": "durgalekshmi91@gmail.com",
       "skills": [
-        "C",
+        "C programming",
         "Python",
         "PHP",
         "Javascript",
@@ -391,7 +456,11 @@
         "EXCEL",
         "POWERPOINT"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -407,7 +476,11 @@
         "CSS3",
         "Udemy"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -419,18 +492,15 @@
       "skills": [
         "Google Analytics",
         "SEO",
-        "Google Ads",
-        "Meta Ads",
         "Email Marketing",
-        "Social Media",
-        "Canva",
-        "English",
-        "Malayalam",
-        "Instagram",
-        "Facebook",
-        "LinkedIn"
+        "Google Ads",
+        "Meta Ads"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -446,7 +516,11 @@
         "JavaScript",
         "MYSQL"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -457,23 +531,28 @@
       "email": "jjahanara471@gmail.com",
       "skills": [
         "Python",
-        "TensorFlow",
+        "Computer Vision",
+        "Numpy",
+        "Tensorflow",
         "SciPy",
         "Matplotlib",
-        "Numpy",
-        "SQL",
+        "NLP",
+        "Artificial Intelligence",
         "HTML",
-        "PyTorch",
-        "Scikit",
+        "Machine Learning",
+        "SQL",
+        "Deep Learning",
+        "SpeechRecognition",
         "NLTK",
         "Mediapipe",
         "Keras",
-        "Deep Learning",
-        "Machine Learning",
-        "NLP",
-        "Computer Vision"
+        "Scikit-learn"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -486,22 +565,22 @@
         "Machine Learning",
         "Deep Learning",
         "Computer Vision",
-        "Power BI",
-        "Excel",
-        "Git",
-        "GitHub",
-        "Visual Studio Code",
-        "Jupyter",
+        "AI",
+        "DBMS",
         "Python",
         "Java",
         "R",
+        "Git",
         "C",
         "IoT",
         "Reinforcement Learning",
-        "Data Engineer",
-        "Prompt Engineering"
+        "Data Engineer"
       ],
-      "experience_years": 0.8
+      "experience_years": {
+        "total_experience_years": 0.3,
+        "work_experience_count": 1,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -515,7 +594,11 @@
         "MySQL",
         "Deep Learning"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -525,18 +608,21 @@
       "name": "Mershan Peter",
       "email": "mershanpeter27@gmail.com",
       "skills": [
-        "VSCode",
-        "SolidWorks",
-        "Arduino IDE",
-        "WPLSoft",
-        "Blue Prism",
-        "Easy EDA",
-        "Java",
-        "Bluetooth",
         "IoT",
-        "CAD/CAM/CAE"
+        "Bluetooth",
+        "Java",
+        "CAD",
+        "CAM",
+        "CAE",
+        "SolidWorks",
+        "Robotics",
+        "AI"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -550,7 +636,11 @@
         "Microsoft Excel",
         "Microsoft PowerPoint"
       ],
-      "experience_years": 2.0
+      "experience_years": {
+        "total_experience_years": 2.0,
+        "work_experience_count": 1,
+        "internship_count": 0
+      }
     }
   },
   {
@@ -559,37 +649,16 @@
     "extracted": {
       "name": "Mohammed Shamil  M",
       "email": "mohammedshamilm17@gmail.com",
-      "skills": [
-        "Machine Learning",
-        "Supervised Learning",
-        "Video Editing",
-        "Videography",
-        "Github",
-        "Linkedin",
-        "Python",
-        "Credit Card Processing",
-        "Online Banking"
-      ],
-      "experience_years": 0.0
+      "skills": [],
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
     "resume_id": "RES_32",
-    "filename": "Mohammed Shammas MP.pdf",
-    "extracted": {
-      "name": "Mohammed Shammas Mp",
-      "email": "amsvkd1@gmail.com",
-      "skills": [
-        "MS Office",
-        "Excel",
-        "Powerpoint",
-        "Graphic Designing"
-      ],
-      "experience_years": 20.5
-    }
-  },
-  {
-    "resume_id": "RES_33",
     "filename": "MOHAMMED SHIHAM C.pdf",
     "extracted": {
       "name": "Mohammed Shiham C",
@@ -599,11 +668,15 @@
         "Rdbms",
         "Html"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_34",
+    "resume_id": "RES_33",
     "filename": "MUHAMMED SHIFAN S.pdf",
     "extracted": {
       "name": "Muhammed Shifan S",
@@ -622,37 +695,40 @@
         "Node.js",
         "CSS"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_35",
+    "resume_id": "RES_34",
     "filename": "NANDHANA V A.pdf",
     "extracted": {
       "name": "Nandhana V A",
       "email": "nandhana82003@gmail.com",
       "skills": [
         "Machine Learning",
-        "Git",
-        "GitHub",
-        "Linux",
-        "AWS",
-        "Windows",
         "Python",
         "NodeJS",
         "Intel OpenVino",
         "Selenium",
         "TensorFlow",
         "NLP",
-        "NumPy",
         "Pandas",
+        "NumPy",
         "Power BI"
       ],
-      "experience_years": 2.1
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 1
+      }
     }
   },
   {
-    "resume_id": "RES_36",
+    "resume_id": "RES_35",
     "filename": "Sahva Ibrahim.pdf",
     "extracted": {
       "name": "Sahva Ibrahim",
@@ -667,11 +743,15 @@
         "HTML",
         "CSS"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_37",
+    "resume_id": "RES_36",
     "filename": "Sandra.pdf",
     "extracted": {
       "name": "Sandra",
@@ -685,11 +765,15 @@
         "Bluetooth",
         "Tinkercad"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_38",
+    "resume_id": "RES_37",
     "filename": "Shaahul hamid.pdf",
     "extracted": {
       "name": "Shaahul Hamid",
@@ -705,15 +789,17 @@
         "Linux",
         "Windows",
         "Scrum",
-        "Agile",
-        "SDLC",
-        "STLC"
+        "Agile"
       ],
-      "experience_years": 1.0
+      "experience_years": {
+        "total_experience_years": 1.0,
+        "work_experience_count": 1,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_39",
+    "resume_id": "RES_38",
     "filename": "SIJEESH S.pdf",
     "extracted": {
       "name": "Sijeesh S",
@@ -726,11 +812,15 @@
         "Eclipse",
         "Ethical Hacking"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_40",
+    "resume_id": "RES_39",
     "filename": "SREEJITH S.pdf",
     "extracted": {
       "name": "Sreejith S",
@@ -748,15 +838,20 @@
         "Java",
         "API",
         "Arduino",
+        "ML",
         "LangChain",
         "LLM",
-        "ML"
+        "Excel"
       ],
-      "experience_years": 2.1
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_41",
+    "resume_id": "RES_40",
     "filename": "Sruthi Satheesan.pdf",
     "extracted": {
       "name": "Sruthi Satheesan",
@@ -768,11 +863,15 @@
         "Bioinformatics",
         "PCR Barcodes"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_42",
+    "resume_id": "RES_41",
     "filename": "STENIYA LIEONS.pdf",
     "extracted": {
       "name": "Steniya Lieons",
@@ -786,11 +885,15 @@
         "MY SQL",
         "CSS"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_43",
+    "resume_id": "RES_42",
     "filename": "Vismin Krishna M.pdf",
     "extracted": {
       "name": "Vismin Krishna M",
@@ -801,11 +904,15 @@
         "GPT",
         "Deep Learning"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   },
   {
-    "resume_id": "RES_44",
+    "resume_id": "RES_43",
     "filename": "Yaseen Salim.pdf",
     "extracted": {
       "name": "Yaseen Salim",
@@ -814,7 +921,11 @@
         "Computer",
         "Image Encryption"
       ],
-      "experience_years": 0.0
+      "experience_years": {
+        "total_experience_years": 0,
+        "work_experience_count": 0,
+        "internship_count": 0
+      }
     }
   }
 ]

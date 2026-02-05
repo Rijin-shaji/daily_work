@@ -13,7 +13,7 @@ HEADERS = [
 ]
 
 SKILL_HEADERS = [
-    "skills","technical skills","competencies","expertise",
+    "skills","technical skills","competencies","expertise","My Skills"
     "tools","technologies","projects","certifications"
 ]
 

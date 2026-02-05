@@ -49,37 +49,64 @@ def combine_skill_sections(r):
     return skills_text.strip()
 
 
-def extract_experience_years(text):
+def extract_experience_details(text):
+    if not text or not isinstance(text, str):
+        return {
+            "total_experience_years": 0,
+            "work_experience_count": 0,
+            "internship_count": 0
+        }
+
     text = re.sub(r'(\d{4})([A-Za-z])', r'\1 \2', text)
-    matches = re.findall(
-        r'((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*\d{4})\s*(?:-|to)\s*((?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*\d{4}|Present|Current|Now)?',
-        text, flags=re.IGNORECASE
+
+    blocks = re.split(r'\n{2,}|(?:experience|employment|internship)', text, flags=re.I)
+
+    work_months = 0
+    internship_months = 0
+    work_count = 0
+    internship_count = 0
+
+    date_pattern = re.compile(
+        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*(\d{4})'
+        r'\s*(?:-|to)\s*'
+        r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*(\d{4}|Present|Current|Now)',
+        re.I
     )
 
-    total_months = 0
-    for start, end in matches:
+    for block in blocks:
+        block_lower = block.lower()
+        match = date_pattern.search(block)
+
+        if not match:
+            continue
+
+        sm, sy, em, ey = match.groups()
+
         try:
-            start = start.strip()
-            start_date = datetime.strptime(start, "%b %Y") if any(m.isalpha() for m in start) else datetime.strptime(
-                start, "%Y")
+            start_date = datetime.strptime(f"{sm or 'Jan'} {sy}", "%b %Y")
+            if ey.lower() in {"present", "current", "now"}:
+                end_date = datetime.now()
+            else:
+                end_date = datetime.strptime(f"{em or 'Jan'} {ey}", "%b %Y")
         except:
             continue
 
-        try:
-            if end is None or end.strip().lower() in ["present", "current", "now"]:
-                end_date = datetime.now()
-            else:
-                end = end.strip()
-                end_date = datetime.strptime(end, "%b %Y") if any(m.isalpha() for m in end) else datetime.strptime(end,
-                                                                                                                   "%Y")
-        except:
-            end_date = datetime.now()
-
         months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
-        if months > 0:
-            total_months += months
+        if months <= 0:
+            continue
 
-    return round(total_months / 12.0, 1)
+        if re.search(r'\bintern(ship)?\b', block_lower):
+            internship_months += months
+            internship_count += 1
+        else:
+            work_months += months
+            work_count += 1
+
+    return {
+        "total_experience_years": round(work_months / 12, 1) if work_months else 0,
+        "work_experience_count": work_count,
+        "internship_count": internship_count
+    }
 
 
 # MAIN
@@ -124,7 +151,7 @@ def run():
             print(f"  ERROR extracting skills: {e}")
             skills_list = []
 
-        exp_years = extract_experience_years(experience_text + " " + skills_text)
+        exp_years = extract_experience_details(experience_text + " " + skills_text)
 
         final_result = {
             "name": final_name,

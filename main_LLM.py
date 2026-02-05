@@ -15,49 +15,23 @@ llm_client = Groq(api_key=api_key)
 
 #JOB SEEKER LLM
 def seeker_analysis(job_match):
-    meta = job_match.get("metadata", {})
+    metadata = job_match.get("metadata", {})
+
+    company = metadata.get("company", "Not provided")
+    role = metadata.get("job_title", "Not provided")
+    location = metadata.get("location", "Not provided")
 
     prompt = f"""
 You are a career advisor.
-Use ONLY the trusted fields below. Do NOT infer or invent facts.
 
-Job Information (trusted):
-Company Name: {meta.get("company", "Not provided")}
-Job Role: {meta.get("job_title", "Not provided")}
-Location: {meta.get("location", "Not provided")}
+Company Name: {company}
+Job Role: {role}
+Location: {location}
 
-Job Description:
+Job Description (supporting context only):
 {job_match.get("text", "")}
-
-Respond in EXACTLY this format:
-
-Role Summary:
-- <one short paragraph>
-
-Required Skills:
-- <comma-separated list>
-
-Experience Level:
-- <years or range if mentioned, else "Not specified">
-
-Why this role suits the candidate:
-- <one short paragraph>
-
-No introduction. No markdown. No extra text.
 """
-
-    response = llm_client.chat.completions.create(
-        model=LLM_MODEL,
-        messages=[
-            {"role": "system", "content": "You are a professional career advisor."},
-            {"role": "user", "content": prompt}
-        ],
-        temperature=0.4,
-        max_tokens=300
-    )
-
-    return response.choices[0].message.content
-
+    return prompt
 
 
 #  HR EVALUATION LLM
@@ -144,9 +118,6 @@ def main():
 
         else:
             print("Invalid choice. Please enter 1, 2, or 0.")
-
-
-
 # RUN
 if __name__ == "__main__":
     main()
