@@ -49,22 +49,26 @@ def combine_skill_sections(r):
     return skills_text.strip()
 
 
-def extract_experience_details(text):
+def extract_experience_years(text):
     if not text or not isinstance(text, str):
         return {
-            "total_experience_years": 0,
-            "work_experience_count": 0,
-            "internship_count": 0
+            "experience_years": 0.0,
+            "internship_years": 0.0,
+            "total_experience_years": 0.0
         }
 
     text = re.sub(r'(\d{4})([A-Za-z])', r'\1 \2', text)
+    text = re.sub(r'([a-z])([A-Z])', r'\1 \2', text)
 
-    blocks = re.split(r'\n{2,}|(?:experience|employment|internship)', text, flags=re.I)
+    lines = [l.strip() for l in text.split("\n") if l.strip()]
+    blocks = []
 
-    work_months = 0
+    WINDOW = 4
+    for i in range(len(lines)):
+        blocks.append(" ".join(lines[i:i+WINDOW]))
+
+    experience_months = 0
     internship_months = 0
-    work_count = 0
-    internship_count = 0
 
     date_pattern = re.compile(
         r'(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)?\s*(\d{4})'
@@ -73,41 +77,69 @@ def extract_experience_details(text):
         re.I
     )
 
+    EXPERIENCE_ROLES = [
+        "engineer", "developer", "software", "analyst",
+        "consultant", "associate", "programmer",
+        "scientist"
+    ]
+
+    INTERNSHIP_KEYWORDS = ["intern", "internship", "trainee"]
+
+    IT_DOMAINS = [
+        "python", "java", "ml", "ai", "data", "web",
+        "software", "cloud", "devops", "flutter",
+        "react", "node", "backend", "frontend"
+    ]
+
+    EXCLUDE_KEYWORDS = [
+        "education", "academic", "course",
+        "certification", "workshop", "seminar"
+    ]
+
     for block in blocks:
         block_lower = block.lower()
-        match = date_pattern.search(block)
 
-        if not match:
+        if any(k in block_lower for k in EXCLUDE_KEYWORDS):
             continue
 
-        sm, sy, em, ey = match.groups()
-
-        try:
-            start_date = datetime.strptime(f"{sm or 'Jan'} {sy}", "%b %Y")
-            if ey.lower() in {"present", "current", "now"}:
-                end_date = datetime.now()
-            else:
-                end_date = datetime.strptime(f"{em or 'Jan'} {ey}", "%b %Y")
-        except:
+        matches = list(date_pattern.finditer(block))
+        if not matches:
             continue
 
-        months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
-        if months <= 0:
-            continue
+        is_internship = any(k in block_lower for k in INTERNSHIP_KEYWORDS)
+        is_experience = any(k in block_lower for k in EXPERIENCE_ROLES)
+        is_it_domain = any(k in block_lower for k in IT_DOMAINS)
 
-        if re.search(r'\bintern(ship)?\b', block_lower):
-            internship_months += months
-            internship_count += 1
-        else:
-            work_months += months
-            work_count += 1
+        for match in matches:
+            sm, sy, em, ey = match.groups()
+
+            try:
+                start_date = datetime.strptime(f"{sm or 'Jan'} {sy}", "%b %Y")
+                end_date = (
+                    datetime.now()
+                    if ey.lower() in {"present", "current", "now"}
+                    else datetime.strptime(f"{em or 'Jan'} {ey}", "%b %Y")
+                )
+            except:
+                continue
+
+            months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
+            if months <= 0:
+                continue
+
+            if is_internship and is_it_domain and months >= 1:
+                internship_months += months
+            elif is_experience:
+                experience_months += months
+
+    experience_years = round(experience_months / 12, 1)
+    internship_years = round(internship_months / 12, 1)
 
     return {
-        "total_experience_years": round(work_months / 12, 1) if work_months else 0,
-        "work_experience_count": work_count,
-        "internship_count": internship_count
+        "experience_years": experience_years,
+        "internship_years": internship_years,
+        "total_experience_years": round(experience_years + internship_years, 1)
     }
-
 
 # MAIN
 def run():
@@ -151,7 +183,7 @@ def run():
             print(f"  ERROR extracting skills: {e}")
             skills_list = []
 
-        exp_years = extract_experience_details(experience_text + " " + skills_text)
+        exp_years = extract_experience_years(experience_text + " " + skills_text)
 
         final_result = {
             "name": final_name,

@@ -8,17 +8,13 @@
       "skills": [
         "Flutter",
         "Dart",
-        "Python",
-        "Firebase",
-        "AES-256",
-        "ECC",
-        "SHA-3",
-        "Blockchain"
+        "IOS",
+        "Android"
       ],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -32,16 +28,15 @@
         "Python",
         "NumPy",
         "Pandas",
-        "Scikit-Learn",
-        "Machine Learning",
+        "Scikit Learn",
         "IOT",
         "DevOps",
         "Android"
       ],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 1
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -51,20 +46,11 @@
     "extracted": {
       "name": "Abhijith V",
       "email": "abhijithvkumar02@gmail.com",
-      "skills": [
-        "Python",
-        "MERN",
-        "PHP",
-        "Java",
-        "DataBase",
-        "Python Basics",
-        "Python Fundamentals",
-        "NPTEL"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 3.0,
-        "work_experience_count": 1,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -74,20 +60,11 @@
     "extracted": {
       "name": "Abhishek S Kumar",
       "email": "abhishekskumar2@gmail.com",
-      "skills": [
-        "Python",
-        "Java",
-        "C",
-        "C++",
-        "Arduino",
-        "AI",
-        "GSM",
-        "Braille"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -97,22 +74,11 @@
     "extracted": {
       "name": "Ahamed Akhil M N",
       "email": "ahamedakhil55@gmail.com",
-      "skills": [
-        "Python",
-        "DSA",
-        "DBMS",
-        "Data Analytics",
-        "Operating System",
-        "Data Visualization",
-        "Machine Learning",
-        "Artificial Intelligence",
-        "Digital Marketing",
-        "Power BI"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -122,17 +88,11 @@
     "extracted": {
       "name": "Akshay Kannan",
       "email": "iamakshy81@gmail.com",
-      "skills": [
-        "React.js",
-        "Tailwind CSS",
-        "JavaScript",
-        "APIs",
-        "GITHUB"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -142,13 +102,11 @@
     "extracted": {
       "name": "Alex Joby",
       "email": "alexjoby85@gmail.com",
-      "skills": [
-        "Tally"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -158,21 +116,11 @@
     "extracted": {
       "name": "Aneeta Varghese",
       "email": "aneetavarghese987@gmail.com",
-      "skills": [
-        "Deep Learning",
-        "SVM",
-        "Android",
-        "React.js",
-        "Django",
-        "Java",
-        "Android Studio",
-        "MySQL",
-        "PHP"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -184,9 +132,9 @@
       "email": "jananila346@gamil.com",
       "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -196,17 +144,11 @@
     "extracted": {
       "name": "Anjali K C",
       "email": "anjalikc620@gmail.com",
-      "skills": [
-        "HTML",
-        "PHP",
-        "C++",
-        "Python",
-        "C"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -216,17 +158,11 @@
     "extracted": {
       "name": "Anjana Np",
       "email": "anjananediyaparampath@gmail.com",
-      "skills": [
-        "React",
-        "TypeScript",
-        "Supabase",
-        "Flask",
-        "Google Cloud AI"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 2.0,
-        "work_experience_count": 1,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -236,11 +172,13 @@
     "extracted": {
       "name": "Anumol Reji",
       "email": "anureji6282@gmail.com",
-      "skills": [],
+      "skills": [
+        "LANGUAGE KNOWN Engish"
+      ],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -250,27 +188,11 @@
     "extracted": {
       "name": "Aparna Das",
       "email": "aparnadass2002@gmail.com",
-      "skills": [
-        "AWS",
-        "EC2",
-        "S3",
-        "IAM",
-        "CI/CD",
-        "Docker",
-        "Git",
-        "GitHub",
-        "MySQL",
-        "MongoDB",
-        "ER Diagrams",
-        "NPTEL",
-        "IoT",
-        "Cyber Security",
-        "AI"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -280,25 +202,11 @@
     "extracted": {
       "name": "Aswathy V",
       "email": "aswathyanuece@gmail.com",
-      "skills": [
-        "React.js",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "TailwindCSS",
-        "Bootstrap",
-        "Node.js",
-        "Express.js",
-        "RESTfulAPIs",
-        "MongoDB",
-        "Mongoose",
-        "JWT",
-        "bcrypt"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -310,9 +218,9 @@
       "email": "af14son@gmail.com",
       "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -322,18 +230,11 @@
     "extracted": {
       "name": "Aysha P Faizel",
       "email": "aysha.faisal10@gmail.com",
-      "skills": [
-        "Java",
-        "Spring Boot",
-        "Node.js",
-        "React",
-        "Core Java",
-        "OOP"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -343,23 +244,11 @@
     "extracted": {
       "name": "Cyril M George",
       "email": "cyrilmgeorge07@gmail.com",
-      "skills": [
-        "HTML",
-        "CSS",
-        "Bootstrap",
-        "PHP",
-        "Django",
-        "Flask",
-        "MySQL",
-        "PostgreSQL",
-        "SQL",
-        "Power BI",
-        "Python"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -369,17 +258,11 @@
     "extracted": {
       "name": "Devika B",
       "email": "devikab140@gmail.com",
-      "skills": [
-        "Oracle Database",
-        "SQL",
-        "Power BI",
-        "Tableau",
-        "Machine Learning"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -389,24 +272,11 @@
     "extracted": {
       "name": "Dilja Das Er",
       "email": "diljadaser@gmail.com",
-      "skills": [
-        "HTML5",
-        "CSS3",
-        "JavaScript",
-        "Bootstrap",
-        "React.js",
-        "Node.js",
-        "Express.js",
-        "REST APIs",
-        "MySQL",
-        "MongoDB",
-        "MERN Stack",
-        "Chrome Developer"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -416,22 +286,11 @@
     "extracted": {
       "name": "Doppalapudi Nithin",
       "email": "Chowdarynithin2183@gmail.com",
-      "skills": [
-        "JavaScript",
-        "HTML",
-        "CSS",
-        "Python",
-        "Flask",
-        "MERN",
-        "MongoDB",
-        "Express.js",
-        "React.js",
-        "Node.js"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -441,25 +300,11 @@
     "extracted": {
       "name": "Durgalekshmi",
       "email": "durgalekshmi91@gmail.com",
-      "skills": [
-        "C programming",
-        "Python",
-        "PHP",
-        "Javascript",
-        "DBMS",
-        "MongoDB",
-        "SQLite",
-        "HTML",
-        "CSS",
-        "MERN STACK",
-        "MS WORD",
-        "EXCEL",
-        "POWERPOINT"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -469,17 +314,11 @@
     "extracted": {
       "name": "Gayathri P K",
       "email": "gayathripk129@gmail.com",
-      "skills": [
-        "Django",
-        "Python",
-        "HTML5",
-        "CSS3",
-        "Udemy"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -489,17 +328,11 @@
     "extracted": {
       "name": "Haripriya Sajeevan",
       "email": "haripriyacsdigital@gmail.com",
-      "skills": [
-        "Google Analytics",
-        "SEO",
-        "Email Marketing",
-        "Google Ads",
-        "Meta Ads"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -509,17 +342,11 @@
     "extracted": {
       "name": "Harisankar K  S",
       "email": "hari.kavunkal.ks@gmail.com",
-      "skills": [
-        "Java",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "MYSQL"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -529,29 +356,11 @@
     "extracted": {
       "name": "Jahanara Jabbar",
       "email": "jjahanara471@gmail.com",
-      "skills": [
-        "Python",
-        "Computer Vision",
-        "Numpy",
-        "Tensorflow",
-        "SciPy",
-        "Matplotlib",
-        "NLP",
-        "Artificial Intelligence",
-        "HTML",
-        "Machine Learning",
-        "SQL",
-        "Deep Learning",
-        "SpeechRecognition",
-        "NLTK",
-        "Mediapipe",
-        "Keras",
-        "Scikit-learn"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -561,25 +370,11 @@
     "extracted": {
       "name": "Jayakrishnan K",
       "email": "jayakrishnank664@gmail.com",
-      "skills": [
-        "Machine Learning",
-        "Deep Learning",
-        "Computer Vision",
-        "AI",
-        "DBMS",
-        "Python",
-        "Java",
-        "R",
-        "Git",
-        "C",
-        "IoT",
-        "Reinforcement Learning",
-        "Data Engineer"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0.3,
-        "work_experience_count": 1,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -589,15 +384,11 @@
     "extracted": {
       "name": "Joel D’Cruz",
       "email": "joeldcruz96@gmail.com",
-      "skills": [
-        "PHP",
-        "MySQL",
-        "Deep Learning"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -607,21 +398,11 @@
     "extracted": {
       "name": "Mershan Peter",
       "email": "mershanpeter27@gmail.com",
-      "skills": [
-        "IoT",
-        "Bluetooth",
-        "Java",
-        "CAD",
-        "CAM",
-        "CAE",
-        "SolidWorks",
-        "Robotics",
-        "AI"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -631,15 +412,11 @@
     "extracted": {
       "name": "Mohammed Safwan Pk",
       "email": "safwanpkpnm@gmail.com",
-      "skills": [
-        "Microsoft Word",
-        "Microsoft Excel",
-        "Microsoft PowerPoint"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 2.0,
-        "work_experience_count": 1,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -651,9 +428,9 @@
       "email": "mohammedshamilm17@gmail.com",
       "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -663,15 +440,11 @@
     "extracted": {
       "name": "Mohammed Shiham C",
       "email": "MSCY0077@gmail.com",
-      "skills": [
-        "Java",
-        "Rdbms",
-        "Html"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -681,24 +454,11 @@
     "extracted": {
       "name": "Muhammed Shifan S",
       "email": "shifankichu100@gmail.com",
-      "skills": [
-        "React",
-        "GitHub API",
-        "HTML",
-        "Tailwind CSS",
-        "VS Code",
-        "CRUD",
-        "Hooks",
-        "MERN",
-        "MongoDB",
-        "Express.js",
-        "Node.js",
-        "CSS"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -708,22 +468,11 @@
     "extracted": {
       "name": "Nandhana V A",
       "email": "nandhana82003@gmail.com",
-      "skills": [
-        "Machine Learning",
-        "Python",
-        "NodeJS",
-        "Intel OpenVino",
-        "Selenium",
-        "TensorFlow",
-        "NLP",
-        "Pandas",
-        "NumPy",
-        "Power BI"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 1
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -733,20 +482,11 @@
     "extracted": {
       "name": "Sahva Ibrahim",
       "email": "Sahvaibrahim16@gmail.com",
-      "skills": [
-        "C Programming",
-        "Python",
-        "Java",
-        "AI & ML",
-        "PHP",
-        "JavaScript",
-        "HTML",
-        "CSS"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -756,19 +496,11 @@
     "extracted": {
       "name": "Sandra",
       "email": "sandrakvinod06@gmail.com",
-      "skills": [
-        "C programming",
-        "Matlab",
-        "Scilab",
-        "Arduino",
-        "Arduino Uno",
-        "Bluetooth",
-        "Tinkercad"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -778,23 +510,11 @@
     "extracted": {
       "name": "Shaahul Hamid",
       "email": "shaahulhamid.kassim@gmail.com",
-      "skills": [
-        "C",
-        "C++",
-        "Java",
-        "Selenium",
-        "SQL",
-        "HTML",
-        "CSS",
-        "Linux",
-        "Windows",
-        "Scrum",
-        "Agile"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 1.0,
-        "work_experience_count": 1,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -804,18 +524,11 @@
     "extracted": {
       "name": "Sijeesh S",
       "email": "sijeesh.2392004.sijeesh@gmail.com",
-      "skills": [
-        "AI",
-        "ML",
-        "Git",
-        "Visual Studio Code",
-        "Eclipse",
-        "Ethical Hacking"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -825,28 +538,11 @@
     "extracted": {
       "name": "Sreejith S",
       "email": "sreejithsreekumar2002@gmail.com",
-      "skills": [
-        "HTML5",
-        "SQL",
-        "CSS3",
-        "Node Js",
-        "Javascript",
-        "Bootstrap",
-        "Python",
-        "Django",
-        "React Js",
-        "Java",
-        "API",
-        "Arduino",
-        "ML",
-        "LangChain",
-        "LLM",
-        "Excel"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -856,17 +552,11 @@
     "extracted": {
       "name": "Sruthi Satheesan",
       "email": "sruthisreejith07@gmail.com",
-      "skills": [
-        "Python",
-        "HTML",
-        "rbcL PCR",
-        "Bioinformatics",
-        "PCR Barcodes"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -876,19 +566,11 @@
     "extracted": {
       "name": "Steniya Lieons",
       "email": "Steniyalieons2002@gmail.com",
-      "skills": [
-        "PYTHON",
-        "BOOTSTRAP",
-        "JAVASCRIPT",
-        "DJANGO",
-        "HTML",
-        "MY SQL",
-        "CSS"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -898,16 +580,11 @@
     "extracted": {
       "name": "Vismin Krishna M",
       "email": "visminkrishnam@gmail.com",
-      "skills": [
-        "YOLOv10",
-        "Python",
-        "GPT",
-        "Deep Learning"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   },
@@ -917,14 +594,11 @@
     "extracted": {
       "name": "Yaseen Salim",
       "email": "yaseensalim2005@gmail.com",
-      "skills": [
-        "Computer",
-        "Image Encryption"
-      ],
+      "skills": [],
       "experience_years": {
-        "total_experience_years": 0,
-        "work_experience_count": 0,
-        "internship_count": 0
+        "experience_years": 0.0,
+        "internship_years": 0.0,
+        "total_experience_years": 0.0
       }
     }
   }
