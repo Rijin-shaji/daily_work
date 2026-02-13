@@ -12,59 +12,55 @@ from .serializers import (
 
 def home(request):
     return HttpResponse("Welcome to the Ecommerce API!")
-# ----------------------
-# User ViewSet
-# ----------------------
+
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-# ----------------------
-# Seller ViewSet
-# ----------------------
 class SellerViewSet(viewsets.ModelViewSet):
     queryset = Seller.objects.all()
     serializer_class = SellerSerializer
 
-# ----------------------
-# Product ViewSet
-# ----------------------
 class ProductViewSet(viewsets.ModelViewSet):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
 
-# ----------------------
-# Review ViewSet
-# ----------------------
 class ReviewViewSet(viewsets.ModelViewSet):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
 
-# ----------------------
-# Issue ViewSet
-# ----------------------
 class IssueViewSet(viewsets.ModelViewSet):
     queryset = Issue.objects.all()
     serializer_class = IssueSerializer
 
-# ----------------------
-# Payment ViewSet
-# ----------------------
 class PaymentViewSet(viewsets.ModelViewSet):
     queryset = Payment.objects.all()
     serializer_class = PaymentSerializer
 
-# ----------------------
-# DeliveryHub ViewSet
-# ----------------------
 class DeliveryHubViewSet(viewsets.ModelViewSet):
     queryset = DeliveryHub.objects.all()
     serializer_class = DeliveryHubSerializer
 
-# ----------------------
-# Platform ViewSet
-# ----------------------
 class PlatformViewSet(viewsets.ModelViewSet):
     queryset = Platform.objects.all()
     serializer_class = PlatformSerializer
+
+
+from rest_framework.response import Response
+from rest_framework.decorators import api_view
+
+@api_view(['GET'])
+def api_home(request):
+    return Response({
+        "Select Table": {
+            "Users": "/api/users/",
+            "Sellers": "/api/sellers/",
+            "Products": "/api/products/",
+            "Reviews": "/api/reviews/",
+            "Issues": "/api/issues/",
+            "Payments": "/api/payments/",
+            "Delivery Hubs": "/api/deliveryhubs/",
+            "Platforms": "/api/platforms/",
+        }
+    })
 

@@ -4,9 +4,7 @@ from django.db import models
 from django.db import models
 from datetime import date
 
-# ----------------------
-# User Model
-# ----------------------
+
 class User(models.Model):
     usid = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
@@ -26,9 +24,6 @@ class User(models.Model):
         return self.name
 
 
-# ----------------------
-# Seller Model
-# ----------------------
 class Seller(models.Model):
     sid = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
@@ -42,7 +37,6 @@ class Seller(models.Model):
     shop_name = models.CharField(max_length=255)
     gst_no = models.CharField(max_length=50)
 
-    # Optional payment reference
     payment = models.ForeignKey(
         'Payment', on_delete=models.SET_NULL, null=True, blank=True, db_column='pay_id', related_name='seller_payment'
     )
@@ -54,10 +48,6 @@ class Seller(models.Model):
     def __str__(self):
         return self.shop_name
 
-
-# ----------------------
-# Delivery Hub Model
-# ----------------------
 class DeliveryHub(models.Model):
     hub_id = models.AutoField(primary_key=True)
     hub_name = models.CharField(max_length=255)
@@ -75,9 +65,6 @@ class DeliveryHub(models.Model):
         return self.hub_name
 
 
-# ----------------------
-# Issue Model
-# ----------------------
 class Issue(models.Model):
     issue_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='issues')
@@ -95,10 +82,6 @@ class Issue(models.Model):
     def __str__(self):
         return f"Issue {self.issue_id} - {self.issue_type}"
 
-
-# ----------------------
-# Payment Model
-# ----------------------
 class Payment(models.Model):
     payment_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='payments')
@@ -116,9 +99,6 @@ class Payment(models.Model):
         return f"Payment {self.payment_id} - {self.amount}"
 
 
-# ----------------------
-# Review Model
-# ----------------------
 class Review(models.Model):
     review_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='reviews')
@@ -135,10 +115,6 @@ class Review(models.Model):
     def __str__(self):
         return f"Review {self.review_id} - {self.rating} stars"
 
-
-# ----------------------
-# Product Model
-# ----------------------
 class Product(models.Model):
     product_id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=255)
@@ -159,10 +135,6 @@ class Product(models.Model):
     def __str__(self):
         return f"{self.name} - {self.brand}"
 
-
-# ----------------------
-# Platform Model
-# ----------------------
 class Platform(models.Model):
     platform_id = models.AutoField(primary_key=True)
     platform_name = models.CharField(max_length=255)

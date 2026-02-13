@@ -1,4 +1,6 @@
+
 from django.urls import path, include
+from .views import api_home
 from rest_framework import routers
 from .views import (
     UserViewSet, SellerViewSet, ProductViewSet,
@@ -13,11 +15,12 @@ router.register(r'products', ProductViewSet)
 router.register(r'reviews', ReviewViewSet)
 router.register(r'issues', IssueViewSet)
 router.register(r'payments', PaymentViewSet)
+
 router.register(r'deliveryhubs', DeliveryHubViewSet)
 router.register(r'platforms', PlatformViewSet)
 
 # Include router URLs
 urlpatterns = [
-    path('', home),
+    path('', api_home),
     path('', include(router.urls)),
 ]
