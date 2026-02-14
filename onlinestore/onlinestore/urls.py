@@ -18,8 +18,10 @@ from django.contrib import admin
 from django.urls import path,include
 from EcommerceApp.views import home
 
+print("MAIN URLS FILE LOADED")
+
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('', home),
+    path('admin/', admin.site.urls),
     path('api/', include('EcommerceApp.urls')),
 ]

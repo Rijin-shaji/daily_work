@@ -11,7 +11,22 @@ from .serializers import (
 )
 
 def home(request):
-    return HttpResponse("Welcome to the Ecommerce API!")
+    return HttpResponse("""
+        <h1>Welcome to the Ecommerce API</h1>
+        <h3>Select a Table</h3>
+
+        <select onchange="if(this.value) window.location.href=this.value;">
+            <option value="">-- Select Table --</option>
+            <option value="/api/users/">Users</option>
+            <option value="/api/sellers/">Sellers</option>
+            <option value="/api/products/">Products</option>
+            <option value="/api/reviews/">Reviews</option>
+            <option value="/api/issues/">Issues</option>
+            <option value="/api/payments/">Payments</option>
+            <option value="/api/deliveryhubs/">Delivery Hubs</option>
+            <option value="/api/platforms/">Platforms</option>
+        </select>
+    """)
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
@@ -63,4 +78,6 @@ def api_home(request):
             "Platforms": "/api/platforms/",
         }
     })
+
+
 
