@@ -1,0 +1,873 @@
+[
+  {
+    "resume_id": "RES_0",
+    "filename": "AARADHI KS.pdf",
+    "extracted": {
+      "name": "Aaradhi Ks",
+      "email": "aaradhiks04@gmail.com",
+      "skills": [
+        "GitHub",
+        "Linkedln"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_1",
+    "filename": "Abhay S.pdf",
+    "extracted": {
+      "name": "Abhay S",
+      "email": "abhayabhi239@gmail.com",
+      "skills": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "Machine Learning"
+      ],
+      "experience_years": 3.8,
+      "internship_years": 0.0,
+      "total_experience_years": 3.8
+    }
+  },
+  {
+    "resume_id": "RES_2",
+    "filename": "ABHIJITH V.pdf",
+    "extracted": {
+      "name": "Software Developer",
+      "email": "abhijithvkumar02@gmail.com",
+      "skills": [
+        "Python",
+        "MERN",
+        "PHP",
+        "Java",
+        "DataBase"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_3",
+    "filename": "Abhishek S Kumar.pdf",
+    "extracted": {
+      "name": "Kumar Karakkat",
+      "email": "abhishekskumar2@gmail.com",
+      "skills": [
+        "IoT",
+        "Computer Network",
+        "Microprocessor",
+        "Microcontroller",
+        "ESP32",
+        "Arduino IDE",
+        "Python"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_4",
+    "filename": "Ahamed Akhil M N.pdf",
+    "extracted": {
+      "name": "Ahamed Akhil",
+      "email": "ahamedakhil55@gmail.com",
+      "skills": [
+        "Python",
+        "Java",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "R",
+        "MySQL",
+        "MongoDB",
+        "SQL",
+        "Django",
+        "React",
+        "TensorFlow",
+        "Git",
+        "GitHub",
+        "DevOps"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_5",
+    "filename": "AKSHAY KANNAN.pdf",
+    "extracted": {
+      "name": "Akshay Kannan",
+      "email": "iamakshy81@gmail.com",
+      "skills": [
+        "React.js",
+        "Tailwind CSS",
+        "JavaScript",
+        "APIs"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_6",
+    "filename": "ALEX JOBY.pdf",
+    "extracted": {
+      "name": "Alex Joby",
+      "email": "alexjoby85@gmail.com",
+      "skills": [
+        "Tally"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_7",
+    "filename": "Aneeta Varghese.pdf",
+    "extracted": {
+      "name": "Aneeta Varghese",
+      "email": "aneetavarghese987@gmail.com",
+      "skills": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "Python",
+        "MySQL",
+        "React",
+        "Django",
+        "PHPMyAdmin",
+        "SublimeText",
+        "VSCode",
+        "Postman",
+        "MySQLWorkbench",
+        "Java",
+        "Android Studio",
+        "DeepLearning",
+        "SVM",
+        "Linux",
+        "Windows"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_8",
+    "filename": "ANILA RAJAN.pdf",
+    "extracted": {
+      "name": "Anila Rajan",
+      "email": "jananila346@gamil.com",
+      "skills": [
+        "SAP",
+        "Data Entry",
+        "Computer skills"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_9",
+    "filename": "ANJALI K C.pdf",
+    "extracted": {
+      "name": "Anjali K C",
+      "email": "anjalikc620@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_10",
+    "filename": "Anjana NP.pdf",
+    "extracted": {
+      "name": "Anjana Np",
+      "email": "anjananediyaparampath@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_11",
+    "filename": "APARNA DAS.pdf",
+    "extracted": {
+      "name": "Aparna Das",
+      "email": "aparnadass2002@gmail.com",
+      "skills": [
+        "AWS",
+        "DevOps",
+        "Python",
+        "SQL",
+        "Docker",
+        "Git",
+        "Java",
+        "C",
+        "C++",
+        "HTML",
+        "CSS",
+        "MySQL",
+        "MongoDB",
+        "Linux",
+        "VS Code",
+        "Pycharm",
+        "ChatGPT",
+        "CI/CD",
+        "EC2",
+        "S3",
+        "IAM"
+      ],
+      "experience_years": 4.5,
+      "internship_years": 0.0,
+      "total_experience_years": 4.5
+    }
+  },
+  {
+    "resume_id": "RES_12",
+    "filename": "Aswathy V.pdf",
+    "extracted": {
+      "name": "Aswathy V",
+      "email": "aswathyanuece@gmail.com",
+      "skills": [
+        "React.js",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "TailwindCSS",
+        "Bootstrap",
+        "Node.js",
+        "Express.js",
+        "RESTfulAPIs",
+        "MongoDB",
+        "Mongoose",
+        "JWT",
+        "bcrypt",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Vercel",
+        "Render"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_13",
+    "filename": "Avinash Fernandez.pdf",
+    "extracted": {
+      "name": "Chef De Partie",
+      "email": "af14son@gmail.com",
+      "skills": [],
+      "experience_years": 5.2,
+      "internship_years": 0.0,
+      "total_experience_years": 5.2
+    }
+  },
+  {
+    "resume_id": "RES_14",
+    "filename": "Aysha P Faizel.pdf",
+    "extracted": {
+      "name": "Faizel Senior Software Engineer",
+      "email": "aysha.faisal10@gmail.com",
+      "skills": [
+        "Java",
+        "Spring Boot",
+        "Postgresql",
+        "Nodejs",
+        "AWS",
+        "Javascript",
+        "MySQL",
+        "RestApi",
+        "React"
+      ],
+      "experience_years": 8.3,
+      "internship_years": 0.0,
+      "total_experience_years": 8.3
+    }
+  },
+  {
+    "resume_id": "RES_16",
+    "filename": "Cyril M George.pdf",
+    "extracted": {
+      "name": "George Pathanamthitta",
+      "email": "cyrilmgeorge07@gmail.com",
+      "skills": [
+        "Python",
+        "Flask Framework",
+        "E-Learning",
+        "Web Designing"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_17",
+    "filename": "DEVIKA B.pdf",
+    "extracted": {
+      "name": "Devika B",
+      "email": "devikab140@gmail.com",
+      "skills": [
+        "Python",
+        "Mathematics",
+        "Statistics"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_18",
+    "filename": "Dilja Das ER.pdf",
+    "extracted": {
+      "name": "Dilja Das",
+      "email": "diljadaser@gmail.com",
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Bootstrap",
+        "React.js",
+        "Node.js",
+        "Express.js",
+        "REST APIs",
+        "MySQL",
+        "MongoDB",
+        "Git",
+        "Agile"
+      ],
+      "experience_years": 0.6,
+      "internship_years": 0.0,
+      "total_experience_years": 0.6
+    }
+  },
+  {
+    "resume_id": "RES_19",
+    "filename": "Doppalapudi Nithin.pdf",
+    "extracted": {
+      "name": "Doppalapudi Nithin",
+      "email": "Chowdarynithin2183@gmail.com",
+      "skills": [
+        "JavaScript",
+        "Python",
+        "HTML5",
+        "CSS3",
+        "Bootstrap",
+        "Node.js",
+        "Express.js",
+        "RESTful APIs",
+        "MongoDB",
+        "MySQL",
+        "Git",
+        "GitHub",
+        "VS Code",
+        "Chrome DevTools",
+        "Web Security"
+      ],
+      "experience_years": 0.2,
+      "internship_years": 0.0,
+      "total_experience_years": 0.2
+    }
+  },
+  {
+    "resume_id": "RES_20",
+    "filename": "DURGALEKSHMI.pdf",
+    "extracted": {
+      "name": "Durgalekshmi Address",
+      "email": "durgalekshmi91@gmail.com",
+      "skills": [
+        "C programming",
+        "Python",
+        "PHP",
+        "Javascript",
+        "DBMS",
+        "MongoDB",
+        "SQLite",
+        "HTML",
+        "CSS",
+        "MS WORD",
+        "EXCEL",
+        "POWERPOINT"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_21",
+    "filename": "EE1.pdf",
+    "extracted": {
+      "name": "Arjun Menon",
+      "email": "enon@gmail.com",
+      "skills": [
+        "AutoCAD",
+        "IEC",
+        "IS Standards",
+        "LV System",
+        "MV System",
+        "SLD"
+      ],
+      "experience_years": 6.9,
+      "internship_years": 0.0,
+      "total_experience_years": 6.9
+    }
+  },
+  {
+    "resume_id": "RES_22",
+    "filename": "EE2.pdf",
+    "extracted": {
+      "name": "Rahul Nair",
+      "email": "rahul.nair@gmail.com",
+      "skills": [
+        "HT Panel",
+        "LT Panel",
+        "VFDs",
+        "Motors"
+      ],
+      "experience_years": 7.5,
+      "internship_years": 0.0,
+      "total_experience_years": 7.5
+    }
+  },
+  {
+    "resume_id": "RES_23",
+    "filename": "EE3.pdf",
+    "extracted": {
+      "name": "Vikram Iyer",
+      "email": "vikram.iyer@gmail.com",
+      "skills": [
+        "SCADA Systems",
+        "Power Distribution",
+        "Protection Relays",
+        "Substation Design",
+        "Electrical Testing"
+      ],
+      "experience_years": 8.7,
+      "internship_years": 0.0,
+      "total_experience_years": 8.7
+    }
+  },
+  {
+    "resume_id": "RES_24",
+    "filename": "EE4.pdf",
+    "extracted": {
+      "name": "Sandeep Kumar",
+      "email": "sandeep.kumar@gmail.com",
+      "skills": [
+        "BOQ Preparation",
+        "Site Supervision",
+        "EPC Project"
+      ],
+      "experience_years": 8.0,
+      "internship_years": 0.0,
+      "total_experience_years": 8.0
+    }
+  },
+  {
+    "resume_id": "RES_25",
+    "filename": "EE5.pdf",
+    "extracted": {
+      "name": "Anil Prakash",
+      "email": "anil.prakash@gmail.com",
+      "skills": [
+        "PLC Programming",
+        "HMI Development",
+        "Industrial Automation",
+        "Control Panel Wiring",
+        "System Commissioning",
+        "Troubleshooting"
+      ],
+      "experience_years": 6.8,
+      "internship_years": 0.0,
+      "total_experience_years": 6.8
+    }
+  },
+  {
+    "resume_id": "RES_26",
+    "filename": "GAYATHRI P K.pdf",
+    "extracted": {
+      "name": "Gayathri P K",
+      "email": "gayathripk129@gmail.com",
+      "skills": [
+        "Django",
+        "HTML",
+        "MySQL",
+        "PostgreSQL",
+        "Python",
+        "C",
+        "CSS",
+        "Pandas",
+        "Numpy",
+        "Matplotlib",
+        "Tableau"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_27",
+    "filename": "HARIPRIYA SAJEEVAN.pdf",
+    "extracted": {
+      "name": "Haripriya Sajeevan",
+      "email": "haripriyacsdigital@gmail.com",
+      "skills": [
+        "Google Analytics",
+        "SEO",
+        "Email Marketing",
+        "Google Ads",
+        "Meta Ads"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_28",
+    "filename": "HARISANKAR K  S.pdf",
+    "extracted": {
+      "name": "Harisankar K  S",
+      "email": "hari.kavunkal.ks@gmail.com",
+      "skills": [
+        "Java",
+        "C",
+        "C++",
+        "PHP",
+        "HTML",
+        "CSS",
+        "MYSQL",
+        "Linux",
+        "NetBeans"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_29",
+    "filename": "JAHANARA JABBAR.pdf",
+    "extracted": {
+      "name": "Jahanara Jabbar",
+      "email": "jjahanara471@gmail.com",
+      "skills": [
+        "Python",
+        "SciPy",
+        "NumPy",
+        "Matplotlib"
+      ],
+      "experience_years": 0.4,
+      "internship_years": 0.0,
+      "total_experience_years": 0.4
+    }
+  },
+  {
+    "resume_id": "RES_30",
+    "filename": "jayakrishnan k.pdf",
+    "extracted": {
+      "name": "Jayakrishnan K",
+      "email": "jayakrishnank664@gmail.com",
+      "skills": [
+        "Machine Learning",
+        "Deep Learning",
+        "Computer Vision",
+        "AI",
+        "Python"
+      ],
+      "experience_years": 1.3,
+      "internship_years": 0.0,
+      "total_experience_years": 1.3
+    }
+  },
+  {
+    "resume_id": "RES_31",
+    "filename": "Joel D’cruz.pdf",
+    "extracted": {
+      "name": "Year Institution",
+      "email": "joeldcruz96@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_33",
+    "filename": "MERSHAN PETER.pdf",
+    "extracted": {
+      "name": "Mershan Peter",
+      "email": "mershanpeter27@gmail.com",
+      "skills": [
+        "Java",
+        "PLC",
+        "C",
+        "VSCode",
+        "SolidWorks",
+        "Arduino IDE",
+        "WPLSoft",
+        "Blue Prism",
+        "Easy EDA"
+      ],
+      "experience_years": 5.1,
+      "internship_years": 0.0,
+      "total_experience_years": 5.1
+    }
+  },
+  {
+    "resume_id": "RES_34",
+    "filename": "Mohammed Safwan PK.pdf",
+    "extracted": {
+      "name": "Mohammed Safwan Pk Office",
+      "email": "safwanpkpnm@gmail.com",
+      "skills": [
+        "Microsoft Word",
+        "Microsoft Excel",
+        "Microsoft PowerPoint"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_35",
+    "filename": "MOHAMMED SHAMIL  M.pdf",
+    "extracted": {
+      "name": "Mohammed Languages Shamil",
+      "email": "mohammedshamilm17@gmail.com",
+      "skills": [
+        "Python",
+        "Mechine learning",
+        "Deep learning",
+        "NLP",
+        "Computer vision",
+        "Web scraping",
+        "Data visualization",
+        "Numpy",
+        "Pandas",
+        "Java",
+        "C programming",
+        "HTML",
+        "DBMS",
+        "MS Office",
+        "Tally"
+      ],
+      "experience_years": 3.7,
+      "internship_years": 0.0,
+      "total_experience_years": 3.7
+    }
+  },
+  {
+    "resume_id": "RES_36",
+    "filename": "MOHAMMED SHIHAM C.pdf",
+    "extracted": {
+      "name": "Mohammed Shiham",
+      "email": "MSCY0077@gmail.com",
+      "skills": [
+        "Java",
+        "Rdbms",
+        "Html"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_37",
+    "filename": "MUHAMMED SHIFAN S.pdf",
+    "extracted": {
+      "name": "Muhammed Shifan",
+      "email": "shifankichu100@gmail.com",
+      "skills": [
+        "HTML",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "GitHub",
+        "Javascript",
+        "React.js",
+        "MongoDB"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_38",
+    "filename": "NANDHANA V A.pdf",
+    "extracted": {
+      "name": "Nandhana V A",
+      "email": "nandhana82003@gmail.com",
+      "skills": [
+        "Machine Learning",
+        "Python",
+        "SQL",
+        "Numpy",
+        "Pandas",
+        "Scikit-learn",
+        "Git",
+        "GitHub",
+        "Linux",
+        "AWS",
+        "Windows",
+        "Power BI"
+      ],
+      "experience_years": 4.2,
+      "internship_years": 0.0,
+      "total_experience_years": 4.2
+    }
+  },
+  {
+    "resume_id": "RES_39",
+    "filename": "Sahva Ibrahim.pdf",
+    "extracted": {
+      "name": "Sahva Ibrahim",
+      "email": "Sahvaibrahim16@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_40",
+    "filename": "Sandra.pdf",
+    "extracted": {
+      "name": "Sandra",
+      "email": "sandrakvinod06@gmail.com",
+      "skills": [
+        "C programming",
+        "Matlab",
+        "Scilab",
+        "Arduino",
+        "Arduino Uno",
+        "Bluetooth",
+        "Tinkercad"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_41",
+    "filename": "Shaahul hamid.pdf",
+    "extracted": {
+      "name": "Shaahul Hamid",
+      "email": "shaahulhamid.kassim@gmail.com",
+      "skills": [
+        "Java",
+        "Manual Testing",
+        "Automation Testing"
+      ],
+      "experience_years": 1.5,
+      "internship_years": 0.0,
+      "total_experience_years": 1.5
+    }
+  },
+  {
+    "resume_id": "RES_42",
+    "filename": "SIJEESH S.pdf",
+    "extracted": {
+      "name": "Sijeesh S",
+      "email": "sijeesh.2392004.sijeesh@gmail.com",
+      "skills": [
+        "Artificial Intelligence",
+        "Machine Learning"
+      ],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_43",
+    "filename": "SREEJITH S.pdf",
+    "extracted": {
+      "name": "Software Engineer",
+      "email": "sreejithsreekumar2002@gmail.com",
+      "skills": [
+        "Python",
+        "Java",
+        "SQL",
+        "Machine Learning"
+      ],
+      "experience_years": 0.2,
+      "internship_years": 0.0,
+      "total_experience_years": 0.2
+    }
+  },
+  {
+    "resume_id": "RES_44",
+    "filename": "Sruthi Satheesan.pdf",
+    "extracted": {
+      "name": "Sruthi Satheesan",
+      "email": "sruthisreejith07@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_45",
+    "filename": "STENIYA LIEONS.pdf",
+    "extracted": {
+      "name": "Steniya Lieons",
+      "email": "Steniyalieons2002@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  },
+  {
+    "resume_id": "RES_46",
+    "filename": "Vismin Krishna M.pdf",
+    "extracted": {
+      "name": "Vismin Krishna",
+      "email": "visminkrishnam@gmail.com",
+      "skills": [
+        "AI",
+        "Python",
+        "Artificial Intelligence"
+      ],
+      "experience_years": 0.1,
+      "internship_years": 0.0,
+      "total_experience_years": 0.1
+    }
+  },
+  {
+    "resume_id": "RES_47",
+    "filename": "Yaseen Salim.pdf",
+    "extracted": {
+      "name": "Yaseen Salim Mangattu",
+      "email": "yaseensalim2005@gmail.com",
+      "skills": [],
+      "experience_years": 0.0,
+      "internship_years": 0.0,
+      "total_experience_years": 0.0
+    }
+  }
+]
