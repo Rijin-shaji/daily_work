@@ -3,7 +3,6 @@ import re
 import json
 import faiss
 import torch
-import numpy as np
 import pdfplumber
 from tkinter import Tk, filedialog
 from transformers import AutoTokenizer, AutoModel
@@ -19,13 +18,13 @@ index = faiss.read_index(FAISS_INDEX_FILE)
 with open(METADATA_FILE, "r", encoding="utf-8") as f:
     metadata_store = json.load(f)
 
-print(f"✓ FAISS loaded: {index.ntotal} vectors")
-print(f"✓ Metadata loaded: {len(metadata_store)} entries")
+print(f" FAISS loaded: {index.ntotal} vectors")
+print(f" Metadata loaded: {len(metadata_store)} entries")
 
 
 # LOAD MODEL
 device = "cuda" if torch.cuda.is_available() else "cpu"
-print(f"✓ Using device: {device}")
+print(f" Using device: {device}")
 
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
@@ -87,7 +86,7 @@ def embed_text(text):
 def upload_pdf(title):
     root = Tk()
     root.withdraw()
-    root.attributes("-topmost", True)
+    root.attributes("topmost", True)
 
     path = filedialog.askopenfilename(
         title=title,
@@ -162,22 +161,22 @@ def match_and_rank(candidates, jd_skills, jd_experience):
 
 # MAIN PIPELINE
 def find_best_employees():
-    print("\n Upload Job Description PDF...")
+    print("\n Upload Job Description PDF")
     jd_path = upload_pdf("Select Job Description PDF")
 
     if not jd_path:
         print("No JD selected")
         return []
 
-    print(f"✓ JD uploaded: {os.path.basename(jd_path)}")
+    print(f"JD uploaded: {os.path.basename(jd_path)}")
 
     jd_text = extract_text_from_pdf(jd_path)
 
     jd_experience = extract_experience_from_jd(jd_text)
     jd_skills = extract_skills_from_jd(jd_text)
 
-    print(f"✓ JD Experience Required: {jd_experience} years")
-    print(f"✓ JD Skills Extracted: {len(jd_skills)} skills")
+    print(f"JD Experience Required: {jd_experience} years")
+    print(f"JD Skills Extracted: {len(jd_skills)} skills")
 
     jd_vector = embed_text(jd_text)
 

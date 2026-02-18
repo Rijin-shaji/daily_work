@@ -58,7 +58,7 @@ def build_faiss_index():
     vectors = []
     metadata_store = []
 
-    print(f"Processing {len(resumes)} resumes...")
+    print(f"Processing {len(resumes)} resumes")
 
     for i, r in enumerate(resumes):
         skills_text = ", ".join(r.get("skills", []))
