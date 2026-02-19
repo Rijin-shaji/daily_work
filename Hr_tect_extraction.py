@@ -2,6 +2,7 @@ import os
 import json
 import re
 import pdfplumber
+from Hr_resume_status import is_hired
 
 RESUME_FOLDER = "D:/project_2_resumes"
 OUTPUT_FILE = "step1_raw_text.json"
@@ -44,9 +45,11 @@ def run():
     print(f"Found {len(files)} resumes")
 
     for i, file in enumerate(files):
+        if is_hired(file):
+            print(f"Skipping hired resume: {file}")
+            continue
         path = os.path.join(RESUME_FOLDER, file)
 
-        # Read file
         if file.lower().endswith(".pdf"):
             raw_text = extract_from_pdf(path)
         else:
