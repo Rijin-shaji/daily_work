@@ -80,7 +80,6 @@ def main():
 
         choice = input("Enter 1, 2 or 0: ").strip()
 
-        # EXIT
         if choice == "0":
             print("Exiting application. Goodbye!!")
             break
