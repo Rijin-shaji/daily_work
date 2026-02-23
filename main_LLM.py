@@ -34,7 +34,7 @@ Job Description (supporting context only):
     return prompt
 
 
-#  HR EVALUATION LLM
+# HR EVALUATION LLM
 def hr_evaluation(candidate):
     prompt = f"""
 You are an HR evaluator.
