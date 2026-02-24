@@ -10,7 +10,6 @@ INPUT_FILE = "step2_sections.json"
 OUTPUT_FILE = "step3_llm_output.json"
 LLM_MODEL_NAME = "llama-3.3-70b-versatile"
 
-# API Key check
 api_key = os.getenv("GROQ_API")
 if not api_key:
     raise ValueError("GROQ_API_KEY environment variable not set")
