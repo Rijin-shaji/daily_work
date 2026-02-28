@@ -12,11 +12,22 @@ def run_agent(user_query: str):
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
-            {"role": "system", "content": "You are a KSRTC intelligent booking assistant. Use tools when required."},
+            {
+                "role": "system",
+                "content": (
+                    "You are a KSRTC intelligent booking assistant. "
+                    "You MUST use the check_availability tool whenever a user asks about buses, routes, or availability. "
+                    "Do NOT answer from general knowledge. Always call the tool."
+                )
+            },
             {"role": "user", "content": user_query}
         ],
         tools=tools,
-        tool_choice="auto"
+        tool_choice={
+            "type": "function",
+            "function": {"name": "check_availability"}
+        }
+
     )
 
     message = response.choices[0].message
