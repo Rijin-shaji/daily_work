@@ -5,7 +5,6 @@ FILE_PATH = "D:/New folder (2)/Bus_dataset.xlsx"
 
 def check_availability(source: str, destination: str, travel_date: str = None):
     try:
-
         if not os.path.exists(FILE_PATH):
             return {"error": "Bus schedule data file not found."}
 
@@ -26,16 +25,15 @@ def check_availability(source: str, destination: str, travel_date: str = None):
         ]
 
         if travel_date and travel_date.strip() != "":
-            travel_date = pd.to_datetime(travel_date).date()
-            filtered = filtered[
-                filtered["Travel_Date"] == travel_date
-                ]
+            travel_date_parsed = pd.to_datetime(travel_date).date()
+            filtered = filtered[filtered["Travel_Date"] == travel_date_parsed]
 
         if filtered.empty:
             return {
                 "status": "success",
                 "available_buses": [],
-                "message": "No buses available for the selected route."
+                "message": f"No buses available from {source.title()} to {destination.title()}"
+                           + (f" on {travel_date}." if travel_date else ".")
             }
 
         filtered = filtered.sort_values(by="Departure")
@@ -46,6 +44,7 @@ def check_availability(source: str, destination: str, travel_date: str = None):
             buses.append({
                 "ticket_id": row["Ticket_ID"],
                 "bus_no": row["Bus_No"],
+                "travel_date": str(row["Travel_Date"]),
                 "departure": str(row["Departure"]),
                 "arrival": str(row["Arrival"]),
                 "bus_type": row["Bus_Type"],
@@ -55,6 +54,8 @@ def check_availability(source: str, destination: str, travel_date: str = None):
 
         return {
             "status": "success",
+            "route": f"{source.title()} → {destination.title()}",
+            "total_found": len(buses),
             "available_buses": buses
         }
 
