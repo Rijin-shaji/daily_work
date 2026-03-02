@@ -10,13 +10,11 @@ client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def run_agent(user_query: str, language: str):
 
-    #  Language instruction
     if language == "malayalam":
         lang_instruction = "Respond ONLY in Malayalam."
     else:
         lang_instruction = "Respond ONLY in English."
 
-    # 🔹 FIRST LLM CALL (Tool Decision)
     response = client.chat.completions.create(
         model=MODEL,
         messages=[
@@ -37,7 +35,6 @@ def run_agent(user_query: str, language: str):
 
     message = response.choices[0].message
 
-    # 🔹 If tool is called
     if message.tool_calls:
         tool_call = message.tool_calls[0]
         arguments = json.loads(tool_call.function.arguments)
@@ -45,7 +42,6 @@ def run_agent(user_query: str, language: str):
         # Execute dataset function
         tool_result = check_availability(**arguments)
 
-        # 🔹 SECOND LLM CALL (Formatting + Language)
         second_response = client.chat.completions.create(
             model=MODEL,
             messages=[
