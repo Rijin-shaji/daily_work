@@ -21,10 +21,14 @@ def run_agent(user_query: str, language: str):
             {
                 "role": "system",
                 "content": (
-                    "You are a KSRTC intelligent booking assistant. "
+                    "You are a KSRTC intelligent booking assistant.\n"
+                    "The bus dataset contains city names in English only.\n"
+                    "If the user asks in Malayalam, you MUST translate the source "
+                    "and destination city names into English before calling the tool.\n"
+                    "When calling the tool, arguments must ALWAYS be in English.\n"
                     "You MUST use the check_availability tool whenever "
-                    "a user asks about buses or routes. "
-                    + lang_instruction
+                    "a user asks about buses or routes.\n"
+                    "Do NOT answer directly without calling the tool."
                 )
             },
             {"role": "user", "content": user_query}
@@ -32,15 +36,15 @@ def run_agent(user_query: str, language: str):
         tools=tools,
         tool_choice="auto"
     )
-
     message = response.choices[0].message
+
 
     if message.tool_calls:
         tool_call = message.tool_calls[0]
         arguments = json.loads(tool_call.function.arguments)
 
-        # Execute dataset function
         tool_result = check_availability(**arguments)
+
 
         second_response = client.chat.completions.create(
             model=MODEL,
@@ -48,8 +52,8 @@ def run_agent(user_query: str, language: str):
                 {
                     "role": "system",
                     "content": (
-                        "You are a KSRTC intelligent booking assistant. "
-                        "Format the bus details clearly and neatly. "
+                        "You are a KSRTC intelligent booking assistant.\n"
+                        "Format the bus details clearly and neatly.\n"
                         + lang_instruction
                     )
                 },
@@ -67,26 +71,24 @@ def run_agent(user_query: str, language: str):
 
     return "Sorry, I couldn't process your request."
 
-
 if __name__ == "__main__":
-
-    print("Kerala State RTC Intelligent Booking Assistant")
-    print("Select Language:")
-    print("1. English")
-    print("2. Malayalam")
-
-    choice = input("Enter 1 or 2: ")
-
-    if choice == "2":
-        language = "malayalam"
-        print("\nഭാഷ തിരഞ്ഞെടുക്കപ്പെട്ടു: മലയാളം\n")
-    else:
-        language = "english"
-        print("\nLanguage selected: English\n")
-
-    print("Type '0' to stop.\n")
-
     while True:
+        print("Kerala State RTC Intelligent Booking Assistant")
+        print("Select Language:")
+        print("1. English")
+        print("2. Malayalam")
+
+        choice = input("Enter 1 or 2: ")
+
+        if choice == "2":
+            language = "malayalam"
+            print("\nഭാഷ തിരഞ്ഞെടുക്കപ്പെട്ടു: മലയാളം\n")
+        else:
+            language = "english"
+            print("\nLanguage selected: English\n")
+
+        print("Type '0' to stop.\n")
+
         user_input = input("Ask your question: ")
 
         if user_input == "0":
