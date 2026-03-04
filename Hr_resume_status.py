@@ -16,7 +16,6 @@ def save_status(status_data):
     with open(STATUS_FILE, "w") as f:
         json.dump(status_data, f, indent=2)
 
-
 def mark_as_hired(filename):
     status_data = load_status()
 
