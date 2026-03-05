@@ -2,12 +2,10 @@ import os
 import json
 import re
 import pdfplumber
-from Hr_resume_status import is_hired
 
 RESUME_FOLDER = "D:/project_2_resumes"
-OUTPUT_FILE = "step1_raw_text.json"
+OUTPUT_FILE = "steps1_raw_text.json"
 
-# CLEANING
 def clean_text(text):
     if not text:
         return ""
@@ -15,8 +13,6 @@ def clean_text(text):
     text = text.replace('\x00', '')
     return text.strip()
 
-
-# PDF TEXT EXTRACTION
 def extract_from_pdf(path):
     full_text = ""
     try:
@@ -30,10 +26,20 @@ def extract_from_pdf(path):
     return full_text
 
 
-
-# MAIN
 def run():
-    all_resumes = []
+
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                all_resumes = json.load(f)
+            print(f"Loaded {len(all_resumes)} existing resumes")
+        except:
+            print("Existing JSON corrupted. Starting fresh.")
+            all_resumes = []
+    else:
+        all_resumes = []
+
+    processed_ids = {r["resume_id"] for r in all_resumes}
 
     if not os.path.exists(RESUME_FOLDER):
         print("Folder not found!")
@@ -42,12 +48,16 @@ def run():
     files = [f for f in os.listdir(RESUME_FOLDER)
              if f.lower().endswith((".pdf", ".txt"))]
 
-    print(f"Found {len(files)} resumes")
+    print(f"Found {len(files)} resumes in folder")
 
-    for i, file in enumerate(files):
-        if is_hired(file):
-            print(f"Skipping hired resume: {file}")
+    new_count = 0
+
+    for file in files:
+
+        if file in processed_ids:
+            print(f"Skipping already processed: {file}")
             continue
+
         path = os.path.join(RESUME_FOLDER, file)
 
         if file.lower().endswith(".pdf"):
@@ -59,22 +69,24 @@ def run():
         cleaned = clean_text(raw_text)
 
         if not cleaned:
+            print(f"Empty content: {file}")
             continue
 
         all_resumes.append({
             "resume_id": file,
             "filename": file,
+            "file_path": path,
             "raw_text": cleaned
         })
 
-        print(f"[{i+1}/{len(files)}] Extracted {file}")
+        new_count += 1
+        print(f"Processed NEW resume: {file}")
 
-    # Save output
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(all_resumes, f, indent=2, ensure_ascii=False)
 
-    print(f"\nSaved to {OUTPUT_FILE}")
-
+    print(f"\nAdded {new_count} new resumes.")
+    print(f"Total resumes stored: {len(all_resumes)}")
 
 if __name__ == "__main__":
     run()

@@ -5,13 +5,17 @@ VALIDATED_JSON = "step4_validated.json"
 OUTPUT_CHUNKS_JSON = "step5_chunks.json"
 CHUNK_SIZE = 250
 
+
 def split_text_into_chunks(text, chunk_size=CHUNK_SIZE):
     words = text.split()
     chunks = []
+
     for i in range(0, len(words), chunk_size):
-        chunk = " ".join(words[i:i+chunk_size])
+        chunk = " ".join(words[i:i + chunk_size])
         chunks.append(chunk)
+
     return chunks
+
 
 def run():
     if not os.path.exists(VALIDATED_JSON):
@@ -24,25 +28,31 @@ def run():
     all_chunks = []
 
     for r in resumes:
-        skills_text = ", ".join(r.get("skills", []))
-        exp_text = r.get("experience_section", "")
-        combined_text = (skills_text + " " + exp_text).strip()
+        filename = r.get("filename", "")
+        resume_id = r.get("resume_id", "")
+        raw_text = r.get("raw_text", "").strip()
+
+        if raw_text:
+            combined_text = raw_text
+        else:
+            skills_text = ", ".join(r.get("skills", []))
+            exp_text = r.get("experience_section", "")
+            combined_text = (skills_text + " " + exp_text).strip()
 
         if not combined_text:
+            print(f"Skipped {filename} (no usable text found)")
             continue
-
 
         chunks = split_text_into_chunks(combined_text)
 
         for chunk in chunks:
             all_chunks.append({
                 "text": chunk,
-                "filename": r.get("filename", ""),
-                "resume_id": r.get("resume_id", "")
+                "filename": filename,
+                "resume_id": resume_id
             })
 
-        print(f"Processed {r.get('filename', '')}, {len(chunks)} chunk(s)")
-
+        print(f"Processed {filename}, {len(chunks)} chunk(s)")
 
     with open(OUTPUT_CHUNKS_JSON, "w", encoding="utf-8") as f:
         json.dump(all_chunks, f, indent=2, ensure_ascii=False)

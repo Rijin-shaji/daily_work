@@ -30,13 +30,14 @@ def validate_experience(exp):
     except:
         return 0.0
 
+with open(INPUT_FILE, "r", encoding="utf-8") as f:
+    data = json.load(f)
 
-# Load data
-data = json.load(open(INPUT_FILE, "r", encoding="utf-8"))
 results = []
 
 for r in data:
-    extracted = r.get("extracted", {})
+
+    extracted = r.get("extracted", r)
 
     name = extracted.get("name", "Unknown")
     email = validate_email(extracted.get("email", ""))
@@ -45,9 +46,13 @@ for r in data:
     internship_years = validate_experience(extracted.get("internship_years", 0))
     total_experience_years = validate_experience(extracted.get("total_experience_years", 0))
 
+    file_path = r.get("file_path") or r.get("File_path", "")
+
     results.append({
-        "resume_id": r["resume_id"],
-        "filename": r["filename"],
+        "resume_id": r.get("resume_id", ""),
+        "filename": r.get("filename", ""),
+        "raw_text": r.get("raw_text", ""),
+        "file_path": file_path,
         "name": name,
         "email": email,
         "skills": skills,
@@ -56,6 +61,8 @@ for r in data:
         "total_experience_years": total_experience_years
     })
 
-json.dump(results, open(OUTPUT_FILE, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    json.dump(results, f, indent=2, ensure_ascii=False)
+
 print(f" Validation complete, saved to {OUTPUT_FILE}")
-print(f"  Total resumes: {len(results)}")
+print(f"Total resumes: {len(results)}")

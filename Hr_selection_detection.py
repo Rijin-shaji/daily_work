@@ -2,7 +2,7 @@ import json
 import re
 from datetime import datetime
 
-INPUT_FILE = "step1_raw_text.json"
+INPUT_FILE = "steps1_raw_text.json"
 OUTPUT_FILE = "step2_sections.json"
 
 SKILL_KEYWORDS = [
@@ -212,6 +212,7 @@ def run():
         result = {
             "resume_id": r["resume_id"],
             "filename": r["filename"],
+            "file_path": r.get("file_path", ""),
             "raw_text": text,
             "name": extract_name(text, r["filename"]),
             "email": extract_email(text),

@@ -86,7 +86,7 @@ def embed_text(text):
 def upload_pdf(title):
     root = Tk()
     root.withdraw()
-    root.attributes("topmost", True)
+    root.attributes("-topmost", True)
 
     path = filedialog.askopenfilename(
         title=title,

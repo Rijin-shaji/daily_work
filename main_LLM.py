@@ -112,6 +112,7 @@ def main():
                 print(f"Rank               : {i}")
                 print(f"Name               : {cand.get('name')}")
                 print(f"Email              : {cand.get('email')}")
+                print(f"Resume Path        : {cand.get('file_path', 'Not available')}")
                 print(f"Skills             : {cand.get('skills')}")
                 print(f"InternShip         : {cand.get('internship_years')} years")
                 print(f"Experience         : {cand.get('experience_years')} years")
