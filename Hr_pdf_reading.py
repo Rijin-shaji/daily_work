@@ -118,7 +118,8 @@ def search_faiss(vector, top_k=TOP_K):
             "experience_years": meta.get("experience_years", 0.0),
             "internship_years": meta.get("internship_years", 0.0),
             "total_experience_years": meta.get("total_experience_years", 0.0),
-            "filename": entry.get("filename", "Unknown")
+            "filename": entry.get("filename", "Unknown"),
+            "file_path": entry.get("file_path", "Unknown")
         })
 
     return candidates
@@ -207,7 +208,6 @@ if __name__ == "__main__":
             print(f"Total Experience Years  : {emp['total_experience_years']}")
             print(f"Matched Skills          : {emp['matched_skills']}")
             print(f"Resume File             : {emp['filename']}")
+            print(f"Resume Path             : {emp['file_path']}")
             print()
-
-
 

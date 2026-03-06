@@ -1,64 +1,47 @@
 import json
-import os
 
-VALIDATED_JSON = "step4_validated.json"
-OUTPUT_CHUNKS_JSON = "step5_chunks.json"
-CHUNK_SIZE = 250
-
-
-def split_text_into_chunks(text, chunk_size=CHUNK_SIZE):
-    words = text.split()
+input_file = "step4_validated.json"
+def split_text(text, chunk_size=300, overlap=50):
     chunks = []
+    start = 0
 
-    for i in range(0, len(words), chunk_size):
-        chunk = " ".join(words[i:i + chunk_size])
-        chunks.append(chunk)
+    while start < len(text):
+        end = start + chunk_size
+        chunks.append(text[start:end])
+        start += chunk_size - overlap
 
     return chunks
 
+with open(input_file, "r", encoding="utf-8") as f:
+    resumes = json.load(f)
 
-def run():
-    if not os.path.exists(VALIDATED_JSON):
-        print(f"Error: {VALIDATED_JSON} not found!")
-        return
 
-    with open(VALIDATED_JSON, "r", encoding="utf-8") as f:
-        resumes = json.load(f)
+all_chunks = []
 
-    all_chunks = []
+for resume in resumes:
 
-    for r in resumes:
-        filename = r.get("filename", "")
-        resume_id = r.get("resume_id", "")
-        raw_text = r.get("raw_text", "").strip()
+    skills = " ".join(resume.get("skills", []))
 
-        if raw_text:
-            combined_text = raw_text
-        else:
-            skills_text = ", ".join(r.get("skills", []))
-            exp_text = r.get("experience_section", "")
-            combined_text = (skills_text + " " + exp_text).strip()
+    text = f"""
+    Name: {resume.get("name","")}
+    Skills: {skills}
+    Experience: {resume.get("total_experience_years","")} years
+    Internship: {resume.get("internship_years","")} years
+    """
 
-        if not combined_text:
-            print(f"Skipped {filename} (no usable text found)")
-            continue
+    chunks = split_text(text)
 
-        chunks = split_text_into_chunks(combined_text)
+    for chunk in chunks:
+        chunk_data = {
+            "text": chunk,
+            "resume_id": resume.get("resume_id"),
+            "filename": resume.get("filename"),
+            "file_path": resume.get("file_path")
+        }
 
-        for chunk in chunks:
-            all_chunks.append({
-                "text": chunk,
-                "filename": filename,
-                "resume_id": resume_id
-            })
+        all_chunks.append(chunk_data)
 
-        print(f"Processed {filename}, {len(chunks)} chunk(s)")
-
-    with open(OUTPUT_CHUNKS_JSON, "w", encoding="utf-8") as f:
-        json.dump(all_chunks, f, indent=2, ensure_ascii=False)
-
-    print(f"\nDone! Saved {len(all_chunks)} chunks to {OUTPUT_CHUNKS_JSON}")
-
-if __name__ == "__main__":
-    run()
-
+with open("step5_chunks.json", "w", encoding="utf-8") as f:
+    json.dump(all_chunks, f, indent=2)
+print("Resumes processed:", len(resumes))
+print("Chunks created:", len(all_chunks))
