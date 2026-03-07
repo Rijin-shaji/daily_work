@@ -160,7 +160,6 @@ def match_and_rank(candidates, jd_skills, jd_experience):
     return sorted(final_results, key=lambda x: x["final_score"], reverse=True)
 
 
-# MAIN PIPELINE
 def find_best_employees():
     print("\n Upload Job Description PDF")
     jd_path = upload_pdf("Select Job Description PDF")
