@@ -8,15 +8,11 @@ import tkinter as tk
 from tkinter import filedialog
 from transformers import AutoTokenizer, AutoModel
 
-
-# CONFIG
 FAISS_INDEX_PATH = "rag_vector_index.faiss"
 METADATA_PATH = "job_description_chunks_metadata.json"
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 TOP_K = 5
 
-
-# LOAD FAISS & METADATA
 index = faiss.read_index(FAISS_INDEX_PATH)
 print("FAISS index loaded")
 
@@ -26,7 +22,6 @@ with open(METADATA_PATH, "r", encoding="utf-8") as f:
 print(f"Loaded {len(metadata_store)} metadata entries")
 
 
-# EMBEDDING MODEL
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME)
 model.eval()
@@ -57,7 +52,6 @@ def embed_text(text):
     return vector.reshape(1, -1)
 
 
-# PDF READING
 def extract_text_from_pdf(pdf_path):
     text = ""
     with open(pdf_path, "rb") as f:
@@ -69,7 +63,6 @@ def extract_text_from_pdf(pdf_path):
     return text
 
 
-# FILE UPLOAD
 def upload_resume():
     root = tk.Tk()
     root.withdraw()
@@ -84,7 +77,6 @@ def upload_resume():
     return file_path
 
 
-# FAISS SEARCH
 def search_faiss(vector, top_k=TOP_K):
     scores, indices = index.search(vector, top_k)
     results = []
@@ -103,7 +95,6 @@ def search_faiss(vector, top_k=TOP_K):
     return results
 
 
-# MAIN PIPELINE
 def retrieve_resume_matches():
     print("\nUpload your resume PDF...")
     pdf_path = upload_resume()
@@ -125,7 +116,6 @@ def retrieve_resume_matches():
     return top_matches
 
 
-# RUN
 if __name__ == "__main__":
     matches = retrieve_resume_matches()
 

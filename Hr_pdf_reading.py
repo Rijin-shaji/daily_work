@@ -22,7 +22,6 @@ print(f" FAISS loaded: {index.ntotal} vectors")
 print(f" Metadata loaded: {len(metadata_store)} entries")
 
 
-# LOAD MODEL
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print(f" Using device: {device}")
 
@@ -30,8 +29,6 @@ tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
 model.eval()
 
-
-# TEXT HELPERS
 def clean_text(text):
     return " ".join(text.split()).replace("\x00", "").lower()
 
@@ -46,7 +43,6 @@ def extract_text_from_pdf(pdf_path):
     return clean_text(text)
 
 
-# JD PARSING
 def extract_experience_from_jd(text):
     match = re.search(r"(\d+(\.\d+)?)\s*\+?\s*years", text)
     return float(match.group(1)) if match else 0.0
@@ -61,7 +57,6 @@ def extract_skills_from_jd(text):
     return {w for w in words if w not in stop_words}
 
 
-# EMBEDDING
 def embed_text(text):
     encoded = tokenizer(
         text,
@@ -82,7 +77,6 @@ def embed_text(text):
     return pooled.cpu().numpy().astype("float32")
 
 
-# FILE UPLOAD
 def upload_pdf(title):
     root = Tk()
     root.withdraw()
@@ -97,7 +91,6 @@ def upload_pdf(title):
     return path
 
 
-# FAISS SEARCH
 def search_faiss(vector, top_k=TOP_K):
     distances, indices = index.search(vector, top_k)
 
@@ -125,7 +118,6 @@ def search_faiss(vector, top_k=TOP_K):
     return candidates
 
 
-# HR MATCHING LOGIC
 def match_and_rank(candidates, jd_skills, jd_experience):
     final_results = []
 
@@ -186,7 +178,6 @@ def find_best_employees():
     return match_and_rank(candidates, jd_skills, jd_experience)
 
 
-# RUN
 if __name__ == "__main__":
     employees = find_best_employees()
 

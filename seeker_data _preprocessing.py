@@ -42,7 +42,6 @@ def preprocess_pdfs(root_folder_path, chunk_size=6, overlap=2):
 
             pdf_path = os.path.join(foldername, filename)
 
-            # Extract text
             text = ""
             with open(pdf_path, "rb") as pdf_file:
                 reader = PyPDF2.PdfReader(pdf_file)
@@ -54,10 +53,8 @@ def preprocess_pdfs(root_folder_path, chunk_size=6, overlap=2):
             if not text.strip():
                 continue
 
-            # Extract metadata
             company, job_title, location = extract_metadata_from_header(text, filename)
 
-            # Sentence tokenization
             sentences = sent_tokenize(text)
             start = 0
             chunk_id = 1
@@ -84,7 +81,6 @@ def preprocess_pdfs(root_folder_path, chunk_size=6, overlap=2):
     return job_chunks
 
 
-# MAIN
 if __name__ == "__main__":
     root_folder = "D:/Project_2"
     chunks = preprocess_pdfs(root_folder)

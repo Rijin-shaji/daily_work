@@ -4,28 +4,21 @@ import faiss
 import torch
 from transformers import AutoTokenizer, AutoModel
 
-# CONFIG
 PDF_JSON_FILE = "job_description_chunks.json"
 FAISS_INDEX_FILE = "rag_vector_index.faiss"
 METADATA_FILE = "job_description_chunks_metadata.json"
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 
 
-# LOAD CHUNKS
 with open(PDF_JSON_FILE, "r", encoding="utf-8") as f:
     pdf_chunks = json.load(f)
 
 print(f"Total chunks loaded: {len(pdf_chunks)}")
 
-
-# LOAD MODEL
-
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME)
 model.eval()
 
-
-# MEAN POOLING
 def mean_pooling(model_output, attention_mask):
     token_embeddings = model_output.last_hidden_state
     input_mask_expanded = attention_mask.unsqueeze(-1).expand(token_embeddings.size()).float()
@@ -34,7 +27,6 @@ def mean_pooling(model_output, attention_mask):
         / torch.clamp(input_mask_expanded.sum(dim=1), min=1e-9)
     )
 
-# VECTORIZE CHUNKS
 vectors = []
 metadata_store = []
 
@@ -71,7 +63,6 @@ with torch.no_grad():
             print(f"Embedded {idx + 1}/{len(pdf_chunks)} chunks")
 
 
-# CREATE FAISS INDEX
 vectors = np.array(vectors, dtype="float32")
 faiss.normalize_L2(vectors)
 
@@ -79,7 +70,6 @@ dim = vectors.shape[1]
 index = faiss.IndexFlatIP(dim)
 index.add(vectors)
 
-# SAVE OUTPUTS
 faiss.write_index(index, FAISS_INDEX_FILE)
 print(f"FAISS index saved: {FAISS_INDEX_FILE}")
 

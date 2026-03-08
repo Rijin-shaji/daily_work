@@ -5,15 +5,12 @@ from seeker_resumer_uploader import retrieve_resume_matches
 
 LLM_MODEL = "llama-3.3-70b-versatile"
 
-#  LLM CLIENT
 api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
     raise ValueError("GROQ_API_KEY not set")
 
 llm_client = Groq(api_key=api_key)
 
-
-#JOB SEEKER LLM
 def seeker_analysis(job_match):
     metadata = job_match.get("metadata", {})
 
@@ -33,8 +30,6 @@ Job Description (supporting context only):
 """
     return prompt
 
-
-# HR EVALUATION LLM
 def hr_evaluation(candidate):
     prompt = f"""
 You are an HR evaluator.
@@ -69,8 +64,6 @@ Do NOT hallucinate.
 
     return response.choices[0].message.content
 
-
-# MAIN CONTROLLER
 def main():
     while True:
         print("\nWho are you?")
@@ -84,7 +77,6 @@ def main():
             print("Exiting application. Goodbye!!")
             break
 
-        # JOB SEEKER MODE
         elif choice == "1":
             matches = retrieve_resume_matches()
 
@@ -98,7 +90,6 @@ def main():
                 print(f"MATCH #{i} | Score: {match['similarity_score']:.4f}\n")
                 print(seeker_analysis(match))
 
-        # HR MODE
         elif choice == "2":
             candidates = find_best_employees()
 
