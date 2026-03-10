@@ -1,25 +1,23 @@
 from fastapi import FastAPI
-from pydantic import BaseModel
+from app.models.query_model import QueryRequest
+from app.services.search import search_resumes
+from app.services.llm_service import rank_candidates
 
 app = FastAPI()
 
-class QueryRequest(BaseModel):
-    user_type: str
-    query: str
 
 @app.get("/")
 def home():
     return {"message": "AI Recruitment API Running"}
+
 
 @app.post("/llm/query")
 def query_llm(request: QueryRequest):
 
     query = request.query
 
-    # Step 1: search resumes
     results = search_resumes(query)
 
-    # Step 2: rank results
     ranked_results = rank_candidates(results)
 
     return {

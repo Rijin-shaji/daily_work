@@ -1,13 +1,3 @@
-def generate_response(query, candidates):
+def rank_candidates(results):
 
-    prompt = f"""
-    Query: {query}
-
-    Candidates:
-    {candidates}
-
-    Rank the best candidates.
-    """
-
-    # temporary response
-    return f"Processed query: {query}"
+    return results
