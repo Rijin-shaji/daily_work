@@ -1,0 +1,9 @@
+{
+    "KL15B1045": {
+        "bus_number": "KL15B1045",
+        "status": "late",
+        "reason": "Block",
+        "delay_minutes": 35,
+        "updated_at": "2026-03-11 12:16:57"
+    }
+}

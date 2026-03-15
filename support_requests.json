@@ -1,0 +1,23 @@
+[
+    {
+        "request_id": "KSRTC-19a5bd",
+        "type": "Query",
+        "message": "why my bus is late. bus number is KL15B1023.",
+        "status": "registered",
+        "created_at": "2026-03-11 11:51:57"
+    },
+    {
+        "request_id": "KSRTC-5e19d1",
+        "type": "query",
+        "message": "Traffic block",
+        "status": "registered",
+        "created_at": "2026-03-11 12:42:27"
+    },
+    {
+        "request_id": "KSRTC-d95a06",
+        "type": "query",
+        "message": "why my bus is late?",
+        "status": "registered",
+        "created_at": "2026-03-11 12:49:35"
+    }
+]
