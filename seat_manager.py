@@ -1,7 +1,7 @@
 import pandas as pd
 from db import cursor
 
-FILE_PATH = "D:/New folder (2)/Bus_dataset.xlsx"
+FILE_PATH = "D:/New folder (2)/Bus_dataset_200.xlsx"
 
 def get_total_seats(bus_no):
     df = pd.read_excel(FILE_PATH)

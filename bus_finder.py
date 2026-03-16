@@ -1,7 +1,7 @@
 import pandas as pd
 from seat_manager import get_available_seat_count
 
-FILE_PATH = "D:/New folder (2)/Bus_dataset.xlsx"
+FILE_PATH = "D:/New folder (2)/Bus_dataset_200.xlsx"
 def show_buses(source, destination, travel_date):
     df = pd.read_excel(FILE_PATH)
     df.columns = df.columns.str.strip()

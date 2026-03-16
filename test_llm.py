@@ -11,6 +11,7 @@ from ticket_booking import book_ticket
 from bus_finder import show_buses, find_bus
 from seat_manager import show_available_seats
 from deep_translator import GoogleTranslator
+from rapidfuzz import process
 
 def translate_text(text, language):
     if language == "malayalam":
@@ -24,6 +25,15 @@ def tprint(text, language):
 
 def tinput(text, language):
     return input(translate_text(text, language))
+
+def correct_city_name(user_city, city_list):
+    if not user_city:
+        return user_city
+    match = process.extractOne(user_city, city_list)
+    if match and match[1] > 70:
+        return match[0]
+
+    return user_city
 
 MODEL = "llama-3.3-70b-versatile"
 client = Groq(api_key=os.getenv("GROQ_API_KEY"))
@@ -62,7 +72,13 @@ def run_agent(user_query: str, language: str):
         arguments = json.loads(tool_call.function.arguments)
 
         if function_name == "check_availability":
-            tool_result = check_availability(**arguments)
+            source = arguments.get("source")
+            destination = arguments.get("destination")
+            travel_date = arguments.get("travel_date")
+            sources, destinations = show_available_routes()
+            source = correct_city_name(source, sources)
+            destination = correct_city_name(destination, destinations)
+            tool_result = check_availability(source, destination, travel_date)
         else:
             tool_result = {"error": "Unknown tool"}
 
@@ -170,6 +186,9 @@ if __name__ == "__main__":
                     while True:
                         source = tinput("Enter Source: ", language).strip()
                         destination = tinput("Enter Destination: ", language).strip()
+                        sources, destinations = show_available_routes()
+                        source = correct_city_name(source, sources)
+                        destination = correct_city_name(destination, destinations)
 
                         if source and destination:
                             break
@@ -238,6 +257,9 @@ Please check again later.
                   print("Phone number must be exactly 10 digits.")
           source = tinput("Source : ", language)
           destination = tinput("Destination : ", language)
+          sources, destinations = show_available_routes()
+          source = correct_city_name(source, sources)
+          destination = correct_city_name(destination, destinations)
           travel_date = tinput("Travel Date (YYYY-MM-DD) : ", language)
 
           while True:
@@ -275,5 +297,10 @@ Seat       : {booking['seat']}
 Route      : {booking['source']} → {booking['destination']}
 Date       : {booking['travel_date']}
 """, language)
+            choice = tinput("\nDo you want to book another ticket? (yes/no): ",language).lower()
+            if choice in ["yes", "y"]:
+                continue
+            else:
+                break
         else:
             tprint("Sorry wrong option", language)
