@@ -1,306 +1,324 @@
 import os
-import json
-import pandas as pd
+import re
+import io
+import contextlib
+from datetime import datetime, timedelta
 from groq import Groq
-from test_tool import tools
-from searching import check_availability
+from deep_translator import GoogleTranslator
+from new_user import register_user, login_user
+from ticket_booking import book_ticket, filter_buses_by_time
+from bus_finder import show_buses
+from seat_manager import show_available_seats
 from support import register_support_request
 from bus_delay import check_bus_delay
 from next_bus import get_next_bus
-from ticket_booking import book_ticket
-from bus_finder import show_buses, find_bus
-from seat_manager import show_available_seats
-from deep_translator import GoogleTranslator
-from rapidfuzz import process
 
-def translate_text(text, language):
+# ─────────────────────────────────────────────
+#  CONFIG
+# ─────────────────────────────────────────────
+MODEL  = "llama-3.3-70b-versatile"
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+# Single source of truth for time ranges
+TIME_MAP = {
+    "1": ("morning",   "05:00", "11:59"),
+    "2": ("afternoon", "12:00", "16:59"),
+    "3": ("evening",   "17:00", "20:59"),
+    "4": ("night",     "21:00", "23:59"),
+}
+
+# Keyword → (start, end) for slot detection & filtering
+TIME_KEYWORD_MAP = {
+    "morning":   ("05:00", "11:59"),
+    "afternoon": ("12:00", "16:59"),
+    "evening":   ("17:00", "20:59"),
+    "night":     ("21:00", "23:59"),
+}
+
+# ─────────────────────────────────────────────
+#  LANGUAGE HELPERS
+# ─────────────────────────────────────────────
+def translate_text(text: str, language: str) -> str:
     if language == "malayalam":
-        return GoogleTranslator(source="auto", target="ml").translate(text)
+        try:
+            return GoogleTranslator(source="auto", target="ml").translate(text)
+        except Exception:
+            return text
     return text
 
+def tprint(text: str, language: str) -> None:
+    print(translate_text(str(text), language))
 
-def tprint(text, language):
-    print(translate_text(text, language))
-
-
-def tinput(text, language):
-    return input(translate_text(text, language))
-
-def correct_city_name(user_city, city_list):
-    if not user_city:
-        return user_city
-    match = process.extractOne(user_city, city_list)
-    if match and match[1] > 70:
-        return match[0]
-
-    return user_city
-
-MODEL = "llama-3.3-70b-versatile"
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
-DATASET_FILE = "D:/New folder (2)/Bus_dataset.xlsx"
+def tinput(prompt: str, language: str) -> str:
+    return input(translate_text(prompt, language))
 
 
-def run_agent(user_query: str, language: str):
-    if language == "malayalam":
-        lang_instruction = "Respond ONLY in Malayalam."
-    else:
-        lang_instruction = "Respond ONLY in English."
-
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {
-                "role": "system",
-                "content": (
-                    "You are a KSRTC intelligent assistant.\n"
-                    "If the user asks about buses or routes, "
-                    "you must use the check_availability tool.\n"
-                    "Never invent information yourself."
-                )
-            },
-            {"role": "user", "content": user_query}
-        ],
-        tools=tools,
-        tool_choice="auto"
+# ─────────────────────────────────────────────
+#  GROQ AI FALLBACK
+# ─────────────────────────────────────────────
+def ask_groq(user_input: str, language: str) -> str:
+    system_prompt = (
+        "You are a helpful bus-travel assistant for Kerala, India. "
+        "Answer questions about bus routes, travel tips, ticket rules, "
+        "and general travel advice. Keep answers short and practical."
     )
-
-    message = response.choices[0].message
-
-    if message.tool_calls:
-        tool_call = message.tool_calls[0]
-        function_name = tool_call.function.name
-        arguments = json.loads(tool_call.function.arguments)
-
-        if function_name == "check_availability":
-            source = arguments.get("source")
-            destination = arguments.get("destination")
-            travel_date = arguments.get("travel_date")
-            sources, destinations = show_available_routes()
-            source = correct_city_name(source, sources)
-            destination = correct_city_name(destination, destinations)
-            tool_result = check_availability(source, destination, travel_date)
-        else:
-            tool_result = {"error": "Unknown tool"}
-
-        second_response = client.chat.completions.create(
+    try:
+        response = client.chat.completions.create(
             model=MODEL,
             messages=[
-                {
-                    "role": "system",
-                    "content": "Format the result clearly.\n" + lang_instruction
-                },
-                {"role": "user", "content": user_query},
-                message,
-                {
-                    "role": "tool",
-                    "tool_call_id": tool_call.id,
-                    "content": json.dumps(tool_result)
-                }
-            ]
+                {"role": "system", "content": system_prompt},
+                {"role": "user",   "content": user_input},
+            ],
+            max_tokens=512,
         )
+        reply = response.choices[0].message.content.strip()
+        return translate_text(reply, language)
+    except Exception as e:
+        return translate_text(f"AI service error: {e}", language)
 
-        return second_response.choices[0].message.content
 
-    return "Sorry, I couldn't process your request."
+# ─────────────────────────────────────────────
+#  NLP – EXTRACT BOOKING DETAILS
+# ─────────────────────────────────────────────
+def extract_details(text: str):
+    text = text.lower()
 
+    # Source / destination
+    match = re.search(r'from\s+(.+?)\s+to\s+(.+?)(?:\s+on\s+|\s+tomorrow|$)', text)
+    source      = match.group(1).strip() if match else None
+    destination = match.group(2).strip() if match else None
 
-def format_support_response(data, language):
-    if language == "malayalam":
-        instruction = "Format the support request clearly in Malayalam."
+    # Travel date
+    travel_date = None
+    if "tomorrow" in text:
+        travel_date = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
     else:
-        instruction = "Format the support request clearly in English."
+        m1 = re.search(r'\d{4}-\d{2}-\d{2}', text)
+        m2 = re.search(r'\d{2}-\d{2}-\d{4}', text)
+        if m1:
+            travel_date = m1.group()
+        elif m2:
+            travel_date = datetime.strptime(m2.group(), "%d-%m-%Y").strftime("%Y-%m-%d")
 
-    response = client.chat.completions.create(
-        model=MODEL,
-        messages=[
-            {"role": "system", "content": instruction},
-            {"role": "user", "content": json.dumps(data)}
+    # Time preference — return string label or None
+    time_pref = None
+    for keyword in TIME_KEYWORD_MAP:
+        if keyword in text:
+            time_pref = keyword
+            break
+
+    # Passenger name (e.g. "for Rahul")
+    name_match     = re.search(r'\bfor\s+([A-Za-z]+)', text)
+    passenger_name = name_match.group(1).capitalize() if name_match else None
+
+    return source, destination, travel_date, time_pref, passenger_name
+
+
+# ─────────────────────────────────────────────
+#  PHONE VALIDATION
+# ─────────────────────────────────────────────
+def get_valid_phone(prompt: str, language: str) -> str:
+    while True:
+        phone = tinput(prompt, language).strip()
+        if re.fullmatch(r'[6-9]\d{9}', phone):
+            return phone
+        tprint("Invalid phone number. Please enter a valid 10-digit Indian mobile number.", language)
+
+
+# ─────────────────────────────────────────────
+#  AVAILABLE SLOT DETECTOR
+# ─────────────────────────────────────────────
+def get_available_time_slots(buses) -> list:
+    """Return only time-slot labels that actually have buses."""
+    available = []
+    for label, (start, end) in TIME_KEYWORD_MAP.items():
+        slot_buses = buses[
+            buses["departure"].astype(str).str[:5].between(start, end)
         ]
+        if not slot_buses.empty:
+            available.append(label)
+    return available
+
+
+# ─────────────────────────────────────────────
+#  BOOKING HANDLER
+# ─────────────────────────────────────────────
+def handle_booking(user_input: str, user_data: dict, language: str) -> str:
+    source, destination, date, time_pref, friend_name = extract_details(user_input)
+
+    # ── Validate mandatory fields ──
+    if not source:
+        source = tinput("Which city are you travelling from? ", language).strip()
+    if not destination:
+        destination = tinput("Which city are you travelling to? ", language).strip()
+    if not date:
+        date = tinput("What date are you travelling? (YYYY-MM-DD): ", language).strip()
+
+    # ── Fetch buses SILENTLY (suppress any prints inside show_buses) ──
+    with contextlib.redirect_stdout(io.StringIO()):
+        buses = show_buses(source, destination, date)
+
+    if buses is None or buses.empty:
+        return "Sorry, no buses found for this route and date."
+
+    # ── Detect which time slots actually have buses ──
+    available_slots = get_available_time_slots(buses)
+
+    # ── Ask time preference only from real available slots ──
+    if time_pref not in available_slots:
+        if len(available_slots) == 1:
+            # Only one slot — auto-select, no need to ask
+            time_pref = available_slots[0]
+            tprint(f"Buses are only available in the {time_pref}.", language)
+        else:
+            slots_display = " / ".join(available_slots) + " / any"
+            pref_input = tinput(
+                f"What time do you prefer? ({slots_display}): ",
+                language
+            ).strip().lower()
+
+            if pref_input in available_slots:
+                time_pref = pref_input
+            elif pref_input == "any":
+                time_pref = None
+            else:
+                return (
+                    f"No buses available at that time. "
+                    f"Try: {', '.join(available_slots)}"
+                )
+
+    # ── Filter by chosen time ──
+    filtered = filter_buses_by_time(buses, time_pref) if time_pref else buses
+
+    if filtered is None or filtered.empty:
+        return "No buses available in the selected time slot."
+
+    # ── Auto-select first available bus and seat ──
+    selected_bus = filtered.iloc[0]
+
+    seats = show_available_seats(selected_bus["bus_no"], date)
+    if not seats:
+        return "Sorry, no seats available on this bus."
+    seat = seats[0]
+
+    # ── Passenger details from stored user data ──
+    if friend_name:
+        phone          = get_valid_phone(f"Enter phone number for {friend_name}: ", language)
+        friend         = {"name": friend_name, "phone": phone}
+        passenger_name = None
+        phone_number   = None
+    else:
+        passenger_name = user_data["name"]
+        phone_number   = user_data["phone"]
+        friend         = None
+
+    # ── Book directly — no extra confirmation needed ──
+    booking = book_ticket(
+        selected_bus["bus_no"],
+        source,
+        destination,
+        date,
+        passenger_name,
+        phone_number,
+        seat,
+        user_data["user_id"],
+        friend_details=friend,
     )
 
-    return response.choices[0].message.content
+    if "error" in booking:
+        return f"Booking failed: {booking['error']}"
 
-def show_available_routes():
-    if not os.path.exists(DATASET_FILE):
-        return [], []
+    return f"""
+══════════════════════════════
+       TICKET CONFIRMED ✓
+══════════════════════════════
+  Passenger  : {booking['passenger_name']}
+  Seat       : {booking['seat']}
+  Route      : {source.title()} → {destination.title()}
+  Departure  : {selected_bus['departure']}
+  Date       : {date}
+  Booking ID : {booking['booking_id']}
+══════════════════════════════
+"""
 
-    df = pd.read_excel(DATASET_FILE)
-    sources = sorted(df["Source"].dropna().unique())
-    destinations = sorted(df["Destination"].dropna().unique())
-    return sources, destinations
+
+# ─────────────────────────────────────────────
+#  MAIN
+# ─────────────────────────────────────────────
+def main():
+    print("\n============================")
+    print("  Kerala Bus Booking System ")
+    print("============================")
+
+    print("\n1. English\n2. Malayalam\n0. Exit")
+    lang_choice = input("Select language: ").strip()
+
+    if lang_choice == "2":
+        language = "malayalam"
+    elif lang_choice == "1":
+        language = "english"
+    else:
+        print("Goodbye!")
+        return
+
+    tprint("\n1. New User  (Register)\n2. Existing User  (Login)", language)
+    user_choice = tinput("Select: ", language).strip()
+
+    if user_choice == "1":
+        user_data = register_user()
+    elif user_choice == "2":
+        user_data = login_user()
+    else:
+        tprint("Invalid choice. Exiting.", language)
+        return
+
+    if not user_data:
+        tprint("Authentication failed. Please try again.", language)
+        return
+
+    tprint(f"\nWelcome, {user_data['name']}!", language)
+    tprint("You can ask me to:\n  • Book a bus ticket\n  • Check next bus\n  • Check bus delay\n  • File a complaint", language)
+
+    while True:
+        user_input = tinput("\nHow can I help you? (type 0 to exit): ", language).strip()
+
+        if not user_input:
+            continue
+
+        if user_input == "0":
+            tprint("Thank you for using Kerala Bus Booking. Have a safe journey!", language)
+            break
+
+        text = user_input.lower()
+
+        if "book" in text:
+            result = handle_booking(user_input, user_data, language)
+            tprint(result, language)
+
+        elif any(word in text for word in ("complaint", "complain", "issue", "problem", "feedback")):
+            msg = tinput("Please describe your issue: ", language).strip()
+            if msg:
+                res = register_support_request(msg, "Complaint")
+                tprint(str(res), language)
+            else:
+                tprint("No message entered. Support request cancelled.", language)
+
+        elif "next bus" in text:
+            src  = tinput("Source city: ", language).strip()
+            dst  = tinput("Destination city: ", language).strip()
+            date = tinput("Travel date (YYYY-MM-DD): ", language).strip()
+            bus  = get_next_bus(src, dst, date)
+            tprint(str(bus), language)
+
+        elif "delay" in text:
+            bus_no = tinput("Enter bus number: ", language).strip()
+            delay  = check_bus_delay(bus_no)
+            tprint(str(delay), language)
+
+        else:
+            reply = ask_groq(user_input, language)
+            tprint(reply, language)
 
 
 if __name__ == "__main__":
-
-    while True:
-        print("\nKerala State RTC Intelligent Assistant")
-        print("\nSelect Language:")
-        print("1. English")
-        print("2. Malayalam")
-        print("0. Exit / പുറത്തുപോവുക ")
-        lang_choice = input("Enter 1, 2 or 0: ")
-
-        if lang_choice == "2":
-            language = "malayalam"
-            print("\nഭാഷ തിരഞ്ഞെടുക്കപ്പെട്ടു: മലയാളം\n")
-        elif lang_choice == "1":
-            language = "english"
-            print("\nLanguage selected: English\n")
-        else:
-            print("Goodbye")
-            break
-
-        tprint("Select Service:", language)
-        tprint("1. Search Bus", language)
-        tprint("2. Ask Us (Support)", language)
-        tprint("3. Book Ticket", language)
-        service_choice = tinput("Choose (1, 2, 3): ", language)
-
-        if service_choice == "1":
-            user_input = tinput("\nEnter route (example: Ernakulam to Kottayam): ", language)
-            result = run_agent(user_input, language)
-            tprint("\nAssistant: " + str(result), language)
-            print("-" * 50)
-
-        elif service_choice == "2":
-
-            tprint("\nSupport Options:", language)
-            tprint("1. Complaint", language)
-            tprint("2. Query", language)
-            tprint("3. Suggestion", language)
-
-            support_choice = tinput("Enter 1, 2, or 3: ", language)
-            message = tinput("\nDescribe your issue: ", language)
-
-            if support_choice == "1":
-                tool_result = register_support_request(message, "Complaint")
-                result = format_support_response(tool_result, language)
-                tprint("\nAssistant: " + str(result), language)
-
-            elif support_choice == "2":
-                if "next bus" in message.lower():
-                    sources, destinations = show_available_routes()
-                    print("\nAvailable Sources:", ", ".join(sources))
-                    print("Available Destinations:", ", ".join(destinations))
-
-                    while True:
-                        source = tinput("Enter Source: ", language).strip()
-                        destination = tinput("Enter Destination: ", language).strip()
-                        sources, destinations = show_available_routes()
-                        source = correct_city_name(source, sources)
-                        destination = correct_city_name(destination, destinations)
-
-                        if source and destination:
-                            break
-                        tprint("Please enter both Source and Destination.", language)
-                    travel_date = tinput("Enter Travel Date (YYYY-MM-DD): ", language).strip()
-                    bus = get_next_bus(source, destination, travel_date)
-
-                    if "bus_no" in bus:
-                        tprint(f"""
-Next Bus Information
-
-Route       : {source} → {destination}
-Bus Number  : {bus['bus_no']}
-Departure   : {bus['departure']}
-Arrival     : {bus['arrival']}
-Bus Type    : {bus['bus_type']}
-Fare        : {bus['fare']}
-Seats Left  : {bus['available_seats']}
-Available Seats  : {bus['available_seats']}
-""", language)
-
-                    else:
-                        tprint(bus.get("message", "No buses found."), language)
-                elif "late" in message.lower() or "delay" in message.lower():
-                    bus_number = tinput("\nEnter Bus Number: ", language)
-                    delay_info = check_bus_delay(bus_number)
-                    if delay_info["status"] == "late":
-                        tprint(f"""
-Bus Delay Information
-
-Bus Number : {bus_number}
-Status     : Late
-Delay      : {delay_info['delay_minutes']} minutes
-Reason     : {delay_info['reason']}
-Updated At : {delay_info['updated_at']}
-""", language)
-                    else:
-                        tprint("""
-No delay has been officially reported for this bus.
-We will contact the conductor and update the status soon.
-Please check again later.
-""", language)
-                else:
-                    tool_result = register_support_request(message, "Query")
-                    result = format_support_response(tool_result, language)
-                    tprint("\nAssistant: " + str(result), language)
-
-            elif support_choice == "3":
-
-                tool_result = register_support_request(message, "Suggestion")
-                result = format_support_response(tool_result, language)
-                tprint("\nAssistant: " + str(result), language)
-            else:
-                tprint("Sorry Wrong option", language)
-
-            print("-" * 50)
-
-        elif service_choice == "3":
-          tprint("\nTicket Booking", language)
-          passenger_name = tinput("Passenger Name : ", language)
-          while True:
-              phone_number = tinput("Phone Number : ", language)
-              if phone_number.isdigit() and len(phone_number) == 10:
-                  break
-              else:
-                  print("Phone number must be exactly 10 digits.")
-          source = tinput("Source : ", language)
-          destination = tinput("Destination : ", language)
-          sources, destinations = show_available_routes()
-          source = correct_city_name(source, sources)
-          destination = correct_city_name(destination, destinations)
-          travel_date = tinput("Travel Date (YYYY-MM-DD) : ", language)
-
-          while True:
-            buses = show_buses(source, destination, travel_date)
-            if buses is None:
-                continue
-            departure = tinput("\nChoose Departure Time : ", language)
-            bus_no = find_bus(source, destination, travel_date, departure)
-            if not bus_no:
-                tprint("Invalid bus selection.", language)
-                continue
-            available = show_available_seats(bus_no, travel_date)
-            if not available:
-                print("Choose another bus")
-                continue
-            seat_number = int(tinput("\nChoose Seat Number : ", language))
-            booking = book_ticket(
-                bus_no,
-                source,
-                destination,
-                travel_date,
-                passenger_name,
-                phone_number,
-                seat_number
-            )
-            if "error" in booking:
-                tprint(booking["error"], language)
-            else:
-                tprint(f"""
-Ticket Booked Successfully
-
-Booking ID : {booking['booking_id']}
-Passenger  : {booking['passenger_name']}
-Seat       : {booking['seat']}
-Route      : {booking['source']} → {booking['destination']}
-Date       : {booking['travel_date']}
-""", language)
-            choice = tinput("\nDo you want to book another ticket? (yes/no): ",language).lower()
-            if choice in ["yes", "y"]:
-                continue
-            else:
-                break
-        else:
-            tprint("Sorry wrong option", language)
+    main()

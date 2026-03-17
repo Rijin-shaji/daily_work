@@ -1,13 +1,13 @@
 import uuid
 import json
 from datetime import datetime
-from db import conn, cursor
+from db import get_connection
 
 FILE = "support_requests.json"
+conn = get_connection()
+cursor = conn.cursor()
 def register_support_request(message, request_type):
-
     request_id = "KSRTC-" + str(uuid.uuid4())[:6]
-
     data = {
         "request_id": request_id,
         "type": request_type,

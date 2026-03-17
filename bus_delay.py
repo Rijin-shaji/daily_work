@@ -1,9 +1,10 @@
 import json
 from datetime import datetime
-from db import conn, cursor
+from db import get_connection
 
 FILE = "bus_delay_data.json"
-
+conn = get_connection()
+cursor = conn.cursor()
 
 def update_bus_status(bus_number, status, reason=None, delay_minutes=0):
 

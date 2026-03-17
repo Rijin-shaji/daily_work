@@ -1,8 +1,9 @@
 import pandas as pd
-from db import cursor
+from db import get_connection
 
 FILE_PATH = "D:/New folder (2)/Bus_dataset_200.xlsx"
-
+conn = get_connection()
+cursor = conn.cursor()
 def get_total_seats(bus_no):
     df = pd.read_excel(FILE_PATH)
     df.columns = df.columns.str.strip()
