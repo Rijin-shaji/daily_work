@@ -318,7 +318,6 @@ def main():
         else:
             reply = ask_groq(user_input, language)
             tprint(reply, language)
-
-
+            
 if __name__ == "__main__":
     main()
