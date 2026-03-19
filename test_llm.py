@@ -133,7 +133,7 @@ def get_available_time_slots(buses) -> list:
     available = []
     for label, (start, end) in TIME_KEYWORD_MAP.items():
         slot_buses = buses[
-            buses["departure"].astype(str).str[:5].between(start, end)
+            buses["Departure"].astype(str).str[:5].between(start, end)
         ]
         if not slot_buses.empty:
             available.append(label)
@@ -152,9 +152,13 @@ def handle_booking(user_input: str, user_data: dict, language: str) -> str:
     if not destination:
         destination = tinput("Which city are you travelling to? ", language).strip()
     if not date:
-        date = tinput("What date are you travelling? (YYYY-MM-DD): ", language).strip()
+        date = tinput("What date are you travelling? (DD-MM-YYYY): ", language).strip()
+        try:
+            date = datetime.strptime(date, "%d-%m-%Y").strftime("%Y-%m-%d")
+        except ValueError:
+            return "Invalid date format. Please use DD-MM-YYYY."
 
-    # ── Fetch buses SILENTLY (suppress any prints inside show_buses) ──
+    # ── Fetch buses SILENTLY ──
     with contextlib.redirect_stdout(io.StringIO()):
         buses = show_buses(source, destination, date)
 
@@ -164,10 +168,13 @@ def handle_booking(user_input: str, user_data: dict, language: str) -> str:
     # ── Detect which time slots actually have buses ──
     available_slots = get_available_time_slots(buses)
 
+    if not available_slots:
+        return "Sorry, no buses available for this route and date."
+
     # ── Ask time preference only from real available slots ──
     if time_pref not in available_slots:
         if len(available_slots) == 1:
-            # Only one slot — auto-select, no need to ask
+            # Only one slot available — auto-select it
             time_pref = available_slots[0]
             tprint(f"Buses are only available in the {time_pref}.", language)
         else:
@@ -193,10 +200,11 @@ def handle_booking(user_input: str, user_data: dict, language: str) -> str:
     if filtered is None or filtered.empty:
         return "No buses available in the selected time slot."
 
-    # ── Auto-select first available bus and seat ──
+    # ── Auto-select first available bus ──
     selected_bus = filtered.iloc[0]
 
-    seats = show_available_seats(selected_bus["bus_no"], date)
+    # ── Auto-select first available seat ──
+    seats = show_available_seats(selected_bus["Bus_No"], date)
     if not seats:
         return "Sorry, no seats available on this bus."
     seat = seats[0]
@@ -214,7 +222,7 @@ def handle_booking(user_input: str, user_data: dict, language: str) -> str:
 
     # ── Book directly — no extra confirmation needed ──
     booking = book_ticket(
-        selected_bus["bus_no"],
+        selected_bus["Bus_No"],
         source,
         destination,
         date,
@@ -235,7 +243,7 @@ def handle_booking(user_input: str, user_data: dict, language: str) -> str:
   Passenger  : {booking['passenger_name']}
   Seat       : {booking['seat']}
   Route      : {source.title()} → {destination.title()}
-  Departure  : {selected_bus['departure']}
+  Departure  : {selected_bus['Departure']}
   Date       : {date}
   Booking ID : {booking['booking_id']}
 ══════════════════════════════
@@ -306,8 +314,13 @@ def main():
         elif "next bus" in text:
             src  = tinput("Source city: ", language).strip()
             dst  = tinput("Destination city: ", language).strip()
-            date = tinput("Travel date (YYYY-MM-DD): ", language).strip()
-            bus  = get_next_bus(src, dst, date)
+            date = tinput("Travel date (DD-MM-YYYY): ", language).strip()
+            try:
+                date = datetime.strptime(date, "%d-%m-%Y").strftime("%Y-%m-%d")
+            except ValueError:
+                tprint("Invalid date format. Please use DD-MM-YYYY.", language)
+                continue
+            bus = get_next_bus(src, dst, date)
             tprint(str(bus), language)
 
         elif "delay" in text:
@@ -318,6 +331,7 @@ def main():
         else:
             reply = ask_groq(user_input, language)
             tprint(reply, language)
-            
+
+
 if __name__ == "__main__":
     main()
