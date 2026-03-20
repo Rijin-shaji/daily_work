@@ -22,7 +22,6 @@ def filter_buses_by_time(buses, time_pref):
 def book_ticket(bus_no, source, destination, travel_date,
                 passenger_name, phone_number, seat, user_id,
                 time_pref=None, friend_details=None):
-
     conn = get_connection()
     cursor = conn.cursor()
 
