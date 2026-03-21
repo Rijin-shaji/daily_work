@@ -23,15 +23,9 @@ def get_booked_seats(bus_no, travel_date):
 
 def show_available_seats(bus_no, travel_date):
     total_seats = get_total_seats(bus_no)
-    booked = get_booked_seats(bus_no, travel_date)
-    available = [seat for seat in range(1, total_seats + 1) if seat not in booked]
-    if not available:
-        print("No seats available")
-        return 0
-    else:
-         print("\nAvailable Seat Numbers:")
-         print(available)
-         return available
+    booked      = get_booked_seats(bus_no, travel_date)
+    available   = [seat for seat in range(1, total_seats + 1) if seat not in booked]
+    return available
 
 def get_available_seat_count(bus_no, travel_date):
     total_seats = get_total_seats(bus_no)
