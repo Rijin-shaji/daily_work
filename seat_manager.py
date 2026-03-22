@@ -1,6 +1,5 @@
 import pandas as pd
 from db import get_connection
-
 FILE_PATH = "D:/New folder (2)/Bus_dataset_200.xlsx"
 conn = get_connection()
 cursor = conn.cursor()
