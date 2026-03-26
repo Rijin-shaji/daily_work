@@ -64,12 +64,40 @@ def extract_phone(text):
     match = re.findall(r"\+?\d[\d\s\-]{8,15}", text)
     return match[0] if match else "Not found"
 
+
 def extract_location(text):
     lines = text.split("\n")
-    for line in lines:
-        if "location" in line.lower():
-            return line.split(":")[-1].strip()
-    return "Not found"
+    emoji_match = re.search(r"[📍📌🌍🗺️]\s*(.+?)(?:\||$)", text)
+    if emoji_match:
+        location = emoji_match.group(1).strip()
+        location = re.sub(r"\s*\|.*", "", location)
+        location = re.sub(r"\s*📱.*", "", location)
+        location = re.sub(r"\+?\d+[\d\s\-().]*", "", location)
+        location = re.sub(r"\s+", " ", location).strip()
+        if location and len(location) > 2:
+            return location
+    for i, line in enumerate(lines):
+        if re.search(r"(?:location|address)[\s:]+", line, re.IGNORECASE):
+            if ":" in line:
+                location = line.split(":")[-1].strip()
+            else:
+                location = line.replace("LOCATION", "").replace("location", "").replace("ADDRESS", "").replace(
+                    "address", "").strip()
+            if not location and i + 1 < len(lines):
+                location = lines[i + 1].strip()
+            location = re.sub(r"\+?\d+[\d\s\-().]*", "", location)
+            location = re.sub(r"www\..*", "", location)
+            location = re.sub(r"\s+", " ", location).strip()
+            if location and len(location) > 2:
+                return location
+    city_pattern = r"([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)\s*,\s*([A-Z][a-z]+(?:\s+[A-Z][a-z]+)*)"
+    match = re.search(city_pattern, text)
+    if match:
+        location = f"{match.group(1)}, {match.group(2)}"
+        if "://" not in location and "@" not in location:
+            return location
+    return "Unknown"
+
 
 def extract_experience(text):
     match = re.findall(r"\d+\s*(?:\+)?\s*(?:years?|yrs?)", text.lower())
@@ -82,12 +110,28 @@ def extract_role(text):
             return line.strip()
     return "Not found"
 
+
 def extract_company(text):
-    lines = text.split("\n")
-    for line in lines[:5]:  # usually top
-        if len(line.strip()) > 2:
-            return line.strip()
-    return "Not found"
+    website_patterns = [
+        r"www\.([a-zA-Z0-9\-]+)\.com",
+        r"www\.([a-zA-Z0-9\-]+)\.co\.uk",
+        r"www\.([a-zA-Z0-9\-]+)\.in",
+        r"www\.([a-zA-Z0-9\-]+)\.org",
+        r"www\.([a-zA-Z0-9\-]+)\.io",
+        r"https?://(?:www\.)?([a-zA-Z0-9\-]+)\.",
+    ]
+    for pattern in website_patterns:
+        website = re.search(pattern, text, re.IGNORECASE)
+        if website:
+            company_name = website.group(1).upper()
+            return company_name
+    email_match = re.search(r"@([a-zA-Z0-9\-]+)\.", text, re.IGNORECASE)
+    if email_match:
+        company_domain = email_match.group(1)
+        generic_domains = ['gmail', 'yahoo', 'hotmail', 'outlook', 'protonmail']
+        if company_domain.lower() not in generic_domains:
+            return company_domain.upper()
+    return "Unknown"
 
 def main():
     file_path = choose_image()
