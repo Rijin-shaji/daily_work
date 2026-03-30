@@ -11,8 +11,6 @@ VECTOR_SIZE = 384
 HF_MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
 CHUNK_SIZE = 250
 CHUNK_OVERLAP = 50
-
-
 device = "cuda" if torch.cuda.is_available() else "cpu"
 tokenizer = AutoTokenizer.from_pretrained(HF_MODEL_NAME)
 model = AutoModel.from_pretrained(HF_MODEL_NAME).to(device)
